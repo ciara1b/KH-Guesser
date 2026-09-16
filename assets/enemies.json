@@ -1,0 +1,13 @@
+{
+    "enemies": [
+        {
+            "id": 0,
+            "name": "",
+            "species": "",
+            "debutGame": "",
+            "appearances": 0,
+            "isBoss": true,
+            "worlds": [""]
+        }
+    ]
+}

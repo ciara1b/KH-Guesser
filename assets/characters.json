@@ -1,0 +1,15 @@
+{
+    "characters": [
+        {
+            "id": 0,
+            "name": "",
+            "gender": "",
+            "species": "",
+            "debutGame": "",
+            "appearances": 0,
+            "weapon": "",
+            "norted": true,
+            "origin": ""
+        }
+    ]
+}
