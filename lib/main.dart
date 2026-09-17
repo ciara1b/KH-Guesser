@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'screens/landing_page.dart';
 
 void main() {
   runApp(const MainApp());
@@ -7,10 +8,20 @@ void main() {
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
 
+  static List<String> options = ['Character', 'Keyblade', 'Enemy'];
+
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(body: Center(child: Text('Hello World!'))),
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Align(
+            alignment: Alignment.centerLeft,
+            child: Text('KHdle'),
+          ),
+        ),
+        body: Center(child: LandingPage(buttonOptions: options)),
+      ),
     );
   }
 }
