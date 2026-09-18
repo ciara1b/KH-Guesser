@@ -2,12 +2,23 @@
     "enemies": [
         {
             "id": 0,
-            "name": "",
-            "species": "",
-            "debutGame": "",
-            "appearances": 0,
-            "isBoss": true,
-            "worlds": [""]
+            "name": "Shadow"
+        },
+        {
+            "id": 1,
+            "name": "Neoshadow"
+        },
+        {
+            "id": 2,
+            "name": "Novashadow"
+        },
+        {
+            "id": 3,
+            "name": "Darkball"
+        },
+        {
+            "id": 4,
+            "name": "Invisible"
         }
     ]
 }
