@@ -10,6 +10,7 @@ class Keyblade {
     this.magic,
     this.wielders,
     required this.appearances,
+    required this.imageUrl,
   });
 
   final int id;
@@ -19,8 +20,11 @@ class Keyblade {
   final int? magic;
   final List<String>? wielders;
   final int appearances;
+  final String imageUrl;
 
   factory Keyblade.fromJson(Map<String, dynamic> json) {
+    final String nameForImage = (json['name'] as String).toLowerCase().replaceAll(' ', '-');
+
     return Keyblade(
       id: json['id'] as int,
       name: json['name'] as String,
@@ -31,6 +35,7 @@ class Keyblade {
           ?.map((w) => w as String)
           .toList(),
       appearances: json['appearances'] as int,
+      imageUrl: 'assets/images/$nameForImage',
     );
   }
 }

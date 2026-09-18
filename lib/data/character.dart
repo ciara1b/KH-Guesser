@@ -12,6 +12,7 @@ class Character {
     this.weapon,
     this.norted = false,
     required this.origin,
+    required this.imageUrl,
   });
 
   final int id;
@@ -23,8 +24,11 @@ class Character {
   final String? weapon;
   final bool? norted;
   final String origin;
+  final String imageUrl;
 
   factory Character.fromJson(Map<String, dynamic> json) {
+    final String nameForImage = (json['name'] as String).toLowerCase().replaceAll(' ', '-');
+
     return Character(
       id: json['id'] as int,
       name: json['name'] as String,
@@ -35,6 +39,7 @@ class Character {
       weapon: json['weapon'] as String?,
       norted: json['norted'] as bool?,
       origin: json['origin'] as String,
+      imageUrl: 'assets/images/$nameForImage',
     );
   }
 }
