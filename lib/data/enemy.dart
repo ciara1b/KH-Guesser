@@ -5,30 +5,20 @@ class Enemy {
   Enemy({
     required this.id,
     required this.name,
-    required this.species,
-    required this.debutGame,
-    required this.appearances,
-    this.isBoss = false,
-    required this.worlds,
+    required this.imageUrl,
   });
 
   final int id;
   final String name;
-  final String species;
-  final String debutGame;
-  final int appearances;
-  final bool? isBoss;
-  final List<String> worlds;
+  final String imageUrl;
 
   factory Enemy.fromJson(Map<String, dynamic> json) {
+    final String nameForImage = (json['name'] as String).toLowerCase().replaceAll(' ', '-');
+
     return Enemy(
       id: json['id'] as int,
       name: json['name'] as String,
-      species: json['species'] as String,
-      debutGame: json['debutGame'] as String,
-      appearances: json['appearances'] as int,
-      isBoss: json['isBoss'] as bool,
-      worlds: (json['worlds'] as List<dynamic>).map((w) => w as String).toList(),
+      imageUrl: 'assets/images/$nameForImage',
     );
   }
 }
