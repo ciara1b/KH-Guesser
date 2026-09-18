@@ -9,7 +9,7 @@ class Character {
     required this.species,
     required this.debutGame,
     required this.appearances,
-    required this.weapon,
+    this.weapon,
     this.norted = false,
     required this.origin,
   });
@@ -17,10 +17,10 @@ class Character {
   final int id;
   final String name;
   final String gender;
-  final String species;
+  final List<String> species;
   final String debutGame;
   final int appearances;
-  final String weapon;
+  final String? weapon;
   final bool? norted;
   final String origin;
 
@@ -29,11 +29,11 @@ class Character {
       id: json['id'] as int,
       name: json['name'] as String,
       gender: json['gender'] as String,
-      species: json['species'] as String,
+      species: (json['species'] as List<dynamic>).map((w) => w as String).toList(),
       debutGame: json['debutGame'] as String,
       appearances: json['appearances'] as int,
-      weapon: json['weapon'] as String,
-      norted: json['norted'] as bool,
+      weapon: json['weapon'] as String?,
+      norted: json['norted'] as bool?,
       origin: json['origin'] as String,
     );
   }

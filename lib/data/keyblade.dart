@@ -5,18 +5,18 @@ class Keyblade {
   Keyblade({
     required this.id,
     required this.name,
-    required this.origin,
-    required this.strength,
-    required this.magic,
+    required this.debutGame,
+    this.strength,
+    this.magic,
     this.wielders,
     required this.appearances,
   });
 
   final int id;
   final String name;
-  final String origin;
-  final int strength;
-  final int magic;
+  final String debutGame;
+  final int? strength;
+  final int? magic;
   final List<String>? wielders;
   final int appearances;
 
@@ -24,9 +24,9 @@ class Keyblade {
     return Keyblade(
       id: json['id'] as int,
       name: json['name'] as String,
-      origin: json['origin'] as String,
-      strength: json['strength'] as int,
-      magic: json['magic'] as int,
+      debutGame: json['debutGame'] as String,
+      strength: json['strength'] as int?,
+      magic: json['magic'] as int?,
       wielders: (json['wielders'] as List<dynamic>?)
           ?.map((w) => w as String)
           .toList(),
