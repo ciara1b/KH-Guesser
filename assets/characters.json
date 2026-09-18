@@ -2,14 +2,53 @@
     "characters": [
         {
             "id": 0,
-            "name": "",
-            "gender": "",
-            "species": "",
-            "debutGame": "",
-            "appearances": 0,
-            "weapon": "",
-            "norted": true,
-            "origin": ""
+            "name": "Sora",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep",
+            "appearances": 13,
+            "weapon": "Keyblade",
+            "origin": "Kingdom Hearts (Game)"
+        },
+        {
+            "id": 1,
+            "name": "Kairi",
+            "gender": "Female",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep",
+            "appearances": 13,
+            "weapon": "Keyblade",
+            "origin": "Kingdom Hearts (Game)"
+        },
+        {
+            "id": 2,
+            "name": "Riku",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep",
+            "appearances": 13,
+            "weapon": "Keyblade",
+            "origin": "Kingdom Hearts (Game)"
+        },
+        {
+            "id": 3,
+            "name": "Roxas",
+            "gender": "Male",
+            "species": ["Human", "Nobody"],
+            "debutGame": "Kingdom Hearts: Chain of Memories",
+            "appearances": 7,
+            "weapon": "Keyblade",
+            "origin": "Kingdom Hearts: Chain of Memories (Game)"
+        },
+        {
+            "id": 4,
+            "name": "Naminé",
+            "gender": "Female",
+            "species": ["Human", "Nobody", "Replica"],
+            "debutGame": "Kingdom Hearts: Chain of Memories",
+            "appearances": 6,
+            "norted": false,
+            "origin": "Kingdom Hearts: Chain of Memories (Game)"
         }
     ]
 }
