@@ -2,12 +2,44 @@
     "keyblades": [
         {
             "id": 0,
-            "name": "",
-            "origin": "",
-            "strength": 0,
+            "name": "Kingdom Key",
+            "debutGame": "Kingdom Hearts",
+            "strength": 3,
             "magic": 0,
-            "appearances": 0,
-            "wielders": [""]
+            "appearances": 12,
+            "wielders": ["Sora", "Riku", "Data-Sora", "Roxas", "Xion", "Ventus"]
+        },
+        {
+            "id": 1,
+            "name": "Way to the Dawn",
+            "debutGame": "Kingdom Hearts II",
+            "strength": 3,
+            "magic": 0,
+            "appearances": 5,
+            "wielders": ["Riku"]
+        },
+        {
+            "id": 2,
+            "name": "Rainfell",
+            "debutGame": "Kingdom Hearts: Birth by Sleep",
+            "strength": 2,
+            "magic": 2,
+            "appearances": 2,
+            "wielders": ["Aqua"]
+        },
+        {
+            "id": 3,
+            "name": "Zero/One",
+            "debutGame": "Kingdom Hearts Re:coded",
+            "appearances": 1,
+            "wielders": ["Data-Sora"]
+        },
+        {
+            "id": 4,
+            "name": "No Name",
+            "debutGame": "Kingdom Hearts χ Back Cover",
+            "appearances": 11,
+            "wielders": ["Master of Masters", "Luxu", "Odin", "Young Xehanort", "Master Xehanort", "Terra-Xehanort", "Replica Xehanorts"]
         }
     ]
 }
