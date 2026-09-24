@@ -6,17 +6,557 @@
             "debutGame": "Kingdom Hearts",
             "strength": 3,
             "magic": 0,
-            "appearances": 12,
+            "appearances": 9,
             "wielders": ["Sora", "Riku", "Data-Sora", "Roxas", "Xion", "Ventus"]
         },
         {
             "id": 1,
+            "name": "Jungle King",
+            "debutGame": "Kingdom Hearts",
+            "strength": 5,
+            "magic": 0,
+            "appearances": 4,
+            "wielders": ["Sora", "Data-Sora"]
+        },
+        {
+            "id": 2,
+            "name": "Three Wishes",
+            "debutGame": "Kingdom Hearts",
+            "strength": 6,
+            "magic": 0,
+            "appearances": 6,
+            "wielders": ["Sora", "Data-Sora", "Player"]
+        },
+        {
+            "id": 3,
+            "name": "Crabclaw",
+            "debutGame": "Kingdom Hearts",
+            "strength": 6,
+            "magic": 1,
+            "appearances": 3,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 4,
+            "name": "Pumpkinhead",
+            "debutGame": "Kingdom Hearts",
+            "strength": 7,
+            "magic": 0,
+            "appearances": 3,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 5,
+            "name": "Fairy Harp",
+            "debutGame": "Kingdom Hearts",
+            "strength": 8,
+            "magic": 1,
+            "appearances": 3,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 6,
+            "name": "Wishing Star",
+            "debutGame": "Kingdom Hearts",
+            "strength": 5,
+            "magic": 0,
+            "appearances": 4,
+            "wielders": ["Sora", "Data-Sora"]
+        },
+        {
+            "id": 7,
+            "name": "Spellbinder",
+            "debutGame": "Kingdom Hearts",
+            "strength": 4,
+            "magic": 2,
+            "appearances": 3,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 8,
+            "name": "Metal Chocobo",
+            "debutGame": "Kingdom Hearts",
+            "strength": 10,
+            "magic": -1,
+            "appearances": 4,
+            "wielders": ["Sora", "Data-Sora"]
+        },
+        {
+            "id": 9,
+            "name": "Olympia",
+            "debutGame": "Kingdom Hearts",
+            "strength": 9,
+            "magic": 0,
+            "appearances": 6,
+            "wielders": ["Sora", "Data-Sora", "Player"]
+        },
+        {
+            "id": 10,
+            "name": "Lionheart",
+            "debutGame": "Kingdom Hearts",
+            "strength": 10,
+            "magic": 1,
+            "appearances": 4,
+            "wielders": ["Sora", "Data-Sora"]
+        },
+        {
+            "id": 11,
+            "name": "Lady Luck",
+            "debutGame": "Kingdom Hearts",
+            "strength": 8,
+            "magic": 2,
+            "appearances": 6,
+            "wielders": ["Sora", "Data-Sora", "Player"]
+        },
+        {
+            "id": 12,
+            "name": "Divine Rose",
+            "debutGame": "Kingdom Hearts",
+            "strength": 10,
+            "magic": 0,
+            "appearances": 6,
+            "wielders": ["Sora", "Data-Sora", "Player"]
+        },
+        {
+            "id": 13,
+            "name": "Oathkeeper",
+            "debutGame": "Kingdom Hearts",
+            "strength": 9,
+            "magic": 1,
+            "appearances": 8,
+            "wielders": ["Sora", "Roxas", "Data-Sora", "Xion"]
+        },
+        {
+            "id": 14,
+            "name": "Oblivion",
+            "debutGame": "Kingdom Hearts",
+            "strength": 11,
+            "magic": -1,
+            "appearances": 8,
+            "wielders": ["Sora", "Roxas", "Data-Sora", "Riku"]
+        },
+        {
+            "id": 15,
+            "name": "Ultima Weapon",
+            "debutGame": "Kingdom Hearts",
+            "strength": 12,
+            "magic": 2,
+            "appearances": 9,
+            "wielders": ["Sora", "Data-Sora", "Terra", "Ventus", "Aqua", "Riku"]
+        },
+        {
+            "id": 16,
+            "name": "Diamond Dust",
+            "debutGame": "Kingdom Hearts Final Mix",
+            "strength": 3,
+            "magic": 3,
+            "appearances": 3,
+            "wielders": ["Sora", "Player"]
+        },
+        {
+            "id": 17,
+            "name": "One-Winged Angel",
+            "debutGame": "Kingdom Hearts Final Mix",
+            "strength": 8,
+            "magic": -2,
+            "appearances": 2,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 18,
+            "name": "Star Seeker",
+            "debutGame": "Kingdom Hearts II",
+            "strength": 3,
+            "magic": 1,
+            "appearances": 4,
+            "wielders": ["Sora", "King Mickey"]
+        },
+        {
+            "id": 19,
+            "name": "Kingdom Key D",
+            "debutGame": "Kingdom Hearts II",
+            "strength": 3,
+            "magic": 0,
+            "appearances": 4,
+            "wielders": ["King Mickey"]
+        },
+        {
+            "id": 20,
+            "name": "Hidden Dragon",
+            "debutGame": "Kingdom Hearts II",
+            "strength": 2,
+            "magic": 2,
+            "appearances": 3,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 21,
+            "name": "Hero's Crest",
+            "debutGame": "Kingdom Hearts II",
+            "strength": 4,
+            "magic": 0,
+            "appearances": 2,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 22,
+            "name": "Monochrome",
+            "debutGame": "Kingdom Hearts II",
+            "strength": 3,
+            "magic": 2,
+            "appearances": 3,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 23,
+            "name": "Follow the Wind",
+            "debutGame": "Kingdom Hearts II",
+            "strength": 3,
+            "magic": 1,
+            "appearances": 3,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 24,
+            "name": "Circle of Life",
+            "debutGame": "Kingdom Hearts II",
+            "strength": 4,
+            "magic": 1,
+            "appearances": 2,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 25,
+            "name": "Photon Debugger",
+            "debutGame": "Kingdom Hearts II",
+            "strength": 3,
+            "magic": 2,
+            "appearances": 3,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 26,
+            "name": "Gull Wing",
+            "debutGame": "Kingdom Hearts II",
+            "strength": 3,
+            "magic": 0,
+            "appearances": 2,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 27,
+            "name": "Rumbling Rose",
+            "debutGame": "Kingdom Hearts II",
+            "strength": 5,
+            "magic": 0,
+            "appearances": 2,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 28,
+            "name": "Guardian Soul",
+            "debutGame": "Kingdom Hearts II",
+            "strength": 5,
+            "magic": 1,
+            "appearances": 2,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 29,
+            "name": "Wishing Lamp",
+            "debutGame": "Kingdom Hearts II",
+            "strength": 4,
+            "magic": 3,
+            "appearances": 2,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 30,
+            "name": "Decisive Pumpkin",
+            "debutGame": "Kingdom Hearts II",
+            "strength": 6,
+            "magic": 1,
+            "appearances": 2,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 31,
+            "name": "Sweet Memories",
+            "debutGame": "Kingdom Hearts II",
+            "strength": 0,
+            "magic": 0,
+            "appearances": 2,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 32,
+            "name": "Mysterious Abyss",
+            "debutGame": "Kingdom Hearts II",
+            "strength": 3,
+            "magic": 3,
+            "appearances": 2,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 33,
+            "name": "Sleeping Lion",
+            "debutGame": "Kingdom Hearts II",
+            "strength": 5,
+            "magic": 3,
+            "appearances": 3,
+            "wielders": ["Sora", "Player"]
+        },
+        {
+            "id": 34,
+            "name": "Bond of Flame",
+            "debutGame": "Kingdom Hearts II",
+            "strength": 4,
+            "magic": 4,
+            "appearances": 4,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 35,
+            "name": "Two Become One",
+            "debutGame": "Kingdom Hearts II Final Mix",
+            "strength": 5,
+            "magic": 4,
+            "appearances": 3,
+            "wielders": ["Sora", "Roxas", "Xion"]
+        },
+        {
+            "id": 36,
+            "name": "Fatal Crest",
+            "debutGame": "Kingdom Hearts II",
+            "strength": 3,
+            "magic": 5,
+            "appearances": 2,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 37,
+            "name": "Fenrir",
+            "debutGame": "Kingdom Hearts II",
+            "strength": 7,
+            "magic": 1,
+            "appearances": 3,
+            "wielders": ["Sora", "Player"]
+        },
+        {
+            "id": 38,
+            "name": "Winner's Proof",
+            "debutGame": "Kingdom Hearts II Final Mix",
+            "strength": 5,
+            "magic": 7,
+            "appearances": 1,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 39,
             "name": "Way to the Dawn",
             "debutGame": "Kingdom Hearts II",
             "strength": 3,
             "magic": 0,
             "appearances": 5,
             "wielders": ["Riku"]
+        },
+        {
+            "id": 40,
+            "name": "Missing Ache",
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "strength": 20,
+            "magic": 0,
+            "appearances": 2,
+            "wielders": ["Roxas", "Xion", "Player"]
+        },
+        {
+            "id": 41,
+            "name": "Ominous Blight",
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "strength": 45,
+            "magic": 0,
+            "appearances": 1,
+            "wielders": ["Roxas", "Xion"]
+        },
+        {
+            "id": 42,
+            "name": "Abaddon Plasma",
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "strength": 71,
+            "magic": 0,
+            "appearances": 1,
+            "wielders": ["Roxas", "Xion"]
+        },
+        {
+            "id": 43,
+            "name": "Pain of Solitude",
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "strength": 23,
+            "magic": 12,
+            "appearances": 1,
+            "wielders": ["Roxas", "Xion"]
+        },
+        {
+            "id": 44,
+            "name": "Sign of Innocence",
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "strength": 60,
+            "magic": 18,
+            "appearances": 1,
+            "wielders": ["Roxas", "Xion"]
+        },
+        {
+            "id": 45,
+            "name": "Crown of Guilt",
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "strength": 67,
+            "magic": 29,
+            "appearances": 1,
+            "wielders": ["Roxas", "Xion"]
+        },
+        {
+            "id": 46,
+            "name": "Abyssal Tide",
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "strength": 55,
+            "magic": 0,
+            "appearances": 1,
+            "wielders": ["Roxas", "Xion"]
+        },
+        {
+            "id": 47,
+            "name": "Leviathan",
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "strength": 54,
+            "magic": 0,
+            "appearances": 1,
+            "wielders": ["Roxas", "Xion"]
+        },
+        {
+            "id": 48,
+            "name": "True Light's Flight",
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "strength": 55,
+            "magic": 0,
+            "appearances": 1,
+            "wielders": ["Roxas", "Xion"]
+        },
+        {
+            "id": 49,
+            "name": "Rejection of Fate",
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "strength": 52,
+            "magic": 0,
+            "appearances": 1,
+            "wielders": ["Roxas", "Xion"]
+        },
+        {
+            "id": 50,
+            "name": "Midnight Roar",
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "strength": 70,
+            "magic": 0,
+            "appearances": 2,
+            "wielders": ["Roxas", "Xion", "Sora"]
+        },
+        {
+            "id": 51,
+            "name": "Glimpse of Darkness",
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "strength": 70,
+            "magic": 0,
+            "appearances": 1,
+            "wielders": ["Roxas", "Xion"]
+        },
+        {
+            "id": 52,
+            "name": "Total Eclipse",
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "strength": 65,
+            "magic": 0,
+            "appearances": 2,
+            "wielders": ["Roxas", "Xion", "Sora"]
+        },
+        {
+            "id": 53,
+            "name": "Silent Dirge",
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "strength": 64,
+            "magic": 23,
+            "appearances": 1,
+            "wielders": ["Roxas", "Xion"]
+        },
+        {
+            "id": 54,
+            "name": "Lunar Eclipse",
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "strength": 100,
+            "magic": 31,
+            "appearances": 1,
+            "wielders": ["Roxas", "Xion"]
+        },
+        {
+            "id": 55,
+            "name": "Darker Than Dark",
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "strength": 75,
+            "magic": 37,
+            "appearances": 1,
+            "wielders": ["Roxas", "Xion"]
+        },
+        {
+            "id": 56,
+            "name": "Astral Blast",
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "strength": 88,
+            "magic": 0,
+            "appearances": 1,
+            "wielders": ["Roxas", "Xion"]
+        },
+        {
+            "id": 57,
+            "name": "Maverick Flare",
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "strength": 80,
+            "magic": 0,
+            "appearances": 2,
+            "wielders": ["Roxas", "Xion", "Sora"]
+        },
+        {
+            "id": 58,
+            "name": "Twilight Blaze",
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "strength": 120,
+            "magic": 0,
+            "appearances": 1,
+            "wielders": ["Roxas", "Xion"]
+        },
+        {
+            "id": 59,
+            "name": "Omega Weapon",
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "strength": 90,
+            "magic": 30,
+            "appearances": 1,
+            "wielders": ["Roxas", "Xion"]
+        },
+        {
+            "id": 60,
+            "name": "Umbrella",
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "strength": 40,
+            "magic": 0,
+            "appearances": 1,
+            "wielders": ["Roxas", "Xion"]
+        },
+        {
+            "id": 61,
+            "name": "Aubade",
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "strength": 80,
+            "magic": 0,
+            "appearances": 1,
+            "wielders": ["Roxas", "Xion"]
         },
         {
             "id": 2,
