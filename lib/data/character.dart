@@ -42,6 +42,17 @@ class Character {
       imageUrl: 'assets/images/$nameForImage',
     );
   }
+  
+  Map<String, dynamic> toMap() => {
+    'name': name,
+    'gender': gender,
+    'species': species,
+    'debutGame': debutGame,
+    'appearances': appearances,
+    'weapon': weapon,
+    'norted': norted,
+    'origin': origin,
+  };
 }
 
 final Set<Character> allCharacters = {};
