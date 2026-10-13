@@ -45,6 +45,7 @@ class Tile extends StatelessWidget {
       child: Center(
         child: Text(
           _display(value),
+          textAlign: TextAlign.center,
           style: Theme.of(context).textTheme.titleSmall,
         ),
       ),
