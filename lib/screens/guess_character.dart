@@ -7,7 +7,7 @@ class GuessCharacterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Guess Today's Keyblade")),
+      appBar: AppBar(title: const Text("Guess Today's Character!")),
       body: Center(child: GamePage()),
     );
   }
