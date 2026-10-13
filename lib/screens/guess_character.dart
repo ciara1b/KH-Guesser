@@ -46,7 +46,10 @@ class Tile extends StatelessWidget {
         child: Text(
           _display(value),
           textAlign: TextAlign.center,
-          style: Theme.of(context).textTheme.titleSmall,
+          style: TextStyle(
+            fontWeight: FontWeight(900),
+            fontSize: 16,
+          ),
         ),
       ),
     );
