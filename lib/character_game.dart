@@ -13,7 +13,7 @@ enum HitType {
 
 typedef CategoryResult = ({String category, dynamic value, HitType type});
 
-final List<String> possibleCharacters = allCharacters.map((item) => item.name).toList();
+List<String> get possibleCharacters => allCharacters.map((c) => c.name).toList();
 
 final List<Object> categories = [
   {
@@ -124,7 +124,7 @@ class Game {
 }
 
 class CharacterGuess {
-  CharacterGuess(this._categoryResults);
+  CharacterGuess(this.categoryResults);
 
   factory CharacterGuess.empty() => CharacterGuess(
     <CategoryResult>[
@@ -153,11 +153,11 @@ class CharacterGuess {
 
   factory CharacterGuess.fromSeed(int seed) => CharacterGuess.fromString(possibleCharacters[seed % possibleCharacters.length]);
 
-  final List<CategoryResult> _categoryResults;
+  final List<CategoryResult> categoryResults;
 
-  bool get isEmpty => _categoryResults.every((c) => c.type == HitType.none);
+  bool get isEmpty => categoryResults.every((c) => c.type == HitType.none);
 
-  bool get isCorrect => _categoryResults.every((c) => c.type == HitType.hit);
+  bool get isCorrect => categoryResults.every((c) => c.type == HitType.hit);
 }
 
 extension CharacterGuessUtils on CharacterGuess {
@@ -165,7 +165,7 @@ extension CharacterGuessUtils on CharacterGuess {
     final hiddenCharacterMap = hiddenCharacter.toMap();
     var result = <CategoryResult>[];
 
-    for (var r in _categoryResults) {
+    for (var r in categoryResults) {
       final currentValue = hiddenCharacterMap[r.category];
       HitType type;
 

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'screens/landing_page.dart';
+import 'data/character.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await loadCharacters();
   runApp(const MainApp());
 }
 
