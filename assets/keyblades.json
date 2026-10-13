@@ -559,16 +559,220 @@
             "wielders": ["Roxas", "Xion"]
         },
         {
-            "id": 2,
+            "id": 62,
+            "name": "Earthshaker",
+            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "strength": 3,
+            "magic": 1,
+            "appearances": 2,
+            "wielders": ["Terra"]
+        },
+        {
+            "id": 63,
+            "name": "Treasure Trove",
+            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "strength": 3,
+            "magic": 2,
+            "appearances": 4,
+            "wielders": ["Terra", "Ventus", "Aqua", "Player"]
+        },
+        {
+            "id": 64,
+            "name": "Stroke of Midnight",
+            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "strength": 2,
+            "magic": 2,
+            "appearances": 3,
+            "wielders": ["Terra", "Ventus", "Aqua", "Player"]
+        },
+        {
+            "id": 65,
+            "name": "Fairy Stars",
+            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "strength": 2,
+            "magic": 3,
+            "appearances": 3,
+            "wielders": ["Terra", "Ventus", "Aqua", "Player"]
+        },
+        {
+            "id": 66,
+            "name": "Victory Line",
+            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "strength": 4,
+            "magic": 2,
+            "appearances": 2,
+            "wielders": ["Terra", "Ventus", "Aqua"]
+        },
+        {
+            "id": 67,
+            "name": "Mark of a Hero",
+            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "strength": 5,
+            "magic": 1,
+            "appearances": 2,
+            "wielders": ["Terra", "Ventus", "Aqua"]
+        },
+        {
+            "id": 68,
+            "name": "Hyperdrive",
+            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "strength": 4,
+            "magic": 3,
+            "appearances": 2,
+            "wielders": ["Terra", "Ventus", "Aqua"]
+        },
+        {
+            "id": 69,
+            "name": "Pixie Petal",
+            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "strength": 3,
+            "magic": 6,
+            "appearances": 2,
+            "wielders": ["Terra", "Ventus", "Aqua"]
+        },
+        {
+            "id": 70,
+            "name": "Sweetstack",
+            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "strength": 6,
+            "magic": 4,
+            "appearances": 2,
+            "wielders": ["Terra", "Ventus", "Aqua"]
+        },
+        {
+            "id": 71,
+            "name": "Darkgnaw",
+            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "strength": 5,
+            "magic": 2,
+            "appearances": 3,
+            "wielders": ["Terra", "Player"]
+        },
+        {
+            "id": 72,
+            "name": "Ends of the Earth",
+            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "strength": 5,
+            "magic": 3,
+            "appearances": 2,
+            "wielders": ["Terra", "Lingering Will"]
+        },
+        {
+            "id": 73,
+            "name": "Chaos Ripper",
+            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "strength": 10,
+            "magic": -2,
+            "appearances": 2,
+            "wielders": ["Terra"]
+        },
+        {
+            "id": 74,
+            "name": "Void Gear",
+            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "strength": 8,
+            "magic": 4,
+            "appearances": 2,
+            "wielders": ["Terra", "Ventus", "Aqua"]
+        },
+        {
+            "id": 75,
+            "name": "No Name (YX)",
+            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "strength": 6,
+            "magic": 7,
+            "appearances": 2,
+            "wielders": ["Terra", "Ventus", "Aqua"]
+        },
+        {
+            "id": 76,
+            "name": "Royal Radiance",
+            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "strength": 8,
+            "magic": 7,
+            "appearances": 1,
+            "wielders": ["Terra", "Ventus", "Aqua"]
+        },
+        {
+            "id": 77,
+            "name": "Wayward Wind",
+            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "strength": 3,
+            "magic": 1,
+            "appearances": 3,
+            "wielders": ["Ventus"]
+        },
+        {
+            "id": 78,
+            "name": "Frolic Flame",
+            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "strength": 3,
+            "magic": 3,
+            "appearances": 2,
+            "wielders": ["Ventus"]
+        },
+        {
+            "id": 79,
+            "name": "Lost Memories",
+            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "strength": 6,
+            "magic": 5,
+            "appearances": 2,
+            "wielders": ["Ventus"]
+        },
+        {
+            "id": 80,
             "name": "Rainfell",
-            "debutGame": "Kingdom Hearts: Birth by Sleep",
+            "debutGame": "Kingdom Hearts Birth by Sleep",
             "strength": 2,
             "magic": 2,
             "appearances": 2,
             "wielders": ["Aqua"]
         },
         {
-            "id": 3,
+            "id": 81,
+            "name": "Destiny's Embrace",
+            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "strength": 3,
+            "magic": 3,
+            "appearances": 3,
+            "wielders": ["Kairi", "Aqua"]
+        },
+        {
+            "id": 82,
+            "name": "Stormfall",
+            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "strength": 5,
+            "magic": 4,
+            "appearances": 2,
+            "wielders": ["Aqua"]
+        },
+        {
+            "id": 83,
+            "name": "Brightcrest",
+            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "strength": 4,
+            "magic": 7,
+            "appearances": 2,
+            "wielders": ["Aqua"]
+        },
+        {
+            "id": 84,
+            "name": "Master's Defender",
+            "debutGame": "Kingdom Hearts Birth by Sleep Final Mix",
+            "strength": 7,
+            "magic": 7,
+            "appearances": 3,
+            "wielders": ["Aqua"]
+        },
+        {
+            "id": 85,
+            "name": "χ-Blade",
+            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "appearances": 0
+        },
+        {
+            "id": 86,
             "name": "Zero/One",
             "debutGame": "Kingdom Hearts Re:coded",
             "appearances": 1,
