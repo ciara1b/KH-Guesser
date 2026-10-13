@@ -81,17 +81,18 @@ class _GamePageState extends State<GamePage> {
               });
             },
           ),
-          for (var guess in _game.guesses)
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                for (var category in guess.categoryResults)
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-                    child: Tile(category.value, category.type),
-                  )
-              ],
-            ),
+          for (var guess in _game.guesses.reversed)
+            guess.isEmpty ? SizedBox() :
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  for (var category in guess.categoryResults)
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                      child: Tile(category.value, category.type),
+                    )
+                ],
+              ),
         ],
       ),
     );
@@ -148,8 +149,7 @@ class _GuessInputState extends State<GuessInput> {
           ),
         ),
         IconButton(
-          padding: EdgeInsets.zero,
-          icon: const Icon(Icons.arrow_circle_up),
+          icon: const Icon(Icons.arrow_circle_right),
           onPressed: _onSubmit,
         ),
       ],

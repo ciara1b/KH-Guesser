@@ -52,7 +52,7 @@ final List<Object> categories = [
 ];
 
 class Game {
-  static const int defaultMaxGuesses = 5;
+  static const int defaultMaxGuesses = 8;
 
   Game({this.maxGuesses = defaultMaxGuesses, this.seed}) : _characterToGuess = _generateInitialCharacter(seed), _guesses = List<CharacterGuess>.filled(maxGuesses, CharacterGuess.empty());
 
