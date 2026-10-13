@@ -23,6 +23,8 @@ class Tile extends StatelessWidget {
   String _display(dynamic value) {
     if (value == null) return '';
     if (value is List) return value.join(', ');
+    if (value == true) return 'Yes';
+    if (value == false) return 'No';
     return value.toString();
   }
 

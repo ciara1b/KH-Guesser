@@ -2,19 +2,6 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 
 class Character {
-  Character({
-    required this.id,
-    required this.name,
-    required this.gender,
-    required this.species,
-    required this.debutGame,
-    required this.appearances,
-    this.weapon,
-    this.norted = false,
-    required this.origin,
-    required this.imageUrl,
-  });
-
   final int id;
   final String name;
   final String gender;
@@ -26,6 +13,19 @@ class Character {
   final String origin;
   final String imageUrl;
 
+  Character({
+    required this.id,
+    required this.name,
+    required this.gender,
+    required this.species,
+    required this.debutGame,
+    required this.appearances,
+    this.weapon,
+    this.norted,
+    required this.origin,
+    required this.imageUrl,
+  });
+
   factory Character.fromJson(Map<String, dynamic> json) {
     final String nameForImage = (json['name'] as String).toLowerCase().replaceAll(' ', '-');
 
@@ -36,8 +36,8 @@ class Character {
       species: (json['species'] as List<dynamic>).map((w) => w as String).toList(),
       debutGame: json['debutGame'] as String,
       appearances: json['appearances'] as int,
-      weapon: json['weapon'] as String?,
-      norted: json['norted'] as bool?,
+      weapon: json['weapon'] as String? ?? 'n/a',
+      norted: json['norted'] as bool? ?? false,
       origin: json['origin'] as String,
       imageUrl: 'assets/images/$nameForImage',
     );
