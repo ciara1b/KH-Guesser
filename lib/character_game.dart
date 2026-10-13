@@ -3,6 +3,7 @@ library;
 import 'dart:collection';
 import 'dart:math';
 import 'data/character.dart';
+import 'package:collection/collection.dart';
 
 enum HitType {
   none,
@@ -169,7 +170,7 @@ extension CharacterGuessUtils on CharacterGuess {
       final currentValue = hiddenCharacterMap[r.category];
       HitType type;
 
-      if (currentValue == r.value) {
+      if (currentValue == r.value || currentValue is List && DeepCollectionEquality.unordered().equals(currentValue, r.value)) {
         type = HitType.hit;
       } else if ((r.category == "species" && currentValue.toSet().intersection(r.value.toSet()).isNotEmpty) || (r.category == "appearances" && (r.value - 2 <= currentValue && currentValue <= r.value + 2))) {
         type = HitType.partial;
