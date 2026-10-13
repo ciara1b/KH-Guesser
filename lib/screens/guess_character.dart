@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:khdle/character_game.dart';
 
+const double tileSize = 128;
+const double tilePadding = 8;
+const double tileSlot = tileSize + tilePadding * 2;
+
 class GuessCharacterPage extends StatelessWidget {
   const GuessCharacterPage({super.key});
 
@@ -12,7 +16,6 @@ class GuessCharacterPage extends StatelessWidget {
     );
   }
 }
-
 
 class Tile extends StatelessWidget {
   const Tile(this.value, this.hitType, {super.key});
@@ -33,8 +36,8 @@ class Tile extends StatelessWidget {
     return AnimatedContainer(
       duration: Duration(milliseconds: 500),
       curve: Curves.bounceIn,
-      width: 128,
-      height: 128,
+      width: tileSize,
+      height: tileSize,
       decoration: BoxDecoration(
         border: Border.all(color: Colors.grey.shade300),
         color: switch (hitType) {
@@ -45,14 +48,14 @@ class Tile extends StatelessWidget {
         },
       ),
       child: Center(
-        child: Text(
+        child: Padding(padding: EdgeInsets.all(tilePadding), child: Text(
           _display(value),
           textAlign: TextAlign.center,
           style: TextStyle(
             fontWeight: FontWeight(900),
             fontSize: 16,
           ),
-        ),
+        )),
       ),
     );
   }
@@ -70,16 +73,21 @@ class _GamePageState extends State<GamePage> {
 
   @override
   Widget build(BuildContext context) {
+    final double rowWidth = 4 * tileSlot;
+
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(tilePadding),
       child: Column(
         children: [
-          GuessInput(
-            onSubmitGuess: (String guess) {
-              setState(() {
-                _game.guess(guess);
-              });
-            },
+          SizedBox(
+            width: rowWidth,
+            child: GuessInput(
+              onSubmitGuess: (String guess) {
+                setState(() {
+                  _game.guess(guess);
+                });
+              },
+            )
           ),
           for (var guess in _game.guesses.reversed)
             guess.isEmpty ? SizedBox() :
@@ -147,11 +155,7 @@ class _GuessInputState extends State<GuessInput> {
               },
             ),
           ),
-        ),
-        IconButton(
-          icon: const Icon(Icons.arrow_circle_right),
-          onPressed: _onSubmit,
-        ),
+        )
       ],
     );
   }
