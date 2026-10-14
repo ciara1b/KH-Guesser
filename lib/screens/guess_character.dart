@@ -89,6 +89,16 @@ class _GamePageState extends State<GamePage> {
               },
             )
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              for (var categoryType in categories)
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                  child: Text(categoryType.name),
+                )
+            ],
+          ),
           for (var guess in _game.guesses.reversed)
             guess.isEmpty ? SizedBox() :
               Row(
