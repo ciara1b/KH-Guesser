@@ -16,7 +16,7 @@ typedef CategoryResult = ({String category, dynamic value, HitType type});
 
 List<String> get possibleCharacters => allCharacters.map((c) => c.name).toList();
 
-final List<Object> categories = [
+List<Object> get categories = [
   {
     "type": 'Name',
     "info": '',
@@ -31,11 +31,11 @@ final List<Object> categories = [
   },
   {
     "type": 'Debut Game',
-    "info": '',
+    "info": 'The game in which they first appeared. Games included: Kingdom Hearts, Kingdom Hearts Final Mix, Kingdom Hearts: Chain of Memories, Kingdom Hearts II, Kingdom Hearts II Final Mix, Kingdom Hearts 358/2 Days, Kingdom Hearts Birth By Sleep, Kingdom Hearts Birth By Sleep Final Mix, Kingdom Hearts Re:Coded, Kingdom Hearts 3D Dream Drop Distance, Kingdom Hearts X, Kingdom Hearts Union X, Kingdom Hearts Dark Road, Kingdom Hearts III + Re Mind.',
   },
   {
-    "type": 'Apperances',
-    "info": '',
+    "type": 'Appearances',
+    "info": 'The number of games the character has appeared in throughout the franchise, including canon and non-canon secret endings.',
   },
   {
     "type": 'Weapon',
@@ -43,11 +43,11 @@ final List<Object> categories = [
   },
   {
     "type": 'Norted',
-    "info": '',
+    "info": 'Whether or not they have been part Xehanort at any point throughout the series.',
   },
   {
-    "type": 'Origin',
-    "info": '',
+    "type": 'Franchise',
+    "info": 'The franchise they originate from, e.g. Kingdom Hearts, Toy Story, Final Fantasy, etc.',
   }
 ];
 
