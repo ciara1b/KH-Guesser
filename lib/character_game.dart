@@ -13,42 +13,43 @@ enum HitType {
 }
 
 typedef CategoryResult = ({String category, dynamic value, HitType type});
+typedef CategoryInfo = ({String category, String value});
 
 List<String> get possibleCharacters => allCharacters.map((c) => c.name).toList();
 
-List<Object> get categories = [
-  {
-    "type": 'Name',
-    "info": '',
-  },
-  {
-    "type": 'Gender',
-    "info": '',
-  },
-  {
-    "type": 'Species',
-    "info": '',
-  },
-  {
-    "type": 'Debut Game',
-    "info": 'The game in which they first appeared. Games included: Kingdom Hearts, Kingdom Hearts Final Mix, Kingdom Hearts: Chain of Memories, Kingdom Hearts II, Kingdom Hearts II Final Mix, Kingdom Hearts 358/2 Days, Kingdom Hearts Birth By Sleep, Kingdom Hearts Birth By Sleep Final Mix, Kingdom Hearts Re:Coded, Kingdom Hearts 3D Dream Drop Distance, Kingdom Hearts X, Kingdom Hearts Union X, Kingdom Hearts Dark Road, Kingdom Hearts III + Re Mind.',
-  },
-  {
-    "type": 'Appearances',
-    "info": 'The number of games the character has appeared in throughout the franchise, including canon and non-canon secret endings.',
-  },
-  {
-    "type": 'Weapon',
-    "info": '',
-  },
-  {
-    "type": 'Norted',
-    "info": 'Whether or not they have been part Xehanort at any point throughout the series.',
-  },
-  {
-    "type": 'Franchise',
-    "info": 'The franchise they originate from, e.g. Kingdom Hearts, Toy Story, Final Fantasy, etc.',
-  }
+const List<CategoryInfo> categories = [
+  (
+    category: 'Name',
+    value: '',
+  ),
+  (
+    category: 'Gender',
+    value: '',
+  ),
+  (
+    category: 'Species',
+    value: '',
+  ),
+  (
+    category: 'Debut Game',
+    value: 'The game in which they first appeared. Games included: Kingdom Hearts, Kingdom Hearts Final Mix, Kingdom Hearts: Chain of Memories, Kingdom Hearts II, Kingdom Hearts II Final Mix, Kingdom Hearts 358/2 Days, Kingdom Hearts Birth By Sleep, Kingdom Hearts Birth By Sleep Final Mix, Kingdom Hearts Re:Coded, Kingdom Hearts 3D Dream Drop Distance, Kingdom Hearts X, Kingdom Hearts Union X, Kingdom Hearts Dark Road, Kingdom Hearts III + Re Mind.',
+  ),
+  (
+    category: 'Appearances',
+    value: 'The number of games the character has appeared in throughout the franchise, including canon and non-canon secret endings.',
+  ),
+  (
+    category: 'Weapon',
+    value: '',
+  ),
+  (
+    category: 'Norted',
+    value: 'Whether or not they have been part Xehanort at any point throughout the series.',
+  ),
+  (
+    category: 'Franchise',
+    value: 'The franchise they originate from, e.g. Kingdom Hearts, Toy Story, Final Fantasy, etc.',
+  )
 ];
 
 class Game {

@@ -93,10 +93,7 @@ class _GamePageState extends State<GamePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               for (var categoryType in categories)
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-                  child: Text(categoryType.name),
-                )
+                SizedBox(width: tileSlot, child: Column(children: [Text(categoryType.category)])),
             ],
           ),
           for (var guess in _game.guesses.reversed)
@@ -105,10 +102,7 @@ class _GamePageState extends State<GamePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   for (var category in guess.categoryResults)
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-                      child: Tile(category.value, category.type),
-                    )
+                    Padding(padding: EdgeInsetsGeometry.only(top: tilePadding), child: SizedBox(width: tileSlot, child: Column(children: [Tile(category.value, category.type)]))),
                 ],
               ),
         ],
