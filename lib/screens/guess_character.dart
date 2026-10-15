@@ -93,7 +93,33 @@ class _GamePageState extends State<GamePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               for (var categoryType in categories)
-                SizedBox(width: tileSlot, child: Column(children: [Text(categoryType.category)])),
+                SizedBox(
+                  width: tileSlot,
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Flexible(
+                            child: Text(
+                              categoryType.category,
+                            ),
+                          ),
+                          if (categoryType.value is String) ...[
+                            const SizedBox(width: tilePadding / 2),
+                            Tooltip(
+                              message: categoryType.value,
+                              constraints: BoxConstraints(maxWidth: rowWidth / 2),
+                              child: Align(alignment: Alignment.topRight, child: Padding(padding: const EdgeInsets.only(right: 4.0), child: Icon(Icons.info_outline, size: 14))),
+                            ),
+                          ],
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
             ],
           ),
           for (var guess in _game.guesses.reversed)
@@ -102,7 +128,17 @@ class _GamePageState extends State<GamePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   for (var category in guess.categoryResults)
-                    Padding(padding: EdgeInsetsGeometry.only(top: tilePadding), child: SizedBox(width: tileSlot, child: Column(children: [Tile(category.value, category.type)]))),
+                    Padding(
+                      padding: EdgeInsetsGeometry.only(top: tilePadding),
+                      child: SizedBox(
+                        width: tileSlot,
+                        child: Column(
+                          children: [
+                            Tile(category.value, category.type)
+                          ]
+                        )
+                      )
+                    ),
                 ],
               ),
         ],
