@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:khdle/character_game.dart';
+import 'package:flutter_typeahead/flutter_typeahead.dart';
 
 const double tileSize = 128;
 const double tilePadding = 8;
@@ -183,18 +184,32 @@ class _GuessInputState extends State<GuessInput> {
         Expanded(
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: TextField(
-              maxLength: 32,
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(35)),
-                ),
-              ),
+            child: TypeAheadField<String>(
               controller: _textEditingController,
-              autofocus: true,
               focusNode: _focusNode,
-              onSubmitted: (value) {
-                _onSubmit();
+              builder: (context, controller, focusNode) {
+                return TextField(
+                  controller: controller,
+                  focusNode: focusNode,
+                  maxLength: 32,
+                  decoration: const InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(35)),
+                    ),
+                  ),
+                  autofocus: true,
+                  onSubmitted: (_) => _onSubmit(),
+                );
+              },
+              suggestionsCallback: (pattern) async {
+                return possibleCharacters
+                    .where((s) => s.toLowerCase().contains(pattern.toLowerCase()))
+                    .toList();
+              },
+              itemBuilder: (context, suggestion) => ListTile(title: Text(suggestion)),
+              hideOnSelect: true,
+              onSelected: (suggestion) {
+                _textEditingController.text = suggestion;
               },
             ),
           ),
