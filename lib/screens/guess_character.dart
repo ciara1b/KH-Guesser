@@ -92,33 +92,34 @@ class _GamePageState extends State<GamePage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              for (var categoryType in categories)
-                SizedBox(
-                  width: tileSlot,
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Flexible(
-                            child: Text(
-                              categoryType.category,
+              if (!_game.guesses.first.isEmpty)
+                for (var categoryType in categories)
+                  SizedBox(
+                    width: tileSlot,
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Flexible(
+                              child: Text(
+                                categoryType.category,
+                              ),
                             ),
-                          ),
-                          if (categoryType.value is String) ...[
-                            const SizedBox(width: tilePadding / 2),
-                            Tooltip(
-                              message: categoryType.value,
-                              constraints: BoxConstraints(maxWidth: rowWidth / 2),
-                              child: Align(alignment: Alignment.topRight, child: Padding(padding: const EdgeInsets.only(right: 4.0), child: Icon(Icons.info_outline, size: 14))),
-                            ),
+                            if (categoryType.value is String) ...[
+                              const SizedBox(width: tilePadding / 2),
+                              Tooltip(
+                                message: categoryType.value,
+                                constraints: BoxConstraints(maxWidth: rowWidth / 2),
+                                child: Align(alignment: Alignment.topRight, child: Padding(padding: const EdgeInsets.only(right: 4.0), child: Icon(Icons.info_outline, size: 14))),
+                              ),
+                            ],
                           ],
-                        ],
-                      ),
-                    ],
-                  ),
+                        ),
+                      ],
+                    ),
                 ),
             ],
           ),
