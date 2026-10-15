@@ -12,7 +12,7 @@ enum HitType {
   miss,
 }
 
-typedef CategoryResult = ({String category, dynamic value, HitType type});
+typedef CategoryResult = ({String category, dynamic value, HitType type, dynamic clue});
 typedef CategoryInfo = ({String category, String? value});
 
 List<String> get possibleCharacters => allCharacters.map((c) => c.name).toList();
@@ -131,20 +131,20 @@ class CharacterGuess {
 
   factory CharacterGuess.empty() => CharacterGuess(
     <CategoryResult>[
-      (category: "name", value: null, type: HitType.none),
-      (category: "gender", value: null, type: HitType.none),
-      (category: "species", value: null, type: HitType.none),
-      (category: "debutGame", value: null, type: HitType.none),
-      (category: "appearances", value: null, type: HitType.none),
-      (category: "weapon", value: null, type: HitType.none),
-      (category: "norted", value: null, type: HitType.none),
-      (category: "origin", value: null, type: HitType.none),
+      (category: "name", value: null, type: HitType.none, clue: null),
+      (category: "gender", value: null, type: HitType.none, clue: null),
+      (category: "species", value: null, type: HitType.none, clue: null),
+      (category: "debutGame", value: null, type: HitType.none, clue: null),
+      (category: "appearances", value: null, type: HitType.none, clue: null),
+      (category: "weapon", value: null, type: HitType.none, clue: null),
+      (category: "norted", value: null, type: HitType.none, clue: null),
+      (category: "origin", value: null, type: HitType.none, clue: null),
     ]
   );
 
   factory CharacterGuess.fromString(String guess) {
     final guessedCharacter = allCharacters.firstWhere((c) => c.name == guess);
-    final categoryResults = guessedCharacter.toMap().entries.map((entry) => (category: entry.key, value: entry.value, type: HitType.none)).toList();
+    final categoryResults = guessedCharacter.toMap().entries.map((entry) => (category: entry.key, value: entry.value, type: HitType.none, clue: null)).toList();
     return CharacterGuess(categoryResults);
   }
 
@@ -171,16 +171,21 @@ extension CharacterGuessUtils on CharacterGuess {
     for (var r in categoryResults) {
       final currentValue = hiddenCharacterMap[r.category];
       HitType type;
+      dynamic clue;
 
       if (currentValue == r.value || currentValue is List && DeepCollectionEquality.unordered().equals(currentValue, r.value)) {
         type = HitType.hit;
-      } else if ((r.category == "species" && currentValue.toSet().intersection(r.value.toSet()).isNotEmpty) || (r.category == "appearances" && (r.value - 2 <= currentValue && currentValue <= r.value + 2))) {
+      } else if ((r.category == "species" && currentValue.toSet().intersection(r.value.toSet()).isNotEmpty)) {
         type = HitType.partial;
       } else {
         type = HitType.miss;
       }
 
-      result.add((category: r.category, value: r.value, type: type));
+      if (r.category == "appearances") {
+        clue = r.value < currentValue;
+      }
+
+      result.add((category: r.category, value: r.value, type: type, clue: clue));
     }
 
     return CharacterGuess(result);

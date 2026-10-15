@@ -18,10 +18,11 @@ class GuessCharacterPage extends StatelessWidget {
 }
 
 class Tile extends StatelessWidget {
-  const Tile(this.value, this.hitType, {super.key});
+  const Tile(this.value, this.hitType, this.clue, {super.key});
 
   final dynamic value;
   final HitType hitType;
+  final dynamic clue;
 
   String _display(dynamic value) {
     if (value == null) return '';
@@ -39,6 +40,7 @@ class Tile extends StatelessWidget {
       width: tileSize,
       height: tileSize,
       decoration: BoxDecoration(
+        image: value is int && hitType != HitType.hit ? (clue != null && clue ? DecorationImage(image: NetworkImage('assets/up-arrow.png'), fit: BoxFit.cover, opacity: 0.1) : DecorationImage(image: NetworkImage('assets/down-arrow.png'), fit: BoxFit.cover, opacity: 0.1)) : null,
         border: Border.all(color: Colors.grey.shade300),
         color: switch (hitType) {
           HitType.hit => Colors.green,
@@ -135,7 +137,7 @@ class _GamePageState extends State<GamePage> {
                         width: tileSlot,
                         child: Column(
                           children: [
-                            Tile(category.value, category.type)
+                            Tile(category.value, category.type, category.clue)
                           ]
                         )
                       )
