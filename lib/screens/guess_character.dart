@@ -88,6 +88,7 @@ class _GamePageState extends State<GamePage> {
             width: rowWidth,
             child: GuessInput(
               remainingCharacters: guessableSolutions,
+              didWin: () => _game.didWin,
               onSubmitGuess: (String guess) {
                 setState(() {
                   _game.guess(guess);
@@ -156,10 +157,11 @@ class _GamePageState extends State<GamePage> {
 }
 
 class GuessInput extends StatefulWidget {
-  const GuessInput({super.key, required this.onSubmitGuess, required this.remainingCharacters});
+  const GuessInput({super.key, required this.onSubmitGuess, required this.remainingCharacters, required this.didWin});
 
   final void Function(String) onSubmitGuess;
   final List<String> remainingCharacters;
+  final bool Function() didWin;
 
   @override
   State<GuessInput> createState() => _GuessInputState();
@@ -195,6 +197,7 @@ class _GuessInputState extends State<GuessInput> {
               builder: (context, controller, focusNode) {
                 return TextField(
                   controller: controller,
+                  enabled: !widget.didWin(),
                   focusNode: focusNode,
                   maxLength: 32,
                   decoration: const InputDecoration(
