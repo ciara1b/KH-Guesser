@@ -74,6 +74,8 @@ class GamePage extends StatefulWidget {
 class _GamePageState extends State<GamePage> {
   final Game _game = Game();
 
+  var guessableSolutions = possibleCharacters;
+
   @override
   Widget build(BuildContext context) {
     final double rowWidth = 4 * tileSlot;
@@ -85,10 +87,12 @@ class _GamePageState extends State<GamePage> {
           SizedBox(
             width: rowWidth,
             child: GuessInput(
+              remainingCharacters: guessableSolutions,
               onSubmitGuess: (String guess) {
                 setState(() {
                   _game.guess(guess);
                 });
+                guessableSolutions.remove(guess);
               },
             )
           ),
@@ -152,9 +156,10 @@ class _GamePageState extends State<GamePage> {
 }
 
 class GuessInput extends StatefulWidget {
-  const GuessInput({super.key, required this.onSubmitGuess});
+  const GuessInput({super.key, required this.onSubmitGuess, required this.remainingCharacters});
 
   final void Function(String) onSubmitGuess;
+  final List<String> remainingCharacters;
 
   @override
   State<GuessInput> createState() => _GuessInputState();
@@ -202,7 +207,7 @@ class _GuessInputState extends State<GuessInput> {
                 );
               },
               suggestionsCallback: (pattern) async {
-                return possibleCharacters
+                return widget.remainingCharacters
                     .where((s) => s.toLowerCase().contains(pattern.toLowerCase()))
                     .toList();
               },
