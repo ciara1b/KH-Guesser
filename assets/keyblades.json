@@ -779,11 +779,371 @@
             "wielders": ["Data-Sora"]
         },
         {
-            "id": 4,
+            "id": 87,
+            "name": "Skull Noise",
+            "debutGame": "Kingdom Hearts 3D: Dream Drop Distance",
+            "strength": 7,
+            "magic": 7,
+            "appearances": 1,
+            "wielders": ["Sora", "Riku"]
+        },
+        {
+            "id": 88,
+            "name": "Guardian Bell",
+            "debutGame": "Kingdom Hearts 3D: Dream Drop Distance",
+            "strength": 7,
+            "magic": 10,
+            "appearances": 1,
+            "wielders": ["Sora", "Riku"]
+        },
+        {
+            "id": 89,
+            "name": "Ocean's Rage",
+            "debutGame": "Kingdom Hearts 3D: Dream Drop Distance",
+            "strength": 8,
+            "magic": 10,
+            "appearances": 1,
+            "wielders": ["Riku"]
+        },
+        {
+            "id": 90,
+            "name": "Dual Disc",
+            "debutGame": "Kingdom Hearts 3D: Dream Drop Distance",
+            "strength": 10,
+            "magic": 7,
+            "appearances": 1,
+            "wielders": ["Sora", "Riku"]
+        },
+        {
+            "id": 91,
+            "name": "Knockout Punch",
+            "debutGame": "Kingdom Hearts 3D: Dream Drop Distance",
+            "strength": 12,
+            "magic": 10,
+            "appearances": 1,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 92,
+            "name": "All for One",
+            "debutGame": "Kingdom Hearts 3D: Dream Drop Distance",
+            "strength": 10,
+            "magic": 12,
+            "appearances": 1,
+            "wielders": ["Sora", "Riku"]
+        },
+        {
+            "id": 93,
+            "name": "Counterpoint",
+            "debutGame": "Kingdom Hearts 3D: Dream Drop Distance",
+            "strength": 12,
+            "magic": 14,
+            "appearances": 2,
+            "wielders": ["Sora", "Riku", "Player"]
+        },
+        {
+            "id": 94,
+            "name": "Sweet Dreams",
+            "debutGame": "Kingdom Hearts 3D: Dream Drop Distance",
+            "strength": 14,
+            "magic": 12,
+            "appearances": 1,
+            "wielders": ["Sora", "Riku"]
+        },
+        {
+            "id": 95,
+            "name": "Divewing",
+            "debutGame": "Kingdom Hearts 3D: Dream Drop Distance",
+            "strength": 12,
+            "magic": 15,
+            "appearances": 1,
+            "wielders": ["Sora", "Riku"]
+        },
+        {
+            "id": 96,
+            "name": "End of Pain",
+            "debutGame": "Kingdom Hearts 3D: Dream Drop Distance",
+            "strength": 14,
+            "magic": 16,
+            "appearances": 1,
+            "wielders": ["Sora", "Riku"]
+        },
+        {
+            "id": 97,
+            "name": "Unbound",
+            "debutGame": "Kingdom Hearts 3D: Dream Drop Distance",
+            "strength": 18,
+            "magic": 14,
+            "appearances": 1,
+            "wielders": ["Sora", "Riku"]
+        },
+        {
+            "id": 98,
+            "name": "Aced's Keyblade",
+            "debutGame": "Kingdom Hearts χ[chi]",
+            "appearances": 0,
+            "wielders": []
+        },
+        {
+            "id": 99,
+            "name": "Ava's Keyblade",
+            "debutGame": "Kingdom Hearts χ[chi]",
+            "appearances": 0,
+            "wielders": []
+        },
+        {
+            "id": 100,
+            "name": "Gula's Keyblade",
+            "debutGame": "Kingdom Hearts χ[chi]",
+            "appearances": 0,
+            "wielders": []
+        },
+        {
+            "id": 101,
+            "name": "Invi's Keyblade",
+            "debutGame": "Kingdom Hearts χ[chi]",
+            "appearances": 0,
+            "wielders": []
+        },
+        {
+            "id": 102,
+            "name": "Ira's Keyblade",
+            "debutGame": "Kingdom Hearts χ[chi]",
+            "appearances": 0,
+            "wielders": []
+        },
+        {
+            "id": 103,
+            "name": "Starlight",
+            "debutGame": "Kingdom Hearts χ[chi]",
+            "appearances": 4,
+            "wielders": ["Sora", "Player", "Xehanort"]
+        },
+        {
+            "id": 104,
+            "name": "Moogle O'Glory",
+            "debutGame": "Kingdom Hearts χ[chi]",
+            "appearances": 2,
+            "wielders": ["Player"]
+        },
+        {
+            "id": 105,
+            "name": "Bad Guy Breaker",
+            "debutGame": "Kingdom Hearts Union χ[Cross]",
+            "appearances": 1,
+            "wielders": ["Player"]
+        },
+        {
+            "id": 106,
+            "name": "Hero's Origin",
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "strength": 5,
+            "magic": 2,
+            "appearances": 1,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 107,
+            "name": "Shooting Star",
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "strength": 3,
+            "magic": 5,
+            "appearances": 1,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 108,
+            "name": "Favourite Deputy",
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "strength": 5,
+            "magic": 3,
+            "appearances": 1,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 109,
+            "name": "Ever After",
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "strength": 2,
+            "magic": 6,
+            "appearances": 1,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 110,
+            "name": "Happy Gear",
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "strength": 6,
+            "magic": 2,
+            "appearances": 1,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 111,
+            "name": "Crystal Snow",
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "strength": 3,
+            "magic": 6,
+            "appearances": 1,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 112,
+            "name": "Hunny Spout",
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "strength": 4,
+            "magic": 4,
+            "appearances": 1,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 113,
+            "name": "Nano Gear",
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "strength": 5,
+            "magic": 4,
+            "appearances": 1,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 114,
+            "name": "Wheel of Fate",
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "strength": 6,
+            "magic": 4,
+            "appearances": 1,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 115,
+            "name": "Grand Chef",
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "strength": 4,
+            "magic": 6,
+            "appearances": 1,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 116,
+            "name": "Classic Tone",
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "strength": 6,
+            "magic": 9,
+            "appearances": 1,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 117,
+            "name": "Midnight Blue",
+            "debutGame": "Kingdom Hearts III + Re Mind (PlayStation 4)",
+            "strength": 4,
+            "magic": 4,
+            "appearances": 1,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 118,
+            "name": "Phantom Green",
+            "debutGame": "Kingdom Hearts III + Re Mind (Xbox One)",
+            "strength": 4,
+            "magic": 4,
+            "appearances": 1,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 119,
+            "name": "Dawn Till Dusk",
+            "debutGame": "Kingdom Hearts III + Re Mind (7-Eleven)",
+            "strength": 4,
+            "magic": 4,
+            "appearances": 1,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 120,
+            "name": "Elemental Encoder",
+            "debutGame": "Kingdom Hearts III + Re Mind (Epic Games)",
+            "strength": 4,
+            "magic": 4,
+            "appearances": 1,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 121,
+            "name": "Advent Red",
+            "debutGame": "Kingdom Hearts III + Re Mind (Nintendo Switch)",
+            "strength": 4,
+            "magic": 4,
+            "appearances": 1,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 122,
+            "name": "Dead of Night",
+            "debutGame": "Kingdom Hearts III + Re Mind (Steam)",
+            "strength": 4,
+            "magic": 4,
+            "appearances": 1,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 123,
+            "name": "Long Night",
+            "debutGame": "Kingdom Hearts III + Re Mind (Nintendo Switch 2)",
+            "strength": 4,
+            "magic": 4,
+            "appearances": 1,
+            "wielders": ["Sora"]
+        },
+        {
+            "id": 124,
+            "name": "Braveheart",
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "strength": 5,
+            "magic": 5,
+            "appearances": 1,
+            "wielders": ["Riku"]
+        },
+        {
+            "id": 125,
+            "name": "Star Cluster",
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "strength": 5,
+            "magic": 5,
+            "appearances": 1,
+            "wielders": ["King Mickey"]
+        },
+        {
+            "id": 126,
+            "name": "Bond of the Blaze",
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "strength": 5,
+            "magic": 5,
+            "appearances": 1,
+            "wielders": ["Lea"]
+        },
+        {
+            "id": 127,
+            "name": "Replica Kingdom Key",
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "strength": 5,
+            "magic": 5,
+            "appearances": 1,
+            "wielders": ["Xion"]
+        },
+        {
+            "id": 128,
+            "name": "Keyblade of Heart",
+            "debutGame": "Kingdom Hearts",
+            "appearances": 0,
+            "wielders": []
+        },
+        {
+            "id": 129,
             "name": "No Name",
-            "debutGame": "Kingdom Hearts χ Back Cover",
-            "appearances": 11,
-            "wielders": ["Master of Masters", "Luxu", "Odin", "Young Xehanort", "Master Xehanort", "Terra-Xehanort", "Replica Xehanorts"]
+            "debutGame": "Kingdom Hearts Birth By Sleep",
+            "appearances": 0,
+            "wielders": []
         }
     ]
 }
