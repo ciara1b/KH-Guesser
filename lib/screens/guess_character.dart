@@ -1,3 +1,5 @@
+import 'dart:collection';
+
 import 'package:flutter/material.dart';
 import 'package:khdle/character_game.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
@@ -33,6 +35,21 @@ class Tile extends StatelessWidget {
     return value.toString();
   }
 
+  static List<Shadow> outlinedText({double strokeWidth = 1, Color strokeColor = Colors.black, int precision = 5}) {
+    Set<Shadow> result = HashSet();
+    for (int x = 1; x < strokeWidth + precision; x++) {
+      for(int y = 1; y < strokeWidth + precision; y++) {
+        double offsetX = x.toDouble();
+        double offsetY = y.toDouble();
+        result.add(Shadow(offset: Offset(-strokeWidth / offsetX, -strokeWidth / offsetY), color: strokeColor));
+        result.add(Shadow(offset: Offset(-strokeWidth / offsetX, strokeWidth / offsetY), color: strokeColor));
+        result.add(Shadow(offset: Offset(strokeWidth / offsetX, -strokeWidth / offsetY), color: strokeColor));
+        result.add(Shadow(offset: Offset(strokeWidth / offsetX, strokeWidth / offsetY), color: strokeColor));
+      }
+    }
+    return result.toList();
+  }
+
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
@@ -42,11 +59,15 @@ class Tile extends StatelessWidget {
       height: tileSize,
       decoration: BoxDecoration(
         image: value is int && hitType != HitType.hit ? (clue != null && clue ? DecorationImage(image: NetworkImage('assets/up-arrow.png'), fit: BoxFit.cover, opacity: 0.1) : DecorationImage(image: NetworkImage('assets/down-arrow.png'), fit: BoxFit.cover, opacity: 0.1)) : null,
-        border: Border.all(color: Colors.grey.shade300),
+        border: Border.all(
+          color: Color.fromARGB(255, 94, 93, 93),
+          width: 3.0,
+        ),
+        borderRadius: BorderRadius.all(Radius.circular(20.0)),
         color: switch (hitType) {
-          HitType.hit => Colors.green,
-          HitType.partial => Colors.yellow,
-          HitType.miss => Colors.grey,
+          HitType.hit => Color(0xFF34A314),
+          HitType.partial => Color(0xFFffdb5b),
+          HitType.miss => Color(0xFF272727),
           _ => Colors.white,
         },
       ),
@@ -57,6 +78,8 @@ class Tile extends StatelessWidget {
           style: TextStyle(
             fontWeight: FontWeight(900),
             fontSize: 16,
+            color: Color(0xFFFDFFFD),
+            shadows: outlinedText(),
           ),
         )),
       ),
