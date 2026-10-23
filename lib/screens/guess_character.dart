@@ -15,7 +15,15 @@ class GuessCharacterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Guess Today's Character!")),
-      body: Center(child: GamePage()),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('guessing-bg-light.png'),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Center(child: GamePage())
+      ),
     );
   }
 }
@@ -137,6 +145,9 @@ class _GamePageState extends State<GamePage> {
                             Flexible(
                               child: Text(
                                 categoryType.category,
+                                style: TextStyle(
+                                  color: Color(0xFFFDFFFD),
+                                ),
                               ),
                             ),
                             if (categoryType.value is String) ...[
@@ -144,7 +155,30 @@ class _GamePageState extends State<GamePage> {
                               Tooltip(
                                 message: categoryType.value,
                                 constraints: BoxConstraints(maxWidth: rowWidth / 2),
-                                child: Align(alignment: Alignment.topRight, child: Padding(padding: const EdgeInsets.only(right: 4.0), child: Icon(Icons.info_outline, size: 14))),
+                                decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: Color(0xFF0191CE),
+                                    width: 3.0,
+                                  ),
+                                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                                  gradient: LinearGradient(
+                                    begin: AlignmentGeometry.topCenter,
+                                    end: AlignmentGeometry.bottomCenter,
+                                    colors: [Color(0xFF0191CE), Color(0xFF002077)]
+                                  ),
+                                  boxShadow: [BoxShadow(color: Colors.black, blurRadius: 0.5, spreadRadius: 0.5)],
+                                ),
+                                child: Align(
+                                  alignment: Alignment.topRight,
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(right: 4.0),
+                                    child: Icon(
+                                      Icons.info_outline,
+                                      size: 14,
+                                      color: Color(0xFFFDFFFD)
+                                    ),
+                                  ),
+                                ),
                               ),
                             ],
                           ],
@@ -224,6 +258,9 @@ class _GuessInputState extends State<GuessInput> {
                   focusNode: focusNode,
                   maxLength: 32,
                   decoration: const InputDecoration(
+                    fillColor: Color(0xFFFDFFFD),
+                    filled: true,
+                    counterText: '',
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(35)),
                     ),
