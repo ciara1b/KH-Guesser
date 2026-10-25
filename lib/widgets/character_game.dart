@@ -1,18 +1,9 @@
 library;
 
 import 'package:collection/collection.dart';
+import 'package:khdle/data/category_info.dart';
 import 'dart:math';
 import '../data/character.dart';
-
-enum HitType {
-  none,
-  hit,
-  partial,
-  miss,
-}
-
-typedef CategoryResult = ({String category, dynamic value, HitType type, dynamic clue});
-typedef CategoryInfo = ({String category, String? value});
 
 List<String> get possibleCharacters => allCharacters.map((c) => c.name).toList();
 

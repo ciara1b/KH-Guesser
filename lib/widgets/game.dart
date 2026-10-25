@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:khdle/widgets/character_game.dart';
+import 'package:khdle/data/category_info.dart';
 import 'package:khdle/widgets/tile.dart';
 import 'package:khdle/widgets/guess_input.dart';
 
