@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:khdle/widgets/keyblade_game.dart';
+import 'package:khdle/widgets/back_button.dart';
 import 'package:khdle/widgets/game.dart';
+import 'package:khdle/widgets/keyblade_game.dart';
 
 class GuessKeybladePage extends StatelessWidget {
   const GuessKeybladePage({super.key});
@@ -8,7 +9,6 @@ class GuessKeybladePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Guess Today's Keyblade!")),
       body: Container(
         width: double.infinity,
         height: double.infinity,
@@ -18,18 +18,24 @@ class GuessKeybladePage extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        child: LayoutBuilder(
-          builder: (context, constraints) => SingleChildScrollView(
-            child: ConstrainedBox(
-              // Content is at least as tall as the page, so it lays out as
-              // before, and grows (and scrolls) once it exceeds the page.
-              constraints: BoxConstraints(minHeight: constraints.maxHeight),
-              child: Align(
-                alignment: Alignment.topCenter,
-                child: GamePage(Game(), possibleKeyblades, categories),
+        child: Stack(
+          children: [
+            LayoutBuilder(
+              builder: (context, constraints) => SingleChildScrollView(
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(minHeight: constraints.maxHeight),
+                  child: Align(
+                    alignment: Alignment.topCenter,
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 64),
+                      child: GamePage(Game(), possibleKeyblades, categories),
+                    ),
+                  ),
+                ),
               ),
             ),
-          ),
+            CustomBackButton(),
+          ],
         ),
       ),
     );
