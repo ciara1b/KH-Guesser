@@ -21,7 +21,7 @@ class _GamePageState extends State<GamePage> {
     final double rowWidth = 4 * tileSlot;
 
     return Padding(
-      padding: const EdgeInsets.all(tilePadding),
+      padding: const EdgeInsets.all(0.0),
       child: Column(
         children: [
           SizedBox(
