@@ -10,13 +10,27 @@ class GuessCharacterPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text("Guess Today's Character!")),
       body: Container(
-        decoration: BoxDecoration(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('guessing-bg-light.png'),
             fit: BoxFit.cover,
           ),
         ),
-        child: Center(child: GamePage(Game(), possibleCharacters, categories))
+        child: LayoutBuilder(
+          builder: (context, constraints) => SingleChildScrollView(
+            child: ConstrainedBox(
+              // Content is at least as tall as the page, so it lays out as
+              // before, and grows (and scrolls) once it exceeds the page.
+              constraints: BoxConstraints(minHeight: constraints.maxHeight),
+              child: Align(
+                alignment: Alignment.topCenter,
+                child: GamePage(Game(), possibleCharacters, categories),
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }

@@ -21,85 +21,66 @@ class _LandingPageState extends State<LandingPage> {
     _isHovering = List.filled(widget.buttonOptions.length, false);
   }
 
+  void _openPage(String value) {
+    final Widget screen = switch (value) {
+      'Character' => const GuessCharacterPage(),
+      'Keyblade' => const GuessKeybladePage(),
+      'Enemy' => const GuessEnemyPage(),
+      _ => throw ArgumentError('Unknown option: $value'),
+    };
+    Navigator.push(
+      context,
+      MaterialPageRoute<void>(builder: (context) => screen),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        ListView(
-          scrollDirection: Axis.vertical,
-          shrinkWrap: true,
+    return Center(
+      child: SingleChildScrollView(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             for (var (index, value) in widget.buttonOptions.indexed)
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: index == widget.buttonOptions.length - 1
-                        ? EdgeInsets.zero
-                        : EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 16.0),
-                    child: MouseRegion(
-                      onEnter: (_) => setState(() => _isHovering[index] = true),
-                      onExit: (_) => setState(() => _isHovering[index] = false),
-                      cursor: SystemMouseCursors.click,
-                      child: AnimatedScale(
-                        scale: _isHovering[index] ? 1.05 : 1.0,
-                        duration: const Duration(milliseconds: 150),
-                        child: Expanded(
-                          flex: 1,
-                          child: Container(
-                            width: 480.0,
-                            height: 100.0,
-                            alignment: AlignmentGeometry.center,
-                            decoration: BoxDecoration(
-                              border: Border.all(),
-                              borderRadius: BorderRadius.circular(25),
-                              shape: BoxShape.rectangle,
+              Padding(
+                padding: EdgeInsets.only(
+                  bottom: index == widget.buttonOptions.length - 1 ? 0 : 16,
+                ),
+                child: MouseRegion(
+                  onEnter: (_) => setState(() => _isHovering[index] = true),
+                  onExit: (_) => setState(() => _isHovering[index] = false),
+                  cursor: SystemMouseCursors.click,
+                  child: AnimatedScale(
+                    scale: _isHovering[index] ? 1.05 : 1.0,
+                    duration: const Duration(milliseconds: 150),
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxWidth: 480),
+                      child: SizedBox(
+                        height: 100,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            minimumSize: const Size.fromHeight(100),
+                            shape: RoundedRectangleBorder(
+                              side: const BorderSide(),
+                              borderRadius: BorderRadius.circular(24),
                             ),
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                minimumSize: Size.fromHeight(116),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(24.0),
-                                ),
-                              ),
-                              onPressed: () {
-                                dynamic screen;
-                                switch (value) {
-                                  case 'Character':
-                                    screen = const GuessCharacterPage();
-                                    break;
-                                  case 'Keyblade':
-                                    screen = const GuessKeybladePage();
-                                    break;
-                                  case 'Enemy':
-                                    screen = const GuessEnemyPage();
-                                    break;
-                                }
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute<void>(
-                                    builder: (context) => screen
-                                  ),
-                                );
-                              },
-                              child: Text(
-                                value,
-                                style: const TextStyle(fontSize: 24),
-                              ),
-                            ),
+                          ),
+                          onPressed: () => _openPage(value),
+                          child: Text(
+                            value,
+                            style: const TextStyle(fontSize: 24),
                           ),
                         ),
                       ),
                     ),
                   ),
-                ],
+                ),
               ),
           ],
         ),
-      ],
+      ),
     );
   }
 }
