@@ -19,11 +19,11 @@ const List<CategoryInfo> categories = [
   ),
   (
     category: 'Strength',
-    value: 'The base strength stat/boost the keyblade provides in the first game it can be used.',
+    value: 'The base strength stat/boost the keyblade provides in the first game it can be used. Yellow indicates you are within 2 of the correct number.',
   ),
   (
     category: 'Magic',
-    value: 'The base magic stat/boost the keyblade provides in the first game it can be used.',
+    value: 'The base magic stat/boost the keyblade provides in the first game it can be used. Yellow indicates you are within 2 of the correct number.',
   ),
   (
     category: 'Wielders',
@@ -31,7 +31,7 @@ const List<CategoryInfo> categories = [
   ),
   (
     category: 'Appearances',
-    value: 'The number of games the keyblade is equippable in throughout the franchise. $gamesIncluded',
+    value: 'The number of games the keyblade is equippable in throughout the franchise. Yellow indicates you are within 2 of the correct number. $gamesIncluded',
   )
 ];
 
@@ -157,7 +157,7 @@ extension KeybladeGuessUtils on KeybladeGuess {
 
       if (currentValue == r.value || currentValue is List && DeepCollectionEquality.unordered().equals(currentValue, r.value)) {
         type = HitType.hit;
-      } else if ((r.value is List && currentValue.toSet().intersection(r.value.toSet()).isNotEmpty)) {
+      } else if ((r.value is List && currentValue.toSet().intersection(r.value.toSet()).isNotEmpty) || (r.value is int && (currentValue - r.value).abs() <= 2)) {
         type = HitType.partial;
       } else {
         type = HitType.miss;

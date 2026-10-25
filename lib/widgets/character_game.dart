@@ -27,7 +27,7 @@ const List<CategoryInfo> categories = [
   ),
   (
     category: 'Appearances',
-    value: 'The number of games the character has appeared in throughout the franchise, including canon and non-canon secret endings. $gamesIncluded',
+    value: 'The number of games the character has appeared in throughout the franchise, including canon and non-canon secret endings. Yellow indicates you are within 2 of the correct number. $gamesIncluded',
   ),
   (
     category: 'Weapon',
@@ -165,7 +165,7 @@ extension CharacterGuessUtils on CharacterGuess {
 
       if (currentValue == r.value || currentValue is List && DeepCollectionEquality.unordered().equals(currentValue, r.value)) {
         type = HitType.hit;
-      } else if ((r.value is List && currentValue.toSet().intersection(r.value.toSet()).isNotEmpty)) {
+      } else if ((r.value is List && currentValue.toSet().intersection(r.value.toSet()).isNotEmpty) || (r.value is int && (currentValue - r.value).abs() <= 2)) {
         type = HitType.partial;
       } else {
         type = HitType.miss;
