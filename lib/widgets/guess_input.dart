@@ -1,3 +1,5 @@
+import 'dart:collection';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
 
@@ -15,6 +17,21 @@ class GuessInput extends StatefulWidget {
 class _GuessInputState extends State<GuessInput> {
   final TextEditingController _textEditingController = TextEditingController();
   final FocusNode _focusNode = FocusNode();
+
+  static List<Shadow> outlinedText({double strokeWidth = 1, Color strokeColor = Colors.black, int precision = 5}) {
+    Set<Shadow> result = HashSet();
+    for (int x = 1; x < strokeWidth + precision; x++) {
+      for(int y = 1; y < strokeWidth + precision; y++) {
+        double offsetX = x.toDouble();
+        double offsetY = y.toDouble();
+        result.add(Shadow(offset: Offset(-strokeWidth / offsetX, -strokeWidth / offsetY), color: strokeColor));
+        result.add(Shadow(offset: Offset(-strokeWidth / offsetX, strokeWidth / offsetY), color: strokeColor));
+        result.add(Shadow(offset: Offset(strokeWidth / offsetX, -strokeWidth / offsetY), color: strokeColor));
+        result.add(Shadow(offset: Offset(strokeWidth / offsetX, strokeWidth / offsetY), color: strokeColor));
+      }
+    }
+    return result.toList();
+  }
 
   @override
   void dispose() {
@@ -50,7 +67,7 @@ class _GuessInputState extends State<GuessInput> {
                     filled: true,
                     counterText: '',
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(35)),
+                      borderRadius: BorderRadius.all(Radius.circular(12)),
                     ),
                   ),
                   autofocus: true,
@@ -69,7 +86,34 @@ class _GuessInputState extends State<GuessInput> {
               },
             ),
           ),
-        )
+        ),
+        Container(
+          constraints: BoxConstraints(minWidth: 128, minHeight: 48),
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: Color(0xFFDF1835),
+              width: 3.0,
+            ),
+            borderRadius: BorderRadius.only(topLeft: Radius.circular(20.0), bottomRight: Radius.circular(20.0), bottomLeft: Radius.circular(5.0), topRight: Radius.circular(5.0)),
+            gradient: LinearGradient(
+              begin: AlignmentGeometry.topCenter,
+              end: AlignmentGeometry.bottomCenter,
+              colors: [Color(0xFF9A1129), Color(0xFFDF1835)]
+            ),
+            boxShadow: [BoxShadow(color: Color(0xFF491225), offset: Offset.fromDirection(1.0, 4.0), spreadRadius: 1)],
+          ),
+          child: ElevatedButton(
+            onPressed: _onSubmit,
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.transparent,
+              shadowColor: Colors.transparent,
+              foregroundColor: Colors.white,
+              textStyle: TextStyle(shadows: outlinedText(), fontSize: 16.0),
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(10.0), bottomRight: Radius.circular(10.0), bottomLeft: Radius.circular(5.0), topRight: Radius.circular(5.0))),
+            ),
+            child: Text('Send'),
+          ),
+        ),
       ],
     );
   }
