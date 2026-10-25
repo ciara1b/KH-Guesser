@@ -79,7 +79,28 @@ class _GuessInputState extends State<GuessInput> {
                     .where((s) => s.toLowerCase().contains(pattern.toLowerCase()))
                     .toList();
               },
-              itemBuilder: (context, suggestion) => ListTile(title: Text(suggestion)),
+              itemBuilder: (context, suggestion) => Material(
+                color: const Color(0xFF121214),
+                child: ListTile(
+                  title: Text(suggestion),
+                  textColor: Color(0xFFFDFFFD),
+                  hoverColor: Color(0xFF42100F),
+                  focusColor: Color(0xFF42100F),
+                  onTap: () => _textEditingController.text = suggestion,
+                ),
+              ),
+              decorationBuilder: (context, child) => Material(
+                type: MaterialType.card,
+                color: const Color(0xFF121214),
+                surfaceTintColor: Colors.transparent,
+                elevation: 4,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                  side: const BorderSide(width: 1, color: Color(0xFF42100F)),
+                ),
+                clipBehavior: Clip.antiAlias,
+                child: child,
+              ),
               hideOnSelect: true,
               onSelected: (suggestion) {
                 _textEditingController.text = suggestion;
