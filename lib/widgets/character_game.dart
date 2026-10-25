@@ -165,13 +165,13 @@ extension CharacterGuessUtils on CharacterGuess {
 
       if (currentValue == r.value || currentValue is List && DeepCollectionEquality.unordered().equals(currentValue, r.value)) {
         type = HitType.hit;
-      } else if ((r.category == "species" && currentValue.toSet().intersection(r.value.toSet()).isNotEmpty)) {
+      } else if ((r.value is List && currentValue.toSet().intersection(r.value.toSet()).isNotEmpty)) {
         type = HitType.partial;
       } else {
         type = HitType.miss;
       }
 
-      if (r.category == "appearances") {
+      if (r.value is int) {
         clue = r.value < currentValue;
       }
 
