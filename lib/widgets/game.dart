@@ -26,6 +26,7 @@ class _GamePageState extends State<GamePage> {
         children: [
           SizedBox(
             width: rowWidth,
+            height: 128.0,
             child: GuessInput(
               remainingCharacters: widget.possibleSolutions,
               didWin: () => widget.gameType.didWin,
