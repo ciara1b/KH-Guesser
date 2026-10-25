@@ -57,6 +57,7 @@ class _GamePageState extends State<GamePage> {
                                 categoryType.category,
                                 style: TextStyle(
                                   color: Color(0xFFFDFFFD),
+                                  fontWeight: FontWeight.bold,
                                 ),
                               ),
                             ),
