@@ -38,6 +38,15 @@ class Keyblade {
       imageUrl: 'assets/images/$nameForImage',
     );
   }
+
+  Map<String, dynamic> toMap() => {
+    'name': name,
+    'debutGame': debutGame,
+    'strength': strength,
+    'magic': magic,
+    'wielders': wielders,
+    'appearances': appearances,
+  };
 }
 
 final Set<Keyblade> allKeyblades = {};

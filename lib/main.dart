@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:khdle/data/enemy.dart';
+import 'package:khdle/data/keyblade.dart';
 import 'screens/landing_page.dart';
 import 'data/character.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await loadCharacters();
+  await loadKeyblades();
+  await loadEnemies();
   runApp(const MainApp());
 }
 
