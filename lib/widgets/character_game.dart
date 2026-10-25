@@ -2,7 +2,7 @@ library;
 
 import 'package:collection/collection.dart';
 import 'dart:math';
-import 'data/character.dart';
+import '../data/character.dart';
 
 enum HitType {
   none,
