@@ -19,5 +19,12 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  fonts:
+    - family: PRGothIWA
+      fonts:
+        - asset: assets/PRGothIWA-Dm.TTF
+    - family: KH-Numbers
+      fonts:
+        - asset: assets/KH2_ALL_MENU_I.TTF
   assets:
     - assets/

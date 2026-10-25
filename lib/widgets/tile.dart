@@ -62,8 +62,9 @@ class Tile extends StatelessWidget {
           _display(value),
           textAlign: TextAlign.center,
           style: TextStyle(
+            fontFamily: value is int ? 'KH-Numbers' : 'PRGothIWA',
             fontWeight: FontWeight(900),
-            fontSize: 16,
+            fontSize: value is int ? 12 : 16,
             color: Color(0xFFFDFFFD),
             shadows: outlinedText(),
           ),
