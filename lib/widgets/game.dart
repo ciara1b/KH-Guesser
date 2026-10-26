@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:khdle/data/category_info.dart';
+import 'package:khdle/widgets/gradient_progress_bar.dart';
 import 'package:khdle/widgets/tile.dart';
 import 'package:khdle/widgets/guess_input.dart';
 
@@ -24,6 +25,21 @@ class _GamePageState extends State<GamePage> {
       padding: const EdgeInsets.all(0.0),
       child: Column(
         children: [
+          SizedBox(
+            width: rowWidth,
+            child: GradientProgressBar(
+              percent: ((widget.game.guessesRemaining / widget.game.maxGuesses) * 100).round(),
+              gradient: LinearGradient(
+                begin: Alignment.bottomCenter,
+                end: Alignment.topCenter,
+                colors: [
+                  Color(0xFF32FB39),
+                  Color(0xFFC0FF0D)
+                ],
+              ),
+              backgroundColor: Color(0xFF171928),
+            )
+          ),
           SizedBox(
             width: rowWidth,
             height: 128.0,
