@@ -26,5 +26,8 @@ flutter:
     - family: KH-Numbers
       fonts:
         - asset: assets/KH2_ALL_MENU_I.TTF
+    - family: TitanOne
+      fonts:
+        - asset: assets/TitanOne-Regular.TTF
   assets:
     - assets/
