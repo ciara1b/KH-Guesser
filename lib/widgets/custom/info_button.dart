@@ -51,6 +51,12 @@ class CustomInfoButton extends StatelessWidget {
       );
     }
 
+    spans.add(
+      TextSpan(
+        text: 'N.B. some canon and non-canon secret endings debut characters and keyblades.',
+      )
+    );
+
     return spans;
   }
 

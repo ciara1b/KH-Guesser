@@ -14,7 +14,7 @@ const List<CategoryInfo> categories = [
   ),
   (
     category: 'Debut Game',
-    value: 'The game in which they first appeared.',
+    value: 'The game in which the keyblade first appeared.',
   ),
   (
     category: 'Strength',
@@ -26,11 +26,11 @@ const List<CategoryInfo> categories = [
   ),
   (
     category: 'Wielders',
-    value: 'Characters you can play as whilst wielding the keyblade.',
+    value: 'Characters that have wielded this keyblade either during gameplay or in a cutscene.',
   ),
   (
     category: 'Appearances',
-    value: 'The number of games the keyblade is equippable in throughout the franchise. Yellow indicates you are within 2 of the correct number.',
+    value: 'The number of games the keyblade appears in. Yellow indicates you are within 2 of the correct number.',
   )
 ];
 
