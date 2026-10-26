@@ -45,6 +45,7 @@ class _GamePageState extends State<GamePage> {
                 for (var categoryType in widget.categories)
                   SizedBox(
                     width: tileSlot,
+                    height: tileSize / 4,
                     child: Column(
                       children: [
                         Row(
@@ -57,7 +58,8 @@ class _GamePageState extends State<GamePage> {
                                 categoryType.category,
                                 style: TextStyle(
                                   color: Color(0xFFFDFFFD),
-                                  fontWeight: FontWeight.bold,
+                                  fontSize: 10,
+                                  fontFamily: 'KH-Numbers'
                                 ),
                               ),
                             ),
