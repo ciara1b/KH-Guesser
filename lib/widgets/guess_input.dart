@@ -78,9 +78,9 @@ class _GuessInputState extends State<GuessInput> {
                 );
               },
               suggestionsCallback: (pattern) async {
-                return widget.remainingSolutions
+                return pattern.length >= 2 ? widget.remainingSolutions
                     .where((s) => s.toLowerCase().contains(pattern.toLowerCase()))
-                    .toList();
+                    .toList() : null;
               },
               itemBuilder: (context, suggestion) => Material(
                 color: const Color(0xFF121214),
