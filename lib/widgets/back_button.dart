@@ -31,7 +31,7 @@ class CustomBackButton extends StatelessWidget {
                 spreadRadius: 2,
               ),
               BoxShadow(
-                color: const Color(0xFF002077), // dark navy, like 0xFF491225 is for red
+                color: const Color(0xFF002077),
                 offset: Offset.fromDirection(2.0, 3.0),
                 spreadRadius: 1,
               ),

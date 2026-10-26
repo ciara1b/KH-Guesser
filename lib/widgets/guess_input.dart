@@ -18,6 +18,7 @@ class GuessInput extends StatefulWidget {
 class _GuessInputState extends State<GuessInput> {
   final TextEditingController _textEditingController = TextEditingController();
   final FocusNode _focusNode = FocusNode();
+  final ScrollController _suggestionsScrollController = ScrollController();
 
   static List<Shadow> outlinedText({double strokeWidth = 1, Color strokeColor = Colors.black, int precision = 5}) {
     Set<Shadow> result = HashSet();
@@ -38,6 +39,7 @@ class _GuessInputState extends State<GuessInput> {
   void dispose() {
     _textEditingController.dispose();
     _focusNode.dispose();
+    _suggestionsScrollController.dispose();
     super.dispose();
   }
 
@@ -58,6 +60,7 @@ class _GuessInputState extends State<GuessInput> {
               constraints: BoxConstraints(maxHeight: 384),
               controller: _textEditingController,
               focusNode: _focusNode,
+              scrollController: _suggestionsScrollController,
               builder: (context, controller, focusNode) {
                 return TextField(
                   controller: controller,
@@ -102,7 +105,24 @@ class _GuessInputState extends State<GuessInput> {
                   side: const BorderSide(width: 1, color: Color(0xFF42100F)),
                 ),
                 clipBehavior: Clip.antiAlias,
-                child: child,
+                child: ScrollbarTheme(
+                  data: ScrollbarThemeData(
+                    thumbColor: const WidgetStatePropertyAll(Colors.white),
+                    thumbVisibility: const WidgetStatePropertyAll(true),
+                    trackVisibility: const WidgetStatePropertyAll(false),
+                    thickness: const WidgetStatePropertyAll(6),
+                    radius: const Radius.circular(3),
+                    crossAxisMargin: 3,
+                  ),
+                  child: Scrollbar(
+                    controller: _suggestionsScrollController,
+                    thumbVisibility: true,
+                    child: ScrollConfiguration(
+                      behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+                      child: child,
+                    ),
+                  ),
+                ),
               ),
               hideOnSelect: true,
               onSelected: (suggestion) {
