@@ -21,6 +21,7 @@ const List<String> games = [
   'Kingdom Hearts 3D: Dream Drop Distance',
   'Kingdom Hearts χ[chi]',
   'Kingdom Hearts Union χ[Cross]',
+  'Kingdom Hearts 0.2 Birth by Sleep -A fragmentary passage-',
   'Kingdom Hearts Dark Road',
   'Kingdom Hearts III + Re Mind'
 ];

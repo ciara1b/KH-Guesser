@@ -7,7 +7,7 @@
             "strength": 3,
             "magic": 0,
             "appearances": 9,
-            "wielders": ["Sora", "Riku", "Data-Sora", "Roxas", "Xion", "Ventus"]
+            "wielders": ["Sora", "Riku", "Data-Sora", "Roxas", "Xion", "Terra", "Armored Ventus Nightmare"]
         },
         {
             "id": 1,
@@ -15,8 +15,8 @@
             "debutGame": "Kingdom Hearts",
             "strength": 5,
             "magic": 0,
-            "appearances": 4,
-            "wielders": ["Sora", "Data-Sora"]
+            "appearances": 2,
+            "wielders": ["Sora"]
         },
         {
             "id": 2,
@@ -114,8 +114,8 @@
             "debutGame": "Kingdom Hearts",
             "strength": 10,
             "magic": 0,
-            "appearances": 6,
-            "wielders": ["Sora", "Data-Sora", "Player"]
+            "appearances": 5,
+            "wielders": ["Sora", "Player", "Lauriam"]
         },
         {
             "id": 13,
@@ -124,7 +124,7 @@
             "strength": 9,
             "magic": 1,
             "appearances": 8,
-            "wielders": ["Sora", "Roxas", "Data-Sora", "Xion"]
+            "wielders": ["Sora", "Roxas", "Data-Sora", "Data-Roxas", "Xion"]
         },
         {
             "id": 14,
@@ -133,7 +133,7 @@
             "strength": 11,
             "magic": -1,
             "appearances": 8,
-            "wielders": ["Sora", "Roxas", "Data-Sora", "Riku"]
+            "wielders": ["Sora", "Roxas", "Data-Sora", "Data-Roxas", "Riku"]
         },
         {
             "id": 15,
@@ -168,8 +168,8 @@
             "debutGame": "Kingdom Hearts II",
             "strength": 3,
             "magic": 1,
-            "appearances": 4,
-            "wielders": ["Sora", "King Mickey"]
+            "appearances": 11,
+            "wielders": ["Sora", "King Mickey", "Yen Sid"]
         },
         {
             "id": 19,
@@ -177,8 +177,8 @@
             "debutGame": "Kingdom Hearts II",
             "strength": 3,
             "magic": 0,
-            "appearances": 4,
-            "wielders": ["King Mickey"]
+            "appearances": 9,
+            "wielders": ["King Mickey", "Aqua"]
         },
         {
             "id": 20,
@@ -358,7 +358,7 @@
             "strength": 3,
             "magic": 0,
             "appearances": 5,
-            "wielders": ["Riku"]
+            "wielders": ["Riku", "Riku Replica", "Sora", "Ventus"]
         },
         {
             "id": 40,
@@ -564,7 +564,7 @@
             "debutGame": "Kingdom Hearts Birth by Sleep",
             "strength": 3,
             "magic": 1,
-            "appearances": 2,
+            "appearances": 3,
             "wielders": ["Terra"]
         },
         {
@@ -651,10 +651,10 @@
         {
             "id": 72,
             "name": "Ends of the Earth",
-            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "debutGame": "Kingdom Hearts II",
             "strength": 5,
             "magic": 3,
-            "appearances": 2,
+            "appearances": 5,
             "wielders": ["Terra", "Lingering Will"]
         },
         {
@@ -669,11 +669,11 @@
         {
             "id": 74,
             "name": "Void Gear",
-            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "debutGame": "Kingdom Hearts II Final Mix",
             "strength": 8,
             "magic": 4,
-            "appearances": 2,
-            "wielders": ["Terra", "Ventus", "Aqua"]
+            "appearances": 4,
+            "wielders": ["Terra", "Ventus", "Aqua", "Vanitas", "Vanitas Remnant", "Replica Xehanorts"]
         },
         {
             "id": 75,
@@ -681,8 +681,8 @@
             "debutGame": "Kingdom Hearts Birth by Sleep",
             "strength": 6,
             "magic": 7,
-            "appearances": 2,
-            "wielders": ["Terra", "Ventus", "Aqua"]
+            "appearances": 4,
+            "wielders": ["Young Xehanort", "Terra", "Ventus", "Aqua", "Replica Xehanorts"]
         },
         {
             "id": 76,
@@ -696,10 +696,10 @@
         {
             "id": 77,
             "name": "Wayward Wind",
-            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "debutGame": "Kingdom Hearts II",
             "strength": 3,
             "magic": 1,
-            "appearances": 3,
+            "appearances": 5,
             "wielders": ["Ventus"]
         },
         {
@@ -732,19 +732,19 @@
         {
             "id": 81,
             "name": "Destiny's Embrace",
-            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "debutGame": "Kingdom Hearts II",
             "strength": 3,
             "magic": 3,
-            "appearances": 3,
+            "appearances": 6,
             "wielders": ["Kairi", "Aqua"]
         },
         {
             "id": 82,
             "name": "Stormfall",
-            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "debutGame": "Kingdom Hearts II",
             "strength": 5,
             "magic": 4,
-            "appearances": 2,
+            "appearances": 4,
             "wielders": ["Aqua"]
         },
         {
@@ -759,11 +759,11 @@
         {
             "id": 84,
             "name": "Master's Defender",
-            "debutGame": "Kingdom Hearts Birth by Sleep Final Mix",
+            "debutGame": "Kingdom Hearts Birth by Sleep",
             "strength": 7,
             "magic": 7,
-            "appearances": 3,
-            "wielders": ["Aqua"]
+            "appearances": 6,
+            "wielders": ["Brain", "Ephemer", "Odin", "Eraqus", "Aqua", "Sora"]
         },
         {
             "id": 85,
@@ -881,43 +881,43 @@
             "id": 98,
             "name": "Aced's Keyblade",
             "debutGame": "Kingdom Hearts χ[chi]",
-            "appearances": 0,
-            "wielders": []
+            "appearances": 2,
+            "wielders": ["Aced"]
         },
         {
             "id": 99,
             "name": "Ava's Keyblade",
             "debutGame": "Kingdom Hearts χ[chi]",
-            "appearances": 0,
-            "wielders": []
+            "appearances": 2,
+            "wielders": ["Ava"]
         },
         {
             "id": 100,
             "name": "Gula's Keyblade",
             "debutGame": "Kingdom Hearts χ[chi]",
-            "appearances": 0,
-            "wielders": []
+            "appearances": 2,
+            "wielders": ["Gula"]
         },
         {
             "id": 101,
             "name": "Invi's Keyblade",
             "debutGame": "Kingdom Hearts χ[chi]",
-            "appearances": 0,
-            "wielders": []
+            "appearances": 2,
+            "wielders": ["Invi"]
         },
         {
             "id": 102,
             "name": "Ira's Keyblade",
             "debutGame": "Kingdom Hearts χ[chi]",
-            "appearances": 0,
-            "wielders": []
+            "appearances": 2,
+            "wielders": ["Ira"]
         },
         {
             "id": 103,
             "name": "Starlight",
             "debutGame": "Kingdom Hearts χ[chi]",
-            "appearances": 4,
-            "wielders": ["Sora", "Player", "Xehanort"]
+            "appearances": 3,
+            "wielders": ["Sora", "Player", "Ephemer", "Skuld", "Strelitzia"]
         },
         {
             "id": 104,
@@ -1111,15 +1111,15 @@
             "strength": 5,
             "magic": 5,
             "appearances": 1,
-            "wielders": ["King Mickey"]
+            "wielders": ["King Mickey", "Anti-Aqua"]
         },
         {
             "id": 126,
             "name": "Bond of the Blaze",
-            "debutGame": "Kingdom Hearts III + Re Mind",
+            "debutGame": "Kingdom Hearts 3D: Dream Drop Distance",
             "strength": 5,
             "magic": 5,
-            "appearances": 1,
+            "appearances": 2,
             "wielders": ["Lea"]
         },
         {
@@ -1129,21 +1129,100 @@
             "strength": 5,
             "magic": 5,
             "appearances": 1,
-            "wielders": ["Xion"]
+            "wielders": ["Xion", "Replica Xehanorts"]
         },
         {
             "id": 128,
             "name": "Keyblade of Heart",
             "debutGame": "Kingdom Hearts",
-            "appearances": 0,
-            "wielders": []
+            "appearances": 2,
+            "wielders": ["Riku"]
         },
         {
             "id": 129,
             "name": "No Name",
-            "debutGame": "Kingdom Hearts Birth By Sleep",
-            "appearances": 0,
-            "wielders": []
+            "debutGame": "Kingdom Hearts II Final Mix",
+            "appearances": 9,
+            "wielders": ["Master of Masters", "Luxu", "Xehanort", "Terra-Xehanort", "Replica Xehanorts", "Odin"]
+        },
+        {
+            "id": 130,
+            "name": "Fake Oblivion",
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "appearances": 2,
+            "wielders": ["Anti-Riku", "Data-Roxas"]
+        },
+        {
+            "id": 131,
+            "name": "Fake Oathkeeper",
+            "debutGame": "Kingdom Hearts Re:Coded",
+            "appearances": 1,
+            "wielders": ["Data-Roxas"]
+        },
+        {
+            "id": 132,
+            "name": "Fake Master's Defender",
+            "debutGame": "Kingdom Hearts Birth by Sleep Final Mix",
+            "appearances": 2,
+            "wielders": ["Phantom Aqua", "Armor of Eraqus"]
+        },
+        {
+            "id": 133,
+            "name": "Fake Kingdom Key",
+            "debutGame": "Kingdom Hearts",
+            "appearances": 3,
+            "wielders": ["Zexion", "AntiSora"]
+        },
+        {
+            "id": 134,
+            "name": "Fake Earthshaker",
+            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "appearances": 2,
+            "wielders": ["Mimic Terra"]
+        },
+        {
+            "id": 135,
+            "name": "Fake Wayward Wind",
+            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "appearances": 2,
+            "wielders": ["Mimic Ventus"]
+        },
+        {
+            "id": 136,
+            "name": "Fake Rainfell",
+            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "appearances": 2,
+            "wielders": ["Mimic Aqua"]
+        },
+        {
+            "id": 137,
+            "name": "Fake No Name",
+            "debutGame": "Kingdom Hearts Birth by Sleep Final Mix",
+            "appearances": 1,
+            "wielders": ["No Heart"]
+        },
+        {
+            "id": 138,
+            "name": "Combined Keyblade",
+            "debutGame": "Kingdom Hearts 3D: Dream Drop Distance",
+            "strength": 0,
+            "magic": 20,
+            "appearances": 2,
+            "wielders": ["Sora", "Riku"]
+        },
+        {
+            "id": 139,
+            "name": "Keyblade (Dark Road)",
+            "debutGame": "Kingdom Hearts Dark Road",
+            "appearances": 1,
+            "wielders": ["Xehanort", "Eraqus", "Hermod", "Bragi", "Urd", "Vor", "Baldr", "Heimdall", "Helgi", "Hoder", "Sigrun", "Vala", "Vali", "Vidar"]
+        },
+        {
+            "id": 140,
+            "name": "χ-blade",
+            "debutGame": "Kingdom Hearts Birth by Sleep",
+            "appearances": 3,
+            "wielders": ["Xehanort", "Vanitas", "Ventus-Vanitas", "Sora"]
         }
     ]
 }
