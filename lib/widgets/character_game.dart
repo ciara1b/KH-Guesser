@@ -70,6 +70,10 @@ class Game {
     return maxGuesses - activeIndex;
   }
 
+  String get gameType {
+    return 'character';
+  }
+
   bool get didWin {
     if (_guesses.first.isEmpty) return false;
 

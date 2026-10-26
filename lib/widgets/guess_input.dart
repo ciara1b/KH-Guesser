@@ -4,11 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
 
 class GuessInput extends StatefulWidget {
-  const GuessInput({super.key, required this.onSubmitGuess, required this.remainingSolutions, required this.didWin});
+  const GuessInput({super.key, required this.gameType, required this.didWin, required this.onSubmitGuess, required this.remainingSolutions});
 
+  final String Function() gameType;
+  final bool Function() didWin;
   final void Function(String) onSubmitGuess;
   final List<String> remainingSolutions;
-  final bool Function() didWin;
 
   @override
   State<GuessInput> createState() => _GuessInputState();
@@ -63,10 +64,11 @@ class _GuessInputState extends State<GuessInput> {
                   enabled: !widget.didWin(),
                   focusNode: focusNode,
                   maxLength: 32,
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
                     fillColor: Color(0xFFFDFFFD),
                     filled: true,
                     counterText: '',
+                    hintText: 'Type any ${widget.gameType()}...',
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(12)),
                     ),

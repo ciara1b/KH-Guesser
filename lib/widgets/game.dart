@@ -4,9 +4,9 @@ import 'package:khdle/widgets/tile.dart';
 import 'package:khdle/widgets/guess_input.dart';
 
 class GamePage extends StatefulWidget {
-  const GamePage(this.gameType, this.possibleSolutions, this.categories, {super.key});
+  const GamePage(this.game, this.possibleSolutions, this.categories, {super.key});
 
-  final dynamic gameType;
+  final dynamic game;
   final List<String> possibleSolutions;
   final List<CategoryInfo> categories;
 
@@ -28,11 +28,12 @@ class _GamePageState extends State<GamePage> {
             width: rowWidth,
             height: 128.0,
             child: GuessInput(
+              gameType: () => widget.game.gameType,
+              didWin: () => widget.game.didWin,
               remainingSolutions: widget.possibleSolutions,
-              didWin: () => widget.gameType.didWin,
               onSubmitGuess: (String guess) {
                 setState(() {
-                  widget.gameType.guess(guess);
+                  widget.game.guess(guess);
                 });
                 widget.possibleSolutions.remove(guess);
               },
@@ -41,7 +42,7 @@ class _GamePageState extends State<GamePage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              if (!widget.gameType.guesses.first.isEmpty)
+              if (!widget.game.guesses.first.isEmpty)
                 for (var categoryType in widget.categories)
                   SizedBox(
                     width: tileSlot,
@@ -70,7 +71,7 @@ class _GamePageState extends State<GamePage> {
                 ),
             ],
           ),
-          for (var guess in widget.gameType.guesses.reversed)
+          for (var guess in widget.game.guesses.reversed)
             guess.isEmpty ? SizedBox() :
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

@@ -62,6 +62,10 @@ class Game {
     return maxGuesses - activeIndex;
   }
 
+  String get gameType {
+    return 'keyblade';
+  }
+
   bool get didWin {
     if (_guesses.first.isEmpty) return false;
 
