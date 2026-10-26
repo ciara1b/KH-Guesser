@@ -7,18 +7,51 @@ class CustomInfoButton extends StatelessWidget {
 
   final List<CategoryInfo> info;
 
-  String formatInfoString() {
-    String result = '';
+  List<TextSpan> buildInfoSpans() {
+    final spans = <TextSpan>[];
 
     for (CategoryInfo c in info) {
       if (c.value is String) {
-        result += '${c.category.toUpperCase()}: ${c.value}\n\n';
+        spans.add(
+          TextSpan(
+            text: c.category.toUpperCase(),
+            style: const TextStyle(
+              fontFamily: 'KH-Numbers',
+              fontSize: 12,
+            ),
+          ),
+        );
+        spans.add(TextSpan(text: '\n${c.value}\n\n'));
       }
     }
 
-    result += gamesIncluded;
+    spans.add(
+      TextSpan(
+        text: 'GAMES INCLUDED\n',
+        style: const TextStyle(
+          fontFamily: 'KH-Numbers',
+          fontSize: 12,
+        ),
+      )
+    );
 
-    return result;
+    for (String gameName in games) {
+      spans.add(
+        TextSpan(
+          text: ' • ',
+          style: const TextStyle(
+            fontFamily: 'KH-Numbers',
+          ),
+        ),
+      );
+      spans.add(
+        TextSpan(
+          text: '$gameName\n'
+        ),
+      );
+    }
+
+    return spans;
   }
 
   @override
@@ -85,10 +118,10 @@ class CustomInfoButton extends StatelessWidget {
                               padding: const EdgeInsets.only(right: 4.0),
                               child: Padding(
                                 padding: EdgeInsets.all(8.0),
-                                child: Text(
-                                  formatInfoString(),
-                                  style: TextStyle(
-                                    color: Color(0xFFFDFFFD)
+                                child: Text.rich(
+                                  TextSpan(children: buildInfoSpans()),
+                                  style: const TextStyle(
+                                    color: Color(0xFFFDFFFD),
                                   ),
                                 ),
                               ),
