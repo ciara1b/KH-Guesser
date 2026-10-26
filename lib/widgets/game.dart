@@ -61,37 +61,6 @@ class _GamePageState extends State<GamePage> {
                                 ),
                               ),
                             ),
-                            if (categoryType.value is String) ...[
-                              const SizedBox(width: tilePadding / 2),
-                              Tooltip(
-                                message: categoryType.value,
-                                constraints: BoxConstraints(maxWidth: rowWidth / 2),
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: Color(0xFF0191CE),
-                                    width: 3.0,
-                                  ),
-                                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                                  gradient: LinearGradient(
-                                    begin: AlignmentGeometry.topCenter,
-                                    end: AlignmentGeometry.bottomCenter,
-                                    colors: [Color(0xFF0191CE), Color(0xFF002077)]
-                                  ),
-                                  boxShadow: [BoxShadow(color: Colors.black, blurRadius: 0.5, spreadRadius: 0.5)],
-                                ),
-                                child: Align(
-                                  alignment: Alignment.topRight,
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(right: 4.0),
-                                    child: Icon(
-                                      Icons.info_outline,
-                                      size: 14,
-                                      color: Color(0xFFFDFFFD)
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
                           ],
                         ),
                       ],
