@@ -7,7 +7,6 @@ import '../data/keyblade.dart';
 
 List<String> get possibleKeyblades => allKeyblades.map((c) => c.name).toList();
 
-const String gamesIncluded = '\n\nGames included:\n • Kingdom Hearts\n • Kingdom Hearts Final Mix\n • Kingdom Hearts: Chain of Memories\n • Kingdom Hearts II\n • Kingdom Hearts II Final Mix\n • Kingdom Hearts 358/2 Days\n • Kingdom Hearts Birth By Sleep\n • Kingdom Hearts Birth By Sleep Final Mix\n • Kingdom Hearts Re:Coded\n • Kingdom Hearts 3D: Dream Drop Distance\n • Kingdom Hearts χ[chi]\n • Kingdom Hearts Union χ[Cross]\n • Kingdom Hearts Dark Road\n • Kingdom Hearts III + Re Mind';
 const List<CategoryInfo> categories = [
   (
     category: 'Name',
@@ -15,7 +14,7 @@ const List<CategoryInfo> categories = [
   ),
   (
     category: 'Debut Game',
-    value: 'The game in which they first appeared. $gamesIncluded',
+    value: 'The game in which they first appeared.',
   ),
   (
     category: 'Strength',
@@ -31,7 +30,7 @@ const List<CategoryInfo> categories = [
   ),
   (
     category: 'Appearances',
-    value: 'The number of games the keyblade is equippable in throughout the franchise. Yellow indicates you are within 2 of the correct number. $gamesIncluded',
+    value: 'The number of games the keyblade is equippable in throughout the franchise. Yellow indicates you are within 2 of the correct number.',
   )
 ];
 
