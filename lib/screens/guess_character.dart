@@ -36,7 +36,7 @@ class GuessCharacterPage extends StatelessWidget {
               ),
             ),
             CustomBackButton(),
-            CustomInfoButton(),
+            CustomInfoButton(categories),
           ],
         ),
       ),

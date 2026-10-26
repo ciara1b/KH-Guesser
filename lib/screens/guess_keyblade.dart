@@ -36,7 +36,7 @@ class GuessKeybladePage extends StatelessWidget {
               ),
             ),
             CustomBackButton(),
-            CustomInfoButton(),
+            CustomInfoButton(categories),
           ],
         ),
       ),
