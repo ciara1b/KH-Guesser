@@ -28,7 +28,7 @@ class _GamePageState extends State<GamePage> {
             width: rowWidth,
             height: 128.0,
             child: GuessInput(
-              remainingCharacters: widget.possibleSolutions,
+              remainingSolutions: widget.possibleSolutions,
               didWin: () => widget.gameType.didWin,
               onSubmitGuess: (String guess) {
                 setState(() {

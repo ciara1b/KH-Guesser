@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
 
 class GuessInput extends StatefulWidget {
-  const GuessInput({super.key, required this.onSubmitGuess, required this.remainingCharacters, required this.didWin});
+  const GuessInput({super.key, required this.onSubmitGuess, required this.remainingSolutions, required this.didWin});
 
   final void Function(String) onSubmitGuess;
-  final List<String> remainingCharacters;
+  final List<String> remainingSolutions;
   final bool Function() didWin;
 
   @override
@@ -76,7 +76,7 @@ class _GuessInputState extends State<GuessInput> {
                 );
               },
               suggestionsCallback: (pattern) async {
-                return widget.remainingCharacters
+                return widget.remainingSolutions
                     .where((s) => s.toLowerCase().contains(pattern.toLowerCase()))
                     .toList();
               },
