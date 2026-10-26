@@ -55,7 +55,7 @@ class _GuessInputState extends State<GuessInput> {
       children: [
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.only(top: 8.0, bottom: 8.0, right: 8.0),
             child: TypeAheadField<String>(
               constraints: BoxConstraints(maxHeight: 384),
               controller: _textEditingController,
