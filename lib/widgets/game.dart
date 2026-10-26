@@ -27,22 +27,6 @@ class _GamePageState extends State<GamePage> {
         children: [
           SizedBox(
             width: rowWidth,
-            child: GradientProgressBar(
-              percent: ((widget.game.guessesRemaining / widget.game.maxGuesses) * 100).round(),
-              gradient: LinearGradient(
-                begin: Alignment.bottomCenter,
-                end: Alignment.topCenter,
-                colors: [
-                  Color(0xFF32FB39),
-                  Color(0xFFC0FF0D)
-                ],
-              ),
-              backgroundColor: Color(0xFF171928),
-            )
-          ),
-          SizedBox(
-            width: rowWidth,
-            height: 128.0,
             child: GuessInput(
               gameType: () => widget.game.gameType,
               didWin: () => widget.game.didWin,
@@ -54,6 +38,24 @@ class _GamePageState extends State<GamePage> {
                 widget.possibleSolutions.remove(guess);
               },
             )
+          ),
+          SizedBox(
+            width: rowWidth,
+            child: Padding(
+              padding: EdgeInsets.only(bottom: 32.0),
+              child: GradientProgressBar(
+                percent: ((widget.game.guessesRemaining / widget.game.maxGuesses) * 100).round(),
+                gradient: LinearGradient(
+                  begin: Alignment.bottomCenter,
+                  end: Alignment.topCenter,
+                  colors: [
+                    Color(0xFF32FB39),
+                    Color(0xFFC0FF0D)
+                  ],
+                ),
+                backgroundColor: Color(0xFF171928),
+              )
+            ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,

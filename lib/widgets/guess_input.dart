@@ -55,7 +55,7 @@ class _GuessInputState extends State<GuessInput> {
       children: [
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.only(top: 8.0, bottom: 8.0, right: 8.0),
+            padding: const EdgeInsets.only(top: 8.0, bottom: 16.0, right: 8.0),
             child: TypeAheadField<String>(
               constraints: BoxConstraints(maxHeight: 384),
               controller: _textEditingController,
@@ -131,31 +131,34 @@ class _GuessInputState extends State<GuessInput> {
             ),
           ),
         ),
-        Container(
-          constraints: BoxConstraints(minWidth: 128, minHeight: 48),
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: Color(0xFFDF1835),
-              width: 3.0,
+        Padding(
+          padding: const EdgeInsets.only(top: 8.0, bottom: 16.0),
+          child: Container(
+            constraints: BoxConstraints(minWidth: 128, minHeight: 48, maxHeight: 384),
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Color(0xFFDF1835),
+                width: 3.0,
+              ),
+              borderRadius: BorderRadius.only(topLeft: Radius.circular(20.0), bottomRight: Radius.circular(20.0), bottomLeft: Radius.circular(5.0), topRight: Radius.circular(5.0)),
+              gradient: LinearGradient(
+                begin: AlignmentGeometry.topCenter,
+                end: AlignmentGeometry.bottomCenter,
+                colors: [Color(0xFF9A1129), Color(0xFFDF1835)]
+              ),
+              boxShadow: [BoxShadow(color: Color(0xFF491225), offset: Offset.fromDirection(1.0, 4.0), spreadRadius: 1)],
             ),
-            borderRadius: BorderRadius.only(topLeft: Radius.circular(20.0), bottomRight: Radius.circular(20.0), bottomLeft: Radius.circular(5.0), topRight: Radius.circular(5.0)),
-            gradient: LinearGradient(
-              begin: AlignmentGeometry.topCenter,
-              end: AlignmentGeometry.bottomCenter,
-              colors: [Color(0xFF9A1129), Color(0xFFDF1835)]
+            child: ElevatedButton(
+              onPressed: _onSubmit,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.transparent,
+                shadowColor: Colors.transparent,
+                foregroundColor: Colors.white,
+                textStyle: TextStyle(shadows: outlinedText(), fontSize: 16.0),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(10.0), bottomRight: Radius.circular(10.0), bottomLeft: Radius.circular(5.0), topRight: Radius.circular(5.0))),
+              ),
+              child: Text('Send'),
             ),
-            boxShadow: [BoxShadow(color: Color(0xFF491225), offset: Offset.fromDirection(1.0, 4.0), spreadRadius: 1)],
-          ),
-          child: ElevatedButton(
-            onPressed: _onSubmit,
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.transparent,
-              shadowColor: Colors.transparent,
-              foregroundColor: Colors.white,
-              textStyle: TextStyle(shadows: outlinedText(), fontSize: 16.0),
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(10.0), bottomRight: Radius.circular(10.0), bottomLeft: Radius.circular(5.0), topRight: Radius.circular(5.0))),
-            ),
-            child: Text('Send'),
           ),
         ),
       ],
