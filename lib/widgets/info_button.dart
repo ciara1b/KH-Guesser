@@ -1,8 +1,25 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
+import 'package:khdle/data/category_info.dart';
 
 class CustomInfoButton extends StatelessWidget {
-  const CustomInfoButton({super.key});
+  const CustomInfoButton(this.info, {super.key});
+
+  final List<CategoryInfo> info;
+
+  String formatInfoString() {
+    String result = '';
+
+    for (CategoryInfo c in info) {
+      if (c.value is String) {
+        result += '${c.category.toUpperCase()}: ${c.value}\n\n';
+      }
+    }
+
+    result += gamesIncluded;
+
+    return result;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +58,47 @@ class CustomInfoButton extends StatelessWidget {
                 ],
               ),
               child: ElevatedButton(
-                onPressed: () => Navigator.of(context).pop(),
+                onPressed: () => showDialog(
+                  context: context,
+                  builder: (context) {
+                    return Dialog(
+                      constraints: BoxConstraints(maxWidth: 512),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Color(0xFF0191CE),
+                            width: 3.0,
+                          ),
+                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                          gradient: LinearGradient(
+                            begin: AlignmentGeometry.topCenter,
+                            end: AlignmentGeometry.bottomCenter,
+                            colors: [Color(0xFF0191CE), Color(0xFF002077)]
+                          ),
+                          boxShadow: [BoxShadow(color: Colors.black, blurRadius: 0.5, spreadRadius: 0.5)],
+                        ),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [Align(
+                            alignment: Alignment.topRight,
+                            child: Padding(
+                              padding: const EdgeInsets.only(right: 4.0),
+                              child: Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text(
+                                  formatInfoString(),
+                                  style: TextStyle(
+                                    color: Color(0xFFFDFFFD)
+                                  ),
+                                ),
+                              ),
+                            ),
+                          )],
+                        ),
+                      ),
+                    );
+                  }
+                ),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.transparent,
                   shadowColor: Colors.transparent,
