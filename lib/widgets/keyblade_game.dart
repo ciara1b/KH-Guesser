@@ -1,9 +1,9 @@
 library;
 
 import 'package:collection/collection.dart';
-import 'package:khdle/data/category_info.dart';
+import 'package:khdle/models/category_info.dart';
 import 'dart:math';
-import '../data/keyblade.dart';
+import '../models/keyblade.dart';
 
 List<String> get possibleKeyblades => allKeyblades.map((c) => c.name).toList();
 

@@ -1,6 +1,6 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
-import 'package:khdle/data/category_info.dart';
+import 'package:khdle/models/category_info.dart';
 
 class CustomInfoButton extends StatelessWidget {
   const CustomInfoButton(this.info, {super.key});

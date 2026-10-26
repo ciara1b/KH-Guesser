@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:khdle/data/category_info.dart';
-import 'package:khdle/widgets/gradient_progress_bar.dart';
-import 'package:khdle/widgets/tile.dart';
-import 'package:khdle/widgets/guess_input.dart';
+import 'package:khdle/models/category_info.dart';
+import 'package:khdle/widgets/custom/gradient_progress_bar.dart';
+import 'package:khdle/widgets/custom/tile.dart';
+import 'package:khdle/widgets/custom/guess_input.dart';
 
 class GamePage extends StatefulWidget {
   const GamePage(this.game, this.possibleSolutions, this.categories, {super.key});

@@ -1,9 +1,9 @@
 library;
 
 import 'package:collection/collection.dart';
-import 'package:khdle/data/category_info.dart';
+import 'package:khdle/models/category_info.dart';
 import 'dart:math';
-import '../data/character.dart';
+import '../models/character.dart';
 
 List<String> get possibleCharacters => allCharacters.map((c) => c.name).toList();
 

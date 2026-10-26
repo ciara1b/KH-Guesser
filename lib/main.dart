@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:khdle/data/enemy.dart';
-import 'package:khdle/data/keyblade.dart';
+import 'package:khdle/models/enemy.dart';
+import 'package:khdle/models/keyblade.dart';
 import 'screens/landing_page.dart';
-import 'data/character.dart';
+import 'models/character.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

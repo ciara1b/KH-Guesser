@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:khdle/widgets/back_button.dart';
+import 'package:khdle/widgets/custom/back_button.dart';
 import 'package:khdle/widgets/character_game.dart';
 import 'package:khdle/widgets/game.dart';
-import 'package:khdle/widgets/info_button.dart';
+import 'package:khdle/widgets/custom/info_button.dart';
 
 class GuessCharacterPage extends StatelessWidget {
   const GuessCharacterPage({super.key});
