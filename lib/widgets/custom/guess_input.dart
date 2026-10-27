@@ -88,7 +88,7 @@ class _GuessInputState extends State<GuessInput> {
               itemBuilder: (context, suggestion) => Material(
                 color: const Color(0xFF121214),
                 child: ListTile(
-                  title: Text(suggestion),
+                  title: Row(children: [Image.asset('images/keyblades/${suggestion.replaceAll(' ', '_')}.png', width: 32, height: 32), Text(suggestion)]),
                   textColor: Color(0xFFFDFFFD),
                   hoverColor: Color(0xFF42100F),
                   focusColor: Color(0xFF42100F),

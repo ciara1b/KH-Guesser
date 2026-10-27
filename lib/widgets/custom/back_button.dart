@@ -60,7 +60,7 @@ class CustomBackButton extends StatelessWidget {
               }),
             ),
             child: Center(
-              child: Image.asset('back-arrow.png'),
+              child: Image.asset('images/back-arrow.png'),
             ),
           ),
         ),

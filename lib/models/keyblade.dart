@@ -23,7 +23,7 @@ class Keyblade {
   final String imageUrl;
 
   factory Keyblade.fromJson(Map<String, dynamic> json) {
-    final String nameForImage = (json['name'] as String).toLowerCase().replaceAll(' ', '-');
+    final String nameForImage = (json['name'] as String).replaceAll(' ', '_');
 
     return Keyblade(
       id: json['id'] as int,
@@ -52,7 +52,7 @@ class Keyblade {
 final Set<Keyblade> allKeyblades = {};
 
 Future<void> loadKeyblades() async {
-  final String response = await rootBundle.loadString('assets/keyblades.json');
+  final String response = await rootBundle.loadString('assets/json/keyblades.json');
   final Map<String, dynamic> data = json.decode(response) as Map<String, dynamic>;
   final List<dynamic> keyblades = data['keyblades'] as List<dynamic>;
 

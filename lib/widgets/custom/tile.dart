@@ -44,7 +44,7 @@ class Tile extends StatelessWidget {
       width: tileSize,
       height: tileSize,
       decoration: BoxDecoration(
-        image: value is int && hitType != HitType.hit ? (clue != null && clue ? DecorationImage(image: NetworkImage('assets/up-arrow.png'), fit: BoxFit.cover, opacity: 0.2) : DecorationImage(image: NetworkImage('assets/down-arrow.png'), fit: BoxFit.cover, opacity: 0.2)) : null,
+        image: value is int && hitType != HitType.hit ? (clue != null && clue ? DecorationImage(image: NetworkImage('assets/images/up-arrow.png'), fit: BoxFit.cover, opacity: 0.2) : DecorationImage(image: NetworkImage('assets/images/down-arrow.png'), fit: BoxFit.cover, opacity: 0.2)) : null,
         border: Border.all(
           color: Color.fromARGB(255, 94, 93, 93),
           width: 3.0,

@@ -26,7 +26,7 @@ class Enemy {
 final Set<Enemy> allEnemies = {};
 
 Future<void> loadEnemies() async {
-  final String response = await rootBundle.loadString('assets/enemies.json');
+  final String response = await rootBundle.loadString('assets/json/enemies.json');
   final Map<String, dynamic> data = json.decode(response) as Map<String, dynamic>;
   final List<dynamic> enemies = data['enemies'] as List<dynamic>;
 

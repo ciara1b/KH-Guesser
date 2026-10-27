@@ -15,7 +15,7 @@ class GuessCharacterPage extends StatelessWidget {
         height: double.infinity,
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('guessing-bg-light.png'),
+            image: AssetImage('images/guessing-bg-light.png'),
             fit: BoxFit.cover,
           ),
         ),

@@ -27,7 +27,7 @@ class Character {
   });
 
   factory Character.fromJson(Map<String, dynamic> json) {
-    final String nameForImage = (json['name'] as String).toLowerCase().replaceAll(' ', '-');
+    final String nameForImage = (json['name'] as String).replaceAll(' ', '_');
 
     return Character(
       id: json['id'] as int,
@@ -58,7 +58,7 @@ class Character {
 final Set<Character> allCharacters = {};
 
 Future<void> loadCharacters() async {
-  final String response = await rootBundle.loadString('assets/characters.json');
+  final String response = await rootBundle.loadString('assets/json/characters.json');
   final Map<String, dynamic> data = json.decode(response) as Map<String, dynamic>;
   final List<dynamic> characters = data['characters'] as List<dynamic>;
 
