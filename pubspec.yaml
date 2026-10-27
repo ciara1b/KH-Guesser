@@ -29,6 +29,9 @@ flutter:
     - family: TitanOne
       fonts:
         - asset: assets/fonts/TitanOne-Regular.TTF
+    - family: ITCBenguiatStdBold
+      fonts:
+        - asset: assets/fonts/ITCBenguiatStdBoldCn.OTF
   assets:
     - assets/fonts/
     - assets/json/
