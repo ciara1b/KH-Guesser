@@ -94,7 +94,8 @@ class _GuessInputState extends State<GuessInput> {
                     children: [
                       Image.asset(
                         'images/${widget.gameType()}s/${suggestion.replaceAll(' ', '_')}.png',
-                        width: 48
+                        width: 48,
+                        height: 48,
                       ),
                       Text(suggestion)
                     ]
