@@ -1,6 +1,7 @@
 import 'dart:collection';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
 
 class GuessInput extends StatefulWidget {
@@ -17,8 +18,18 @@ class GuessInput extends StatefulWidget {
 
 class _GuessInputState extends State<GuessInput> {
   final TextEditingController _textEditingController = TextEditingController();
-  final FocusNode _focusNode = FocusNode();
   final ScrollController _suggestionsScrollController = ScrollController();
+
+  late final FocusNode _focusNode = FocusNode(
+    onKeyEvent: (node, event) {
+      final isEnter = event.logicalKey == LogicalKeyboardKey.enter || event.logicalKey == LogicalKeyboardKey.numpadEnter;
+      if (isEnter) {
+        if (event is KeyDownEvent) _onSubmit();
+        return KeyEventResult.handled;
+      }
+      return KeyEventResult.ignored;
+    },
+  );
 
   static List<Shadow> outlinedText({double strokeWidth = 1, Color strokeColor = Colors.black, int precision = 5}) {
     Set<Shadow> result = HashSet();
@@ -44,7 +55,9 @@ class _GuessInputState extends State<GuessInput> {
   }
 
   void _onSubmit() {
-    widget.onSubmitGuess(_textEditingController.text);
+    final text = _textEditingController.text.trim();
+    if (text.isEmpty) return;
+    widget.onSubmitGuess(text);
     _textEditingController.clear();
     _focusNode.requestFocus();
   }
@@ -67,6 +80,7 @@ class _GuessInputState extends State<GuessInput> {
                   enabled: !widget.gameOver,
                   focusNode: focusNode,
                   maxLength: 32,
+                  textInputAction: TextInputAction.send,
                   decoration: InputDecoration(
                     fillColor: Color(0xFFFDFFFD),
                     filled: true,
@@ -81,9 +95,12 @@ class _GuessInputState extends State<GuessInput> {
                 );
               },
               suggestionsCallback: (pattern) async {
-                return pattern.length >= 2 ? widget.remainingSolutions
-                    .where((s) => s.toLowerCase().contains(pattern.toLowerCase()))
-                    .toList().sublist(0, 5) : null;
+                if (pattern.length < 2) return null;
+                final p = pattern.toLowerCase();
+                return widget.remainingSolutions
+                    .where((s) => s.toLowerCase().contains(p))
+                    .take(5)
+                    .toList();
               },
               itemBuilder: (context, suggestion) => Material(
                 color: const Color(0xFF121214),
