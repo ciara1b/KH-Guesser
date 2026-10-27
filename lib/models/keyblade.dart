@@ -35,11 +35,12 @@ class Keyblade {
           ?.map((w) => w as String)
           .toList(),
       appearances: json['appearances'] as int,
-      imageUrl: 'assets/images/$nameForImage',
+      imageUrl: 'assets/images/keyblades/$nameForImage.png',
     );
   }
 
   Map<String, dynamic> toMap() => {
+    'image': imageUrl,
     'name': name,
     'debutGame': debutGame,
     'strength': strength,

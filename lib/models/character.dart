@@ -39,7 +39,7 @@ class Character {
       weapon: json['weapon'] as String? ?? 'n/a',
       norted: json['norted'] as bool? ?? false,
       origin: json['origin'] as String,
-      imageUrl: 'assets/images/$nameForImage',
+      imageUrl: 'assets/images/keyblades/$nameForImage.png',
     );
   }
   
