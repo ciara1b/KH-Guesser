@@ -132,13 +132,11 @@ class KeybladeGuess {
     <CategoryResult>[
       (category: "image", value: null, type: HitType.none, clue: null),
       (category: "name", value: null, type: HitType.none, clue: null),
-      (category: "gender", value: null, type: HitType.none, clue: null),
-      (category: "species", value: null, type: HitType.none, clue: null),
       (category: "debutGame", value: null, type: HitType.none, clue: null),
+      (category: "strength", value: null, type: HitType.none, clue: null),
+      (category: "magic", value: null, type: HitType.none, clue: null),
+      (category: "wielders", value: null, type: HitType.none, clue: null),
       (category: "appearances", value: null, type: HitType.none, clue: null),
-      (category: "weapon", value: null, type: HitType.none, clue: null),
-      (category: "norted", value: null, type: HitType.none, clue: null),
-      (category: "origin", value: null, type: HitType.none, clue: null),
     ]
   );
 
