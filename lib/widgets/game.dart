@@ -28,7 +28,7 @@ class _GamePageState extends State<GamePage> {
     showDialog(
       context: context,
       builder: (_) =>
-        CustomPopupBox(widget.game.didWin, widget.game.guessesRemaining),
+        CustomPopupBox(widget.game.didWin, widget.game.guessesRemaining, () => widget.game.gameType),
     );
   }
 

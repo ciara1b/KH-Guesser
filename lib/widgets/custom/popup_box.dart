@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class CustomPopupBox extends StatelessWidget {
-  const CustomPopupBox(this.boolInfo, this.numInfo, {super.key});
+  const CustomPopupBox(this.boolInfo, this.numInfo, this.gameType, {super.key});
 
   final bool boolInfo;
   final int numInfo;
+  final String Function() gameType;
 
   @override
   Widget build(BuildContext context) {
-    final String clipboardText = "I ${boolInfo ? "won with $numInfo guesses remaining." : "lost"} today's Kingdom Hearts character guesser!\nThink you can beat me? Try it out here: https://www.khguesser.com";
+    final String clipboardText = "I ${boolInfo ? "won" : "lost"} today's Kingdom Hearts ${gameType()} guesser${boolInfo ? " with $numInfo guesses remaining!\nThink you can beat me? " : ".\n"}Try it out here: https://www.khguesser.com";
 
     return SafeArea(
       child: Align(
