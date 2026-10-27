@@ -23,7 +23,7 @@ class Keyblade {
   final String imageUrl;
 
   factory Keyblade.fromJson(Map<String, dynamic> json) {
-    final String nameForImage = (json['name'] as String).replaceAll(' ', '_');
+    final String nameForImage = (json['name'] as String).replaceAll(' ', '_').replaceAll('/', '');
 
     return Keyblade(
       id: json['id'] as int,

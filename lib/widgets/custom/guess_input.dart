@@ -110,7 +110,7 @@ class _GuessInputState extends State<GuessInput> {
                     spacing: 16.0,
                     children: [
                       Image.asset(
-                        'images/${widget.gameType()}s/${suggestion.replaceAll(' ', '_')}.png',
+                        'images/${widget.gameType()}s/${suggestion.replaceAll(' ', '_').replaceAll('/', '')}.png',
                         width: 48,
                         height: 48,
                       ),
