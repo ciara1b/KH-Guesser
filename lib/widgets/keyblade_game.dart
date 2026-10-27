@@ -9,6 +9,10 @@ List<String> get possibleKeyblades => allKeyblades.map((c) => c.name).toList();
 
 const List<CategoryInfo> categories = [
   (
+    category: '',
+    value: null,
+  ),
+  (
     category: 'Name',
     value: null,
   ),
@@ -116,6 +120,7 @@ class KeybladeGuess {
 
   factory KeybladeGuess.empty() => KeybladeGuess(
     <CategoryResult>[
+      (category: "image", value: null, type: HitType.none, clue: null),
       (category: "name", value: null, type: HitType.none, clue: null),
       (category: "gender", value: null, type: HitType.none, clue: null),
       (category: "species", value: null, type: HitType.none, clue: null),

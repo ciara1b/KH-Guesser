@@ -9,6 +9,10 @@ List<String> get possibleCharacters => allCharacters.map((c) => c.name).toList()
 
 const List<CategoryInfo> categories = [
   (
+    category: '',
+    value: null,
+  ),
+  (
     category: 'Name',
     value: null,
   ),
@@ -124,6 +128,7 @@ class CharacterGuess {
 
   factory CharacterGuess.empty() => CharacterGuess(
     <CategoryResult>[
+      (category: "image", value: null, type: HitType.none, clue: null),
       (category: "name", value: null, type: HitType.none, clue: null),
       (category: "gender", value: null, type: HitType.none, clue: null),
       (category: "species", value: null, type: HitType.none, clue: null),
