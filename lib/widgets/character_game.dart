@@ -49,7 +49,7 @@ const List<CategoryInfo> categories = [
 class Game {
   static const int defaultMaxGuesses = 8;
 
-  Game({this.maxGuesses = defaultMaxGuesses, this.seed}) : _characterToGuess = _generateInitialCharacter(seed), _guesses = List<CharacterGuess>.filled(maxGuesses, CharacterGuess.empty());
+  Game({this.maxGuesses = defaultMaxGuesses, this.seed}) : _characterToGuess = _generateInitialCharacter(seed), _guesses = List<CharacterGuess>.filled(maxGuesses, CharacterGuess.empty()), _remaining = allCharacters.map((c) => c.name).toList();
 
   final int maxGuesses;
   final int? seed;
@@ -57,6 +57,10 @@ class Game {
   Character _characterToGuess;
 
   List<CharacterGuess> _guesses;
+
+  List<String> _remaining;
+
+  UnmodifiableListView<String> get remainingSolutions => UnmodifiableListView(_remaining);
 
   Character get hiddenCharacter => _characterToGuess;
 
@@ -89,19 +93,25 @@ class Game {
   void resetGame() {
     _characterToGuess = _generateInitialCharacter(seed);
     _guesses = List<CharacterGuess>.filled(maxGuesses, CharacterGuess.empty());
+    _remaining = allCharacters.map((c) => c.name).toList();
+  }
+
+  String? _canonicalName(String guess) {
+    final g = guess.trim().toLowerCase();
+    return _remaining.firstWhereOrNull((c) => c.toLowerCase() == g);
   }
 
   CharacterGuess? guess(String guess) {
-    if (isLegalGuess(guess)) {
-      final result = matchGuessOnly(guess);
-      addGuessToList(result);
-      return result;
-    }
+    final name = _canonicalName(guess);
+    if (name == null) return null;
 
-    return null;
+    final result = matchGuessOnly(name);
+    addGuessToList(result);
+    _remaining.remove(name);
+    return result;
   }
 
-  bool isLegalGuess(String guess) => possibleCharacters.contains(guess);
+  bool isLegalGuess(String guess) => _canonicalName(guess) != null;
 
   CharacterGuess matchGuessOnly(String guess) => CharacterGuess.fromString(guess).evaluateGuess(_characterToGuess);
 

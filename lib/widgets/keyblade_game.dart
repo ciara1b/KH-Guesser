@@ -41,7 +41,7 @@ const List<CategoryInfo> categories = [
 class Game {
   static const int defaultMaxGuesses = 8;
 
-  Game({this.maxGuesses = defaultMaxGuesses, this.seed}) : _keybladeToGuess = _generateInitialKeyblade(seed), _guesses = List<KeybladeGuess>.filled(maxGuesses, KeybladeGuess.empty());
+  Game({this.maxGuesses = defaultMaxGuesses, this.seed}) : _keybladeToGuess = _generateInitialKeyblade(seed), _guesses = List<KeybladeGuess>.filled(maxGuesses, KeybladeGuess.empty()), _remaining = allKeyblades.map((k) => k.name).toList();
 
   final int maxGuesses;
   final int? seed;
@@ -49,6 +49,10 @@ class Game {
   Keyblade _keybladeToGuess;
 
   List<KeybladeGuess> _guesses;
+
+  List<String> _remaining;
+
+  UnmodifiableListView<String> get remainingSolutions => UnmodifiableListView(_remaining);
 
   Keyblade get hiddenKeyblade => _keybladeToGuess;
 
@@ -81,19 +85,25 @@ class Game {
   void resetGame() {
     _keybladeToGuess = _generateInitialKeyblade(seed);
     _guesses = List<KeybladeGuess>.filled(maxGuesses, KeybladeGuess.empty());
+    _remaining = allKeyblades.map((k) => k.name).toList();
+  }
+
+  String? _canonicalName(String guess) {
+    final g = guess.trim().toLowerCase();
+    return _remaining.firstWhereOrNull((k) => k.toLowerCase() == g);
   }
 
   KeybladeGuess? guess(String guess) {
-    if (isLegalGuess(guess)) {
-      final result = matchGuessOnly(guess);
-      addGuessToList(result);
-      return result;
-    }
+    final name = _canonicalName(guess);
+    if (name == null) return null;
 
-    return null;
+    final result = matchGuessOnly(name);
+    addGuessToList(result);
+    _remaining.remove(name);
+    return result;
   }
 
-  bool isLegalGuess(String guess) => possibleKeyblades.contains(guess);
+  bool isLegalGuess(String guess) => _canonicalName(guess) != null;
 
   KeybladeGuess matchGuessOnly(String guess) => KeybladeGuess.fromString(guess).evaluateGuess(_keybladeToGuess);
 

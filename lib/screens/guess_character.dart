@@ -4,8 +4,15 @@ import 'package:khdle/widgets/character_game.dart';
 import 'package:khdle/widgets/game.dart';
 import 'package:khdle/widgets/custom/info_button.dart';
 
-class GuessCharacterPage extends StatelessWidget {
+class GuessCharacterPage extends StatefulWidget {
   const GuessCharacterPage({super.key});
+
+  @override
+  State<GuessCharacterPage> createState() => _GuessCharacterPageState();
+}
+
+class _GuessCharacterPageState extends State<GuessCharacterPage> {
+  final Game _game = Game();
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +36,7 @@ class GuessCharacterPage extends StatelessWidget {
                     alignment: Alignment.topCenter,
                     child: Padding(
                       padding: const EdgeInsets.only(top: 64),
-                      child: GamePage(Game(), possibleCharacters, categories),
+                      child: GamePage(_game, categories),
                     ),
                   ),
                 ),

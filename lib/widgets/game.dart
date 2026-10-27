@@ -6,10 +6,9 @@ import 'package:khdle/widgets/custom/tile.dart';
 import 'package:khdle/widgets/custom/guess_input.dart';
 
 class GamePage extends StatefulWidget {
-  const GamePage(this.game, this.possibleSolutions, this.categories, {super.key});
+  const GamePage(this.game, this.categories, {super.key});
 
   final dynamic game;
-  final List<String> possibleSolutions;
   final List<CategoryInfo> categories;
 
   @override
@@ -54,12 +53,11 @@ class _GamePageState extends State<GamePage> {
             child: GuessInput(
               gameType: () => widget.game.gameType,
               gameOver: isGameOver,
-              remainingSolutions: widget.possibleSolutions,
+              remainingSolutions: widget.game.remainingSolutions,
               onSubmitGuess: (String guess) {
                 setState(() {
                   widget.game.guess(guess);
                 });
-                widget.possibleSolutions.remove(guess);
 
                 if (isGameOver) _showResultDialog();
               },
