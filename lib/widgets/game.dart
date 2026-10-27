@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:khdle/models/category_info.dart';
 import 'package:khdle/widgets/custom/gradient_progress_bar.dart';
+import 'package:khdle/widgets/custom/popup_box.dart';
 import 'package:khdle/widgets/custom/tile.dart';
 import 'package:khdle/widgets/custom/guess_input.dart';
 
@@ -16,6 +17,29 @@ class GamePage extends StatefulWidget {
 }
 
 class _GamePageState extends State<GamePage> {
+  bool _resultShown = false;
+
+  bool get isGameOver =>
+    widget.game.didWin || widget.game.guessesRemaining <= 0;
+
+  void _showResultDialog() {
+    if (_resultShown) return;
+    _resultShown = true;
+
+    showDialog(
+      context: context,
+      builder: (_) =>
+        CustomPopupBox(widget.game.didWin, widget.game.guessesRemaining),
+    );
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted && isGameOver) _showResultDialog();
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,13 +53,15 @@ class _GamePageState extends State<GamePage> {
             width: rowWidth,
             child: GuessInput(
               gameType: () => widget.game.gameType,
-              didWin: () => widget.game.didWin,
+              gameOver: isGameOver,
               remainingSolutions: widget.possibleSolutions,
               onSubmitGuess: (String guess) {
                 setState(() {
                   widget.game.guess(guess);
                 });
                 widget.possibleSolutions.remove(guess);
+
+                if (isGameOver) _showResultDialog();
               },
             )
           ),
