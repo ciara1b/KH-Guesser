@@ -28,7 +28,7 @@ flutter:
         - asset: assets/fonts/KH2_ALL_MENU_I.TTF
     - family: TitanOne
       fonts:
-        - asset: assets/fonts/TitanOne-Regular.TTF
+        - asset: assets/fonts/TitanOne-Regular.ttf
     - family: ITCBenguiatStdBold
       fonts:
         - asset: assets/fonts/ITCBenguiatStdBoldCn.OTF
