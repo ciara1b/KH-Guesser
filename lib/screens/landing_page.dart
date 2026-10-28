@@ -37,50 +37,59 @@ class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: SingleChildScrollView(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            for (var (index, value) in widget.buttonOptions.indexed)
-              Padding(
-                padding: EdgeInsets.only(
-                  bottom: index == widget.buttonOptions.length - 1 ? 0 : 16,
-                ),
-                child: MouseRegion(
-                  onEnter: (_) => setState(() => _isHovering[index] = true),
-                  onExit: (_) => setState(() => _isHovering[index] = false),
-                  cursor: SystemMouseCursors.click,
-                  child: AnimatedScale(
-                    scale: _isHovering[index] ? 1.05 : 1.0,
-                    duration: const Duration(milliseconds: 150),
-                    child: ConstrainedBox(
-                      constraints: const BoxConstraints(maxWidth: 480),
-                      child: SizedBox(
-                        height: 100,
-                        child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            minimumSize: const Size.fromHeight(100),
-                            shape: RoundedRectangleBorder(
-                              side: const BorderSide(),
-                              borderRadius: BorderRadius.circular(24),
+        child: GridView.count(
+          scrollDirection: Axis.vertical,
+          shrinkWrap: true,
+          primary: false,
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 10,
+          mainAxisExtent: WidgetsBinding.instance.platformDispatcher.views.first.physicalSize.height / 2.5,
+          crossAxisCount: 2,
+          children: <Widget>[
+            Image.asset('images/back-arrow.png',),
+            Image.asset('images/main-menu-logo.png'),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [for (var (index, value) in widget.buttonOptions.indexed)
+                Padding(
+                  padding: EdgeInsets.only(
+                    bottom: index == widget.buttonOptions.length - 1 ? 0 : 16,
+                  ),
+                  child: MouseRegion(
+                    onEnter: (_) => setState(() => _isHovering[index] = true),
+                    onExit: (_) => setState(() => _isHovering[index] = false),
+                    cursor: SystemMouseCursors.click,
+                    child: AnimatedScale(
+                      scale: _isHovering[index] ? 1.05 : 1.0,
+                      duration: const Duration(milliseconds: 150),
+                      child: ConstrainedBox(
+                        constraints: const BoxConstraints(maxWidth: 480),
+                        child: SizedBox(
+                          height: 100,
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              minimumSize: const Size.fromHeight(100),
+                              shape: RoundedRectangleBorder(
+                                side: const BorderSide(),
+                                borderRadius: BorderRadius.circular(24),
+                              ),
                             ),
-                          ),
-                          onPressed: () => _openPage(value),
-                          child: Text(
-                            value,
-                            style: const TextStyle(fontSize: 24),
+                            onPressed: () => _openPage(value),
+                            child: Text(
+                              value,
+                              style: const TextStyle(fontSize: 24),
+                            ),
                           ),
                         ),
                       ),
                     ),
                   ),
                 ),
-              ),
+              ],
+            ),
+            Text('Test footer.')
           ],
         ),
-      ),
     );
   }
 }
