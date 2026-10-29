@@ -42,7 +42,7 @@ class _LandingPageState extends State<LandingPage> {
             children: [
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.all(4.0),
+                  padding: EdgeInsets.all(4.0),
                   child: Image.asset(
                     'images/main-menu-logo.png',
                     fit: BoxFit.contain,
@@ -61,23 +61,22 @@ class _LandingPageState extends State<LandingPage> {
           child: Row(
             children: [
               Expanded(
-                child: Center(
-                  child: SizedBox(
-                    width: 250,
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        for (final value in widget.buttonOptions)
-                          MenuOptionButton(
-                            onPressed: () => _openPage(value),
-                            text: value,
-                          ),
-                      ],
-                    ),
+                child: Padding(
+                  padding: EdgeInsets.only(bottom: 64.0),
+                  child: Column(
+                    spacing: 16.0,
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      for (final value in widget.buttonOptions)
+                        MenuOptionButton(
+                          onPressed: () => _openPage(value),
+                          text: value,
+                        ),
+                    ],
                   ),
                 ),
               ),
-              const Expanded(
+              Expanded(
                 child: Center(child: Text('Test footer.')),
               ),
             ],

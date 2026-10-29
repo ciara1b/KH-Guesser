@@ -1,47 +1,139 @@
 import 'package:flutter/material.dart';
 
-class MenuOptionButton extends StatelessWidget {
+class MenuOptionButton extends StatefulWidget {
   final String text;
   final VoidCallback onPressed;
-  final Color? color;
-  final double? borderRadius;
   final TextStyle? textStyle;
 
   const MenuOptionButton({
-    Key? key,
     required this.text,
     required this.onPressed,
-    this.color,
-    this.borderRadius,
     this.textStyle,
-  }) : super(key: key);
+    super.key,
+  });
+
+  @override
+  State<MenuOptionButton> createState() => _MenuOptionButtonState();
+}
+
+class _MenuOptionButtonState extends State<MenuOptionButton>
+    with SingleTickerProviderStateMixin {
+  bool _hovered = false;
+
+  late final AnimationController _pulseController;
+  late final Animation<double> _pulse;
+
+  @override
+  void initState() {
+    super.initState();
+    _pulseController = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: 1500),
+    );
+    _pulse = CurvedAnimation(parent: _pulseController, curve: Curves.easeInOut);
+  }
+
+  @override
+  void dispose() {
+    _pulseController.dispose();
+    super.dispose();
+  }
+
+  void _onHover(bool hovering) {
+    setState(() => _hovered = hovering);
+    if (hovering) {
+      _pulseController.repeat(reverse: true);
+    } else {
+      _pulseController.stop();
+      _pulseController.value = 0.0;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
-    return MouseRegion(
-      cursor: SystemMouseCursors.click,
-      child: ConstrainedBox(
-        constraints: const BoxConstraints(maxWidth: 480),
-        child: SizedBox(
-          height: 100,
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: color ?? Theme.of(context).primaryColor,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(borderRadius ?? 8.0),
-              ),
-              padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
-            ),
-            onPressed: onPressed,
-            child: Text(
-              text,
-              style: TextStyle(
-                color: Colors.black,
-              )
+    return Padding(
+      padding: EdgeInsets.only(left: 64.0),
+      child: AnimatedScale(
+        scale: _hovered ? 1.05 : 1.0,
+        duration: Duration(milliseconds: 150),
+        curve: Curves.easeOut,
+        alignment: Alignment.centerLeft,
+        child: Container(
+          width: double.infinity,
+          foregroundDecoration: BoxDecoration(
+            border: Border(bottom: BorderSide(color: Colors.black, width: 3)),
+          ),
+          child: InkWell(
+            onTap: widget.onPressed,
+            onHover: _onHover,
+            hoverColor: Colors.transparent,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              spacing: 16.0,
+              children: [
+                AnimatedContainer(
+                  duration: Duration(milliseconds: 0),
+                  decoration: BoxDecoration(
+                    color: _hovered ? Color(0xFFFF8400) : Colors.black,
+                    border: Border.all(color: Colors.black, width: 16.0),
+                  ),
+                  width: 64.0,
+                  height: 64.0,
+                  child: Stack(
+                    fit: StackFit.expand,
+                    clipBehavior: Clip.none,
+                    alignment: Alignment.center,
+                    children: [
+                      Center(
+                        child: AnimatedBuilder(
+                          animation: _pulse,
+                          builder: (context, child) {
+                            final scale = _hovered
+                                ? 0.5 +
+                                    (2.0 - 0.5) *
+                                        _pulse.value
+                                : 0.0;
+                            return Transform.scale(scale: scale, child: child);
+                          },
+                          child: Container(
+                          width: 32,
+                          height: 32,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            gradient: RadialGradient(
+                              colors: [
+                                Color.fromRGBO(255, 255, 255, 1.0),
+                                Color.fromRGBO(255, 255, 75, 0.75),
+                                Color.fromRGBO(255, 255, 75, 0.0),
+                              ],
+                              stops: [0.0, 0.55, 1.0],
+                            ),
+                          ),
+                        ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Align(
+                    heightFactor: 1.7,
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      widget.text,
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 32.0,
+                        fontFamily: 'KH-Numbers',
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ),
       ),
-  );
+    );
   }
 }
