@@ -14,12 +14,10 @@ class LandingPage extends StatefulWidget {
 }
 
 class _LandingPageState extends State<LandingPage> {
-  late List<bool> _isHovering;
 
   @override
   void initState() {
     super.initState();
-    _isHovering = List.filled(widget.buttonOptions.length, false);
   }
 
   void _openPage(String value) {
@@ -37,30 +35,55 @@ class _LandingPageState extends State<LandingPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child: GridView.count(
-          scrollDirection: Axis.vertical,
-          shrinkWrap: true,
-          primary: false,
-          crossAxisSpacing: 10,
-          mainAxisSpacing: 10,
-          mainAxisExtent: WidgetsBinding.instance.platformDispatcher.views.first.physicalSize.height / 2.5,
-          crossAxisCount: 2,
-          children: <Widget>[
-            Image.asset('images/back-arrow.png',),
-            Image.asset('images/main-menu-logo.png'),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [for (var (_, value) in widget.buttonOptions.indexed)
-                MenuOptionButton(
-                  onPressed: () => _openPage(value),
-                  text: value,
+    return Column(
+      children: [
+        Expanded(
+          child: Row(
+            children: [
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(4.0),
+                  child: Image.asset(
+                    'images/main-menu-logo.png',
+                    fit: BoxFit.contain,
+                  ),
                 ),
-              ],
-            ),
-            Text('Test footer.')
-          ],
+              ),
+              Expanded(
+                child: Center(
+                  child: Image.asset('images/back-arrow.png', width: 200, height: 200),
+                ),
+              ),
+            ],
+          ),
         ),
+        Expanded(
+          child: Row(
+            children: [
+              Expanded(
+                child: Center(
+                  child: SizedBox(
+                    width: 250,
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        for (final value in widget.buttonOptions)
+                          MenuOptionButton(
+                            onPressed: () => _openPage(value),
+                            text: value,
+                          ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              const Expanded(
+                child: Center(child: Text('Test footer.')),
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }
