@@ -66,7 +66,7 @@ class _LandingPageState extends State<LandingPage> {
                     child: Align(
                       alignment: Alignment.centerLeft,
                       child: Padding(
-                        padding: EdgeInsets.only(top: 4.0, bottom: 4.0, left: 128.0, right: 4.0),
+                        padding: EdgeInsets.only(left: 128.0, right: 4.0),
                         child: Image.asset(
                           'images/main-menu-logo.png',
                           fit: BoxFit.contain,
