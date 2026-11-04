@@ -61,7 +61,7 @@ class _MenuOptionButtonState extends State<MenuOptionButton>
         child: Container(
           width: double.infinity,
           foregroundDecoration: BoxDecoration(
-            border: Border(bottom: BorderSide(color: Colors.black, width: 3)),
+            border: Border(bottom: BorderSide(color: Colors.black, width: 3))
           ),
           child: InkWell(
             onTap: widget.onPressed,
@@ -116,15 +116,25 @@ class _MenuOptionButtonState extends State<MenuOptionButton>
                   ),
                 ),
                 Expanded(
-                  child: Align(
-                    heightFactor: 1.7,
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      widget.text,
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 32.0,
-                        fontFamily: 'KH-Numbers',
+                  child: Container(
+                    height: 64.0,
+                    decoration: BoxDecoration(
+                      gradient: _hovered ? LinearGradient(
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                        stops: [0.0, 0.3, 0.6, 1.0],
+                        colors: [Color(0xFFd0bff9).withAlpha(0), Color(0xFFd0bff9).withAlpha(50), Color(0xFFd0bff9).withAlpha(255), Color(0xFFd095f9)],
+                      ) : null,
+                    ),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        widget.text,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 32.0,
+                          fontFamily: 'KH-Numbers',
+                        ),
                       ),
                     ),
                   ),
