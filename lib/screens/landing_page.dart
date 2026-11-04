@@ -38,18 +38,24 @@ class _LandingPageState extends State<LandingPage> {
     return Column(
       children: [
         Expanded(
+          flex: 2,
           child: Row(
             children: [
               Expanded(
-                child: Padding(
-                  padding: EdgeInsets.all(4.0),
-                  child: Image.asset(
-                    'images/main-menu-logo.png',
-                    fit: BoxFit.contain,
+                flex: 2,
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                    padding: EdgeInsets.only(top: 4.0, bottom: 4.0, left: 128.0, right: 4.0),
+                    child: Image.asset(
+                      'images/main-menu-logo.png',
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 ),
               ),
               Expanded(
+                flex: 1,
                 child: Center(
                   child: Image.asset('images/back-arrow.png', width: 200, height: 200),
                 ),
@@ -58,28 +64,20 @@ class _LandingPageState extends State<LandingPage> {
           ),
         ),
         Expanded(
-          child: Row(
-            children: [
-              Expanded(
-                child: Padding(
-                  padding: EdgeInsets.only(bottom: 64.0),
-                  child: Column(
-                    spacing: 16.0,
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      for (final value in widget.buttonOptions)
-                        MenuOptionButton(
-                          onPressed: () => _openPage(value),
-                          text: value,
-                        ),
-                    ],
+          flex: 1,
+          child: Padding(
+            padding: EdgeInsets.only(bottom: 64.0),
+            child: Column(
+              spacing: 32.0,
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                for (final value in widget.buttonOptions)
+                  MenuOptionButton(
+                    onPressed: () => _openPage(value),
+                    text: value,
                   ),
-                ),
-              ),
-              Expanded(
-                child: Center(child: Text('Test footer.')),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ],
