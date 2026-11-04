@@ -3,6 +3,7 @@ import 'package:khdle/widgets/custom/menu_option_button.dart';
 import 'guess_character.dart';
 import 'guess_enemy.dart';
 import 'guess_keyblade.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({super.key, required this.buttonOptions});
@@ -14,6 +15,7 @@ class LandingPage extends StatefulWidget {
 }
 
 class _LandingPageState extends State<LandingPage> {
+  bool _hovered = false;
 
   @override
   void initState() {
@@ -31,6 +33,10 @@ class _LandingPageState extends State<LandingPage> {
       context,
       MaterialPageRoute<void>(builder: (context) => screen),
     );
+  }
+
+  void _nameOnHover(bool hovering) {
+    setState(() => _hovered = hovering);
   }
 
   @override
@@ -58,6 +64,66 @@ class _LandingPageState extends State<LandingPage> {
                 flex: 1,
                 child: Center(
                   child: Image.asset('images/back-arrow.png', width: 200, height: 200),
+                ),
+              ),
+            ],
+          ),
+        ),
+        Align(
+          alignment: Alignment.centerLeft,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(left: 32.0),
+                child: Text(
+                  "DEVELOPED BY",
+                  style: TextStyle(
+                    color: Color(0xFF8C8C8C),
+                    fontFamily: "ScienceGothic",
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.w400,
+                    letterSpacing: 1.5,
+                    height: 1.2,
+                  ),
+                ),
+              ),
+              FractionallySizedBox(
+                widthFactor: 0.2,
+                child: Container(
+                  height: 2.0,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [Color(0xFF8C8C8C), Color(0x008C8C8C)],
+                    ),
+                  ),
+                ),
+              ),
+              AnimatedScale(
+                scale: _hovered ? 1.05 : 1.0,
+                duration: Duration(milliseconds: 150),
+                curve: Curves.easeOut,
+                child: Padding(
+                  padding: EdgeInsets.only(left: 32.0),
+                  child: InkWell(
+                    onHover: _nameOnHover,
+                    hoverColor: Colors.transparent,
+                    onTap: () => launchUrl(
+                      Uri.parse("https://www.ciarabarry.ie")
+                    ),
+                    child: Text(
+                      "ZEKROFIRE",
+                      style: TextStyle(
+                        color: Color(0xFF8C8C8C),
+                        fontFamily: "ScienceGothic",
+                        fontSize: 32.0,
+                        fontWeight: FontWeight.w600,
+                        letterSpacing: 1.5,
+                        height: 1.2,
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ],

@@ -90,7 +90,7 @@ class CustomInfoButton extends StatelessWidget {
                     spreadRadius: 2,
                   ),
                   BoxShadow(
-                    color: const Color(0xFFE53E01), // dark navy, like 0xFF491225 is for red
+                    color: const Color(0xFFE53E01),
                     offset: Offset.fromDirection(6.0, 3.0),
                     spreadRadius: 1,
                   ),
