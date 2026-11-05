@@ -5,50 +5,135 @@
             "name": "Sora",
             "gender": "Male",
             "species": ["Human"],
-            "debutGame": "Kingdom Hearts: Birth by Sleep",
-            "appearances": 13,
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "appearances": 9,
             "weapon": "Keyblade",
             "origin": "Kingdom Hearts"
         },
         {
             "id": 1,
-            "name": "Kairi",
-            "gender": "Female",
+            "name": "Riku",
+            "gender": "Male",
             "species": ["Human"],
-            "debutGame": "Kingdom Hearts: Birth by Sleep",
-            "appearances": 13,
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "appearances": 9,
             "weapon": "Keyblade",
             "origin": "Kingdom Hearts"
         },
         {
             "id": 2,
-            "name": "Riku",
-            "gender": "Male",
+            "name": "Kairi",
+            "gender": "Female",
             "species": ["Human"],
-            "debutGame": "Kingdom Hearts: Birth by Sleep",
-            "appearances": 13,
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "appearances": 9,
             "weapon": "Keyblade",
             "origin": "Kingdom Hearts"
         },
         {
             "id": 3,
-            "name": "Roxas",
+            "name": "Tidus",
             "gender": "Male",
-            "species": ["Human", "Nobody"],
-            "debutGame": "Kingdom Hearts: Chain of Memories",
-            "appearances": 7,
-            "weapon": "Keyblade",
-            "origin": "Kingdom Hearts"
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts Final Mix",
+            "appearances": 2,
+            "weapon": "Stick",
+            "origin": "Final Fantasy X"
         },
         {
             "id": 4,
-            "name": "Naminé",
+            "name": "Selphie",
             "gender": "Female",
-            "species": ["Human", "Nobody", "Replica"],
-            "debutGame": "Kingdom Hearts: Chain of Memories",
-            "appearances": 6,
-            "norted": false,
-            "origin": "Kingdom Hearts"
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts Final Mix",
+            "appearances": 3,
+            "weapon": "Whip",
+            "origin": "Final Fantasy VIII"
+        },
+        {
+            "id": 5,
+            "name": "Wakka",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts Final Mix",
+            "appearances": 2,
+            "weapon": "Ball",
+            "origin": "Final Fantasy X"
+        },
+        {
+            "id": 6,
+            "name": "King Mickey",
+            "gender": "Male",
+            "species": ["Rodent"],
+            "debutGame": "Kingdom Hearts χ",
+            "appearances": 11,
+            "weapon": "Keyblade",
+            "origin": "Plane Crazy (Disney)"
+        },
+        {
+            "id": 7,
+            "name": "Queen Minnie",
+            "gender": "Female",
+            "species": ["Rodent"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "appearances": 5,
+            "origin": "Plane Crazy (Disney)"
+        },
+        {
+            "id": 8,
+            "name": "Daisy Duck",
+            "gender": "Female",
+            "species": ["Bird"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "appearances": 4,
+            "origin": "Don Donald (Disney)"
+        },
+        {
+            "id": 9,
+            "name": "Donald Duck",
+            "gender": "Male",
+            "species": ["Bird"],
+            "debutGame": "Kingdom Hearts χ",
+            "appearances": 11,
+            "weapon": "Staff",
+            "origin": "The Wise Little Hen (Disney)"
+        },
+        {
+            "id": 10,
+            "name": "Goofy",
+            "gender": "Male",
+            "species": ["Canine"],
+            "debutGame": "Kingdom Hearts χ",
+            "appearances": 11,
+            "weapon": "Shield",
+            "origin": "Mickey's Revue (Disney)"
+        },
+        {
+            "id": 11,
+            "name": "Pluto",
+            "gender": "Male",
+            "species": ["Canine"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "appearances": 5,
+            "origin": "The Chain Gang (Disney)"
+        },
+        {
+            "id": 12,
+            "name": "Jiminy Cricket",
+            "gender": "Male",
+            "species": ["Insect"],
+            "debutGame": "Kingdom Hearts Final Mix",
+            "appearances": 5,
+            "origin": "Pinocchio (Disney)"
+        },
+        {
+            "id": 13,
+            "name": "Chip & Dale",
+            "gender": "Male",
+            "species": ["Squirrel"],
+            "debutGame": "Kingdom Hearts χ",
+            "appearances": 8,
+            "origin": "Private Pluto (Disney)"
         }
     ]
 }
