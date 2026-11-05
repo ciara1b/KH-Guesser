@@ -139,7 +139,8 @@ class _MenuOptionButtonState extends State<MenuOptionButton>
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 32.0,
-                              fontFamily: 'KH-Numbers',
+                              fontFamily: 'ScienceGothic',
+                              fontWeight: FontWeight.w700,
                             ),
                           ),
                         ),
