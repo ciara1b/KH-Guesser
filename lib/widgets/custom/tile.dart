@@ -54,7 +54,7 @@ class Tile extends StatelessWidget {
           HitType.hit => Color(0xFF34A314),
           HitType.partial => Color(0xFFffdb5b),
           HitType.miss => Color(0xFF272727),
-          _ => Colors.white,
+          _ => Colors.red,
         },
       ),
       child: Center(

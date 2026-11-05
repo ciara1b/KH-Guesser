@@ -36,7 +36,7 @@ class _GuessCharacterPageState extends State<GuessCharacterPage> {
                     alignment: Alignment.topCenter,
                     child: Padding(
                       padding: const EdgeInsets.only(top: 64),
-                      child: GamePage(_game, categories),
+                      child: GamePage(_game, categories, CharacterGuess.fromString(_game.hiddenCharacter.name)),
                     ),
                   ),
                 ),

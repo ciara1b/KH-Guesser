@@ -36,7 +36,7 @@ class _GuessKeybladePageState extends State<GuessKeybladePage> {
                     alignment: Alignment.topCenter,
                     child: Padding(
                       padding: const EdgeInsets.only(top: 64),
-                      child: GamePage(_game, categories),
+                      child: GamePage(_game, categories, KeybladeGuess.fromString(_game.hiddenKeyblade.name)),
                     ),
                   ),
                 ),

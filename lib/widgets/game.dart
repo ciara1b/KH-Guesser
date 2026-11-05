@@ -6,10 +6,11 @@ import 'package:khdle/widgets/custom/tile.dart';
 import 'package:khdle/widgets/custom/guess_input.dart';
 
 class GamePage extends StatefulWidget {
-  const GamePage(this.game, this.categories, {super.key});
+  const GamePage(this.game, this.categories, this.answer, {super.key});
 
   final dynamic game;
   final List<CategoryInfo> categories;
+  final dynamic answer;
 
   @override
   State<GamePage> createState() => _GamePageState();
@@ -113,6 +114,24 @@ class _GamePageState extends State<GamePage> {
                 ),
             ],
           ),
+          if (_resultShown && !widget.game.didWin)
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                for (var category in widget.answer.categoryResults)
+                  Padding(
+                    padding: EdgeInsetsGeometry.only(top: tilePadding),
+                    child: SizedBox(
+                      width: tileSlot,
+                      child: Column(
+                        children: [
+                          Tile(category.value, HitType.none, null)
+                        ]
+                      )
+                    )
+                  ),
+              ],
+            ),
           for (var guess in widget.game.guesses.reversed)
             guess.isEmpty ? SizedBox() :
               Row(
