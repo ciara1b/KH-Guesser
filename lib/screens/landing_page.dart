@@ -154,6 +154,26 @@ class _LandingPageState extends State<LandingPage> {
                 ),
               ),
             ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(left: 32.0, bottom: 16.0),
+                    child: Text(
+                      "Zekrofire is not affiliated with Disney or Square Enix and does not own or claim any rights to any trademark belonging to either party.",
+                      style: TextStyle(
+                        color: Color(0xFF8C8C8C),
+                        fontFamily: "ScienceGothic",
+                        fontSize: 12.0,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ],
