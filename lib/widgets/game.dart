@@ -45,128 +45,133 @@ class _GamePageState extends State<GamePage> {
   Widget build(BuildContext context) {
     final double rowWidth = 4 * tileSlot;
 
-    return Padding(
-      padding: const EdgeInsets.all(0.0),
-      child: Column(
-        children: [
-          SizedBox(
-            width: rowWidth,
-            child: GuessInput(
-              gameType: () => widget.game.gameType,
-              gameOver: isGameOver,
-              remainingSolutions: widget.game.remainingSolutions,
-              onSubmitGuess: (String guess) {
-                setState(() {
-                  widget.game.guess(guess);
-                });
+    return Column(
+      children: [
+        Expanded(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(
+                  width: rowWidth,
+                  child: GuessInput(
+                    gameType: () => widget.game.gameType,
+                    gameOver: isGameOver,
+                    remainingSolutions: widget.game.remainingSolutions,
+                    onSubmitGuess: (String guess) {
+                      setState(() {
+                        widget.game.guess(guess);
+                      });
 
-                if (isGameOver) _showResultDialog();
-              },
-            )
-          ),
-          SizedBox(
-            width: rowWidth,
-            child: Padding(
-              padding: EdgeInsets.only(bottom: 32.0),
-              child: GradientProgressBar(
-                percent: ((widget.game.guessesRemaining / widget.game.maxGuesses) * 100).round(),
-                gradient: LinearGradient(
-                  begin: Alignment.bottomCenter,
-                  end: Alignment.topCenter,
-                  colors: [
-                    Color(0xFF32FB39),
-                    Color(0xFFC0FF0D)
+                      if (isGameOver) _showResultDialog();
+                    },
+                  ),
+                ),
+                SizedBox(
+                  width: rowWidth,
+                  child: Padding(
+                    padding: const EdgeInsets.only(bottom: 32.0),
+                    child: GradientProgressBar(
+                      percent: ((widget.game.guessesRemaining / widget.game.maxGuesses) * 100).round(),
+                      gradient: const LinearGradient(
+                        begin: Alignment.bottomCenter,
+                        end: Alignment.topCenter,
+                        colors: [
+                          Color(0xFF32FB39),
+                          Color(0xFFC0FF0D),
+                        ],
+                      ),
+                      backgroundColor: const Color(0xFF171928),
+                    ),
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    if (!widget.game.guesses.first.isEmpty)
+                      for (var categoryType in widget.categories)
+                        SizedBox(
+                          width: tileSlot,
+                          height: tileSize / 4,
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Flexible(
+                                    child: Text(
+                                      categoryType.category,
+                                      style: const TextStyle(
+                                        color: Color(0xFFFDFFFD),
+                                        fontSize: 10,
+                                        fontFamily: 'KH-Numbers',
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
                   ],
                 ),
-                backgroundColor: Color(0xFF171928),
-              )
-            ),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              if (!widget.game.guesses.first.isEmpty)
-                for (var categoryType in widget.categories)
-                  SizedBox(
-                    width: tileSlot,
-                    height: tileSize / 4,
-                    child: Column(
-                      children: [
-                        Row(
-                          mainAxisSize: MainAxisSize.min,
+                if (_resultShown && !widget.game.didWin)
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      for (var category in widget.answer.categoryResults)
+                        Padding(
+                          padding: EdgeInsetsGeometry.only(top: tilePadding),
+                          child: SizedBox(
+                            width: tileSlot,
+                            child: Column(
+                              children: [
+                                Tile(category.value, HitType.none, null),
+                              ],
+                            ),
+                          ),
+                        ),
+                    ],
+                  ),
+                for (var guess in widget.game.guesses.reversed)
+                  guess.isEmpty
+                      ? const SizedBox()
+                      : Row(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Flexible(
-                              child: Text(
-                                categoryType.category,
-                                style: TextStyle(
-                                  color: Color(0xFFFDFFFD),
-                                  fontSize: 10,
-                                  fontFamily: 'KH-Numbers'
+                            for (var category in guess.categoryResults)
+                              Padding(
+                                padding: EdgeInsetsGeometry.only(top: tilePadding),
+                                child: SizedBox(
+                                  width: tileSlot,
+                                  child: Column(
+                                    children: [
+                                      Tile(category.value, category.type, category.clue),
+                                    ],
+                                  ),
                                 ),
                               ),
-                            ),
                           ],
                         ),
-                      ],
-                    ),
-                ),
-            ],
-          ),
-          if (_resultShown && !widget.game.didWin)
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                for (var category in widget.answer.categoryResults)
-                  Padding(
-                    padding: EdgeInsetsGeometry.only(top: tilePadding),
-                    child: SizedBox(
-                      width: tileSlot,
-                      child: Column(
-                        children: [
-                          Tile(category.value, HitType.none, null)
-                        ]
-                      )
-                    )
-                  ),
               ],
             ),
-          for (var guess in widget.game.guesses.reversed)
-            guess.isEmpty ? SizedBox() :
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  for (var category in guess.categoryResults)
-                    Padding(
-                      padding: EdgeInsetsGeometry.only(top: tilePadding),
-                      child: SizedBox(
-                        width: tileSlot,
-                        child: Column(
-                          children: [
-                            Tile(category.value, category.type, category.clue)
-                          ]
-                        )
-                      )
-                    ),
-                ],
-              ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Padding(
-              padding: EdgeInsets.only(left: 32.0, bottom: 16.0, top: 16.0),
-              child: Text(
-                "Zekrofire is not affiliated with Disney or Square Enix and does not own or claim any rights to any trademark belonging to either party.",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: "ScienceGothic",
-                  fontSize: 12.0,
-                ),
-              ),
+          ),
+        ),
+
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 32.0, vertical: 16.0),
+          child: Text(
+            "Zekrofire is not affiliated with Disney or Square Enix and does not own or claim any rights to any trademark belonging to either party.",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Colors.white,
+              fontFamily: "ScienceGothic",
+              fontSize: 12.0,
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

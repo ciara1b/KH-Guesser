@@ -28,18 +28,12 @@ class _GuessKeybladePageState extends State<GuessKeybladePage> {
         ),
         child: Stack(
           children: [
-            LayoutBuilder(
-              builder: (context, constraints) => SingleChildScrollView(
-                child: ConstrainedBox(
-                  constraints: BoxConstraints(minHeight: constraints.maxHeight),
-                  child: Align(
-                    alignment: Alignment.topCenter,
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 64),
-                      child: GamePage(_game, categories, KeybladeGuess.fromString(_game.hiddenKeyblade.name)),
-                    ),
-                  ),
-                ),
+            Positioned.fill(
+              top: 64,
+              child: GamePage(
+                _game,
+                categories,
+                KeybladeGuess.fromString(_game.hiddenKeyblade.name),
               ),
             ),
             CustomBackButton(),

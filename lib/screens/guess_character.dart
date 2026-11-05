@@ -28,18 +28,12 @@ class _GuessCharacterPageState extends State<GuessCharacterPage> {
         ),
         child: Stack(
           children: [
-            LayoutBuilder(
-              builder: (context, constraints) => SingleChildScrollView(
-                child: ConstrainedBox(
-                  constraints: BoxConstraints(minHeight: constraints.maxHeight),
-                  child: Align(
-                    alignment: Alignment.topCenter,
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 64),
-                      child: GamePage(_game, categories, CharacterGuess.fromString(_game.hiddenCharacter.name)),
-                    ),
-                  ),
-                ),
+            Positioned.fill(
+              top: 64,
+              child: GamePage(
+                _game,
+                categories,
+                CharacterGuess.fromString(_game.hiddenCharacter.name),
               ),
             ),
             CustomBackButton(),
