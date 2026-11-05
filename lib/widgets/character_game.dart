@@ -30,7 +30,7 @@ const List<CategoryInfo> categories = [
   ),
   (
     category: 'Appearances',
-    value: 'The number of games the character has appeared in throughout the franchise, including canon and non-canon secret endings. Yellow indicates you are within 2 of the correct number.',
+    value: 'The number of games the character has appeared in throughout the franchise, including canon and non-canon secret endings. Yellow indicates you are within 2 of the correct number.\nN.B. Data characters do not count, i.e. Tidus did not appear in Kingdom Hearts Re:Coded, Data-Tidus did.',
   ),
   (
     category: 'Weapon',
@@ -41,8 +41,8 @@ const List<CategoryInfo> categories = [
     value: 'Whether or not they have been part Xehanort at any point throughout the series.',
   ),
   (
-    category: 'Franchise',
-    value: 'The franchise they originate from, e.g. Kingdom Hearts, Toy Story, Final Fantasy, etc.',
+    category: 'Origin',
+    value: 'The media they originate from, e.g. Kingdom Hearts, Toy Story, Final Fantasy VIII, etc.',
   )
 ];
 

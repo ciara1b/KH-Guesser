@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:khdle/models/category_info.dart';
 
 class CustomInfoButton extends StatelessWidget {
-  const CustomInfoButton(this.info, {super.key});
+  const CustomInfoButton(this.info, {this.useCanonGames = false, super.key});
 
   final List<CategoryInfo> info;
+  final bool useCanonGames;
 
   List<TextSpan> buildInfoSpans() {
     final spans = <TextSpan>[];
@@ -35,7 +36,7 @@ class CustomInfoButton extends StatelessWidget {
       )
     );
 
-    for (String gameName in games) {
+    for (String gameName in (useCanonGames ? canonicalGames : games)) {
       spans.add(
         TextSpan(
           text: ' • ',

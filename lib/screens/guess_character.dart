@@ -43,7 +43,7 @@ class _GuessCharacterPageState extends State<GuessCharacterPage> {
               ),
             ),
             CustomBackButton(),
-            CustomInfoButton(categories),
+            CustomInfoButton(categories, useCanonGames: true),
           ],
         ),
       ),
