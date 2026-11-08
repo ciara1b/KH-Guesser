@@ -18,6 +18,10 @@ class GamePage extends StatefulWidget {
 
 class _GamePageState extends State<GamePage> {
   bool _resultShown = false;
+  bool _showAnswer = false;
+  bool _hasGuessed = false;
+
+  static const _flipStagger = Duration(milliseconds: 500);
 
   bool get isGameOver =>
     widget.game.didWin || widget.game.guessesRemaining <= 0;
@@ -26,10 +30,43 @@ class _GamePageState extends State<GamePage> {
     if (_resultShown) return;
     _resultShown = true;
 
-    showDialog(
-      context: context,
-      builder: (_) =>
-        CustomPopupBox(widget.game.didWin, widget.game.guessesRemaining, () => widget.game.gameType),
+    final wait = _hasGuessed ? _flipStagger * widget.categories.length + const Duration(milliseconds: 700) : Duration.zero;
+
+    Future.delayed(wait, () {
+      if (!mounted) return;
+      setState(() => _showAnswer = true);
+      showDialog(
+        context: context,
+        builder: (_) =>
+          CustomPopupBox(widget.game.didWin, widget.game.guessesRemaining, () => widget.game.gameType),
+      );
+    });
+  }
+
+  Widget _buildGuessRow(int index, dynamic guess, bool isNewest) {
+    if (guess.isEmpty) return SizedBox();
+
+    final results = guess.categoryResults.toList();
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        for (int i = 0; i < results.length; i++)
+          Padding(
+            padding: EdgeInsets.only(top: tilePadding),
+            child: SizedBox(
+              width: tileSlot,
+              child: Column(
+                children: [
+                  FlipTile(
+                    animate: isNewest && _hasGuessed,
+                    delay: _flipStagger * i,
+                    child: Tile(results[i].value, results[i].type, results[i].clue),
+                  ),
+                ],
+              ),
+            ),
+          ),
+      ],
     );
   }
 
@@ -59,6 +96,7 @@ class _GamePageState extends State<GamePage> {
                     remainingSolutions: widget.game.remainingSolutions,
                     onSubmitGuess: (String guess) {
                       setState(() {
+                        _hasGuessed = true;
                         widget.game.guess(guess);
                       });
 
@@ -116,7 +154,7 @@ class _GamePageState extends State<GamePage> {
                         ),
                   ],
                 ),
-                if (_resultShown && !widget.game.didWin)
+                if (_showAnswer && !widget.game.didWin)
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -134,26 +172,14 @@ class _GamePageState extends State<GamePage> {
                         ),
                     ],
                   ),
-                for (var guess in widget.game.guesses.reversed)
-                  guess.isEmpty
-                      ? const SizedBox()
-                      : Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            for (var category in guess.categoryResults)
-                              Padding(
-                                padding: EdgeInsetsGeometry.only(top: tilePadding),
-                                child: SizedBox(
-                                  width: tileSlot,
-                                  child: Column(
-                                    children: [
-                                      Tile(category.value, category.type, category.clue),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                          ],
-                        ),
+                ...() {
+                  final guesses = widget.game.guesses as List;
+                  final newest = widget.game.activeIndex - 1;
+                  return [
+                    for (int i = guesses.length - 1; i >= 0; i--)
+                      _buildGuessRow(i, guesses[i], i == newest),
+                  ];
+                }(),
               ],
             ),
           ),
