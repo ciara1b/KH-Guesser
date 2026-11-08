@@ -11,7 +11,7 @@ typedef CategoryInfo = ({String category, String? value});
 const List<String> games = [
   'Kingdom Hearts',
   'Kingdom Hearts Final Mix',
-  'Kingdom Hearts: Chain of Memories',
+  'Kingdom Hearts Re:Chain of Memories',
   'Kingdom Hearts II',
   'Kingdom Hearts II Final Mix',
   'Kingdom Hearts 358/2 Days',
@@ -28,7 +28,7 @@ const List<String> games = [
 
 const List<String> canonicalGames = [
   'Kingdom Hearts Final Mix',
-  'Kingdom Hearts: Chain of Memories',
+  'Kingdom Hearts Re:Chain of Memories',
   'Kingdom Hearts II Final Mix',
   'Kingdom Hearts 358/2 Days',
   'Kingdom Hearts Birth By Sleep Final Mix',
