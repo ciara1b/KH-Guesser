@@ -17,7 +17,7 @@ const List<CategoryInfo> categories = [
     value: null,
   ),
   (
-    category: 'Debut Game',
+    category: 'Debut',
     value: 'The game in which the keyblade first appeared.',
   ),
   (

@@ -25,7 +25,7 @@ const List<CategoryInfo> categories = [
     value: null,
   ),
   (
-    category: 'Canonical Debut',
+    category: 'Debut',
     value: 'The game in which they first appeared chronologically.',
   ),
   (
