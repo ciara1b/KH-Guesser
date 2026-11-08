@@ -8,7 +8,7 @@
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
             "appearances": 9,
             "weapon": "Keyblade",
-            "origin": "Kingdom Hearts"
+            "origin": "Kingdom Hearts (2002)"
         },
         {
             "id": 1,
@@ -18,7 +18,7 @@
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
             "appearances": 9,
             "weapon": "Keyblade",
-            "origin": "Kingdom Hearts"
+            "origin": "Kingdom Hearts (2002)"
         },
         {
             "id": 2,
@@ -28,7 +28,7 @@
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
             "appearances": 9,
             "weapon": "Keyblade",
-            "origin": "Kingdom Hearts"
+            "origin": "Kingdom Hearts (2002)"
         },
         {
             "id": 3,
@@ -38,7 +38,7 @@
             "debutGame": "Kingdom Hearts Final Mix",
             "appearances": 2,
             "weapon": "Stick",
-            "origin": "Final Fantasy X"
+            "origin": "Final Fantasy X (2001)"
         },
         {
             "id": 4,
@@ -48,7 +48,7 @@
             "debutGame": "Kingdom Hearts Final Mix",
             "appearances": 3,
             "weapon": "Whip",
-            "origin": "Final Fantasy VIII"
+            "origin": "Final Fantasy VIII (1999)"
         },
         {
             "id": 5,
@@ -58,7 +58,7 @@
             "debutGame": "Kingdom Hearts Final Mix",
             "appearances": 2,
             "weapon": "Ball",
-            "origin": "Final Fantasy X"
+            "origin": "Final Fantasy X (2001)"
         },
         {
             "id": 6,
@@ -68,7 +68,7 @@
             "debutGame": "Kingdom Hearts χ",
             "appearances": 11,
             "weapon": "Keyblade",
-            "origin": "Plane Crazy (Disney)"
+            "origin": "Plane Crazy (1928)"
         },
         {
             "id": 7,
@@ -77,7 +77,7 @@
             "species": ["Rodent"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
             "appearances": 5,
-            "origin": "Plane Crazy (Disney)"
+            "origin": "Plane Crazy (1928)"
         },
         {
             "id": 8,
@@ -86,7 +86,7 @@
             "species": ["Bird"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
             "appearances": 4,
-            "origin": "Don Donald (Disney)"
+            "origin": "Don Donald (1937)"
         },
         {
             "id": 9,
@@ -96,7 +96,7 @@
             "debutGame": "Kingdom Hearts χ",
             "appearances": 11,
             "weapon": "Staff",
-            "origin": "The Wise Little Hen (Disney)"
+            "origin": "The Wise Little Hen (1934)"
         },
         {
             "id": 10,
@@ -106,7 +106,7 @@
             "debutGame": "Kingdom Hearts χ",
             "appearances": 11,
             "weapon": "Shield",
-            "origin": "Mickey's Revue (Disney)"
+            "origin": "Mickey's Revue (1932)"
         },
         {
             "id": 11,
@@ -115,7 +115,7 @@
             "species": ["Canine"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
             "appearances": 5,
-            "origin": "The Chain Gang (Disney)"
+            "origin": "The Chain Gang (1930)"
         },
         {
             "id": 12,
@@ -124,7 +124,7 @@
             "species": ["Insect"],
             "debutGame": "Kingdom Hearts Final Mix",
             "appearances": 5,
-            "origin": "Pinocchio (Disney)"
+            "origin": "Pinocchio (1940)"
         },
         {
             "id": 13,
@@ -133,7 +133,327 @@
             "species": ["Squirrel"],
             "debutGame": "Kingdom Hearts χ",
             "appearances": 8,
-            "origin": "Private Pluto (Disney)"
+            "origin": "Private Pluto (1943)"
+        },
+        {
+            "id": 14,
+            "name": "Leon",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts",
+            "appearances": 4,
+            "weapon": "Gunblade",
+            "origin": "Final Fantasy VIII (1999)"
+        },
+        {
+            "id": 15,
+            "name": "Cid",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts",
+            "appearances": 4,
+            "weapon": "Lance",
+            "origin": "Final Fantasy VII (1997)"
+        },
+        {
+            "id": 16,
+            "name": "Aerith",
+            "gender": "Female",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts",
+            "appearances": 4,
+            "weapon": "Staff",
+            "origin": "Final Fantasy VII (1997)"
+        },
+        {
+            "id": 17,
+            "name": "Yuffie",
+            "gender": "Female",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts",
+            "appearances": 4,
+            "weapon": "Shuriken",
+            "origin": "Final Fantasy VII (1997)"
+        },
+        {
+            "id": 18,
+            "name": "Merlin",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "appearances": 4,
+            "weapon": "Wand",
+            "origin": "The Sword in the Stone (1963)"
+        },
+        {
+            "id": 19,
+            "name": "Fairy Godmother",
+            "gender": "Female",
+            "species": ["Fairy"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "appearances": 3,
+            "weapon": "Wand",
+            "origin": "Cinderella (1950)"
+        },
+        {
+            "id": 20,
+            "name": "Huey, Dewey & Louie",
+            "gender": "Male",
+            "species": ["Bird"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "appearances": 4,
+            "origin": "Donald's Nephews (1938)"
+        },
+        {
+            "id": 21,
+            "name": "Alice",
+            "gender": "Female",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts χ",
+            "appearances": 4,
+            "origin": "Alice in Wonderland (1951)"
+        },
+        {
+            "id": 22,
+            "name": "Queen of Hearts",
+            "gender": "Female",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts χ",
+            "appearances": 6,
+            "origin": "Alice in Wonderland (1951)"
+        },
+        {
+            "id": 23,
+            "name": "Cheshire Cat",
+            "gender": "Male",
+            "species": ["Feline"],
+            "debutGame": "Kingdom Hearts χ",
+            "appearances": 6,
+            "origin": "Alice in Wonderland (1951)"
+        },
+        {
+            "id": 24,
+            "name": "Hercules",
+            "gender": "Male",
+            "species": ["Demigod"],
+            "debutGame": "Kingdom Hearts χ",
+            "appearances": 8,
+            "weapon": "Barehands",
+            "origin": "Hercules (1997)"
+        },
+        {
+            "id": 25,
+            "name": "Philoctes",
+            "gender": "Male",
+            "species": ["Satyr"],
+            "debutGame": "Kingdom Hearts χ",
+            "appearances": 8,
+            "origin": "Hercules (1997)"
+        },
+        {
+            "id": 26,
+            "name": "Hades",
+            "gender": "Male",
+            "species": ["God"],
+            "debutGame": "Kingdom Hearts χ",
+            "appearances": 8,
+            "origin": "Hercules (1997)"
+        },
+        {
+            "id": 27,
+            "name": "Cloud",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts χ",
+            "appearances": 5,
+            "weapon": "Sword",
+            "origin": "Final Fantasy VII (1997)"
+        },
+        {
+            "id": 28,
+            "name": "Sephiroth",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts χ",
+            "appearances": 3,
+            "weapon": "Sword",
+            "origin": "Final Fantasy VII (1997)"
+        },
+        {
+            "id": 29,
+            "name": "Aladdin",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts χ",
+            "appearances": 6,
+            "weapon": "Sword",
+            "origin": "Aladdin (1992)"
+        },
+        {
+            "id": 30,
+            "name": "Jasmine",
+            "gender": "Female",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts Union χ",
+            "appearances": 5,
+            "origin": "Aladdin (1992)"
+        },
+        {
+            "id": 29,
+            "name": "Genie",
+            "gender": "Male",
+            "species": ["Genie"],
+            "debutGame": "Kingdom Hearts Union χ",
+            "appearances": 5,
+            "origin": "Aladdin (1992)"
+        },
+        {
+            "id": 30,
+            "name": "The Peddler",
+            "gender": "Male",
+            "species": ["Genie"],
+            "debutGame": "Kingdom Hearts Final Mix",
+            "appearances": 2,
+            "origin": "Aladdin (1992)"
+        },
+        {
+            "id": 31,
+            "name": "Jafar",
+            "gender": "Male",
+            "species": ["Human", "Genie"],
+            "debutGame": "Kingdom Hearts Union χ",
+            "appearances": 5,
+            "weapon": "Staff",
+            "origin": "Aladdin (1992)"
+        },
+        {
+            "id": 32,
+            "name": "Pinocchio",
+            "gender": "Male",
+            "species": ["Human", "Toy"],
+            "debutGame": "Kingdom Hearts Final Mix",
+            "appearances": 4,
+            "origin": "Pinocchio (1940)"
+        },
+        {
+            "id": 32,
+            "name": "Geppetto",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts Final Mix",
+            "appearances": 3,
+            "origin": "Pinocchio (1940)"
+        },
+        {
+            "id": 33,
+            "name": "Ariel",
+            "gender": "Female",
+            "species": ["Human", "Merfolk"],
+            "debutGame": "Kingdom Hearts Final Mix",
+            "appearances": 4,
+            "origin": "The Little Mermaid (1989)"
+        },
+        {
+            "id": 34,
+            "name": "Sebastian",
+            "gender": "Male",
+            "species": ["Crustacean"],
+            "debutGame": "Kingdom Hearts Final Mix",
+            "appearances": 3,
+            "origin": "The Little Mermaid (1989)"
+        },
+        {
+            "id": 35,
+            "name": "Ursula",
+            "gender": "Female",
+            "species": ["Merfolk"],
+            "debutGame": "Kingdom Hearts Final Mix",
+            "appearances": 4,
+            "origin": "The Little Mermaid (1989)"
+        },
+        {
+            "id": 36,
+            "name": "Jack Skellington",
+            "gender": "Male",
+            "species": ["Undead"],
+            "debutGame": "Kingdom Hearts Final Mix",
+            "appearances": 4,
+            "origin": "The Nightmare Before Christmas (1993)"
+        },
+        {
+            "id": 37,
+            "name": "Oogie Boogie",
+            "gender": "Male",
+            "species": ["Undead"],
+            "debutGame": "Kingdom Hearts Final Mix",
+            "appearances": 3,
+            "origin": "The Nightmare Before Christmas (1993)"
+        },
+        {
+            "id": 38,
+            "name": "Peter Pan",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "appearances": 4,
+            "weapon": "Knife",
+            "origin": "Peter Pan (1953)"
+        },
+        {
+            "id": 39,
+            "name": "Tinkerbell",
+            "gender": "Female",
+            "species": ["Fairy"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "appearances": 5,
+            "weapon": "Wand",
+            "origin": "Peter Pan (1953)"
+        },
+        {
+            "id": 40,
+            "name": "Captain Hook",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "appearances": 4,
+            "weapon": "Sword",
+            "origin": "Peter Pan (1953)"
+        },
+        {
+            "id": 41,
+            "name": "Winnie the Pooh",
+            "gender": "Male",
+            "species": ["Bear"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "appearances": 5,
+            "origin": "Winnie the Pooh and the Honey Tree (1966)"
+        },
+        {
+            "id": 42,
+            "name": "Tigger",
+            "gender": "Male",
+            "species": ["Feline"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "appearances": 5,
+            "origin": "Winnie the Pooh and the Blustery Day (1968)"
+        },
+        {
+            "id": 43,
+            "name": "Eeyore",
+            "gender": "Male",
+            "species": ["Equine"],
+            "debutGame": "Kingdom Hearts Final Mix",
+            "appearances": 3,
+            "origin": "Winnie the Pooh and the Honey Tree (1966)"
+        },
+        {
+            "id": 44,
+            "name": "Ansem, Seeker of Darkness",
+            "gender": "Male",
+            "species": ["Heartless"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "appearances": 8,
+            "origin": "Kingdom Hearts (2002)"
         }
     ]
 }
