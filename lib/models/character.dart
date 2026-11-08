@@ -44,6 +44,7 @@ class Character {
   }
   
   Map<String, dynamic> toMap() => {
+    'image': imageUrl,
     'name': name,
     'gender': gender,
     'species': species,
