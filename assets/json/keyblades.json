@@ -174,7 +174,7 @@
         {
             "id": 19,
             "name": "Kingdom Key D",
-            "debutGame": "Kingdom Hearts II",
+            "debutGame": "Kingdom Hearts",
             "strength": 3,
             "magic": 0,
             "appearances": 9,
@@ -767,14 +767,19 @@
         },
         {
             "id": 85,
-            "name": "χ-Blade",
+            "name": "χ-blade",
             "debutGame": "Kingdom Hearts Birth by Sleep",
-            "appearances": 0
+            "strength": 1,
+            "magic": 1,
+            "appearances": 3,
+            "wielders": ["Xehanort", "Vanitas", "Ventus-Vanitas", "Sora"]
         },
         {
             "id": 86,
             "name": "Zero/One",
             "debutGame": "Kingdom Hearts Re:coded",
+            "strength": 1,
+            "magic": 1,
             "appearances": 1,
             "wielders": ["Data-Sora"]
         },
@@ -881,6 +886,8 @@
             "id": 98,
             "name": "Aced's Keyblade",
             "debutGame": "Kingdom Hearts χ[chi]",
+            "strength": 1,
+            "magic": 1,
             "appearances": 2,
             "wielders": ["Aced"]
         },
@@ -888,6 +895,8 @@
             "id": 99,
             "name": "Ava's Keyblade",
             "debutGame": "Kingdom Hearts χ[chi]",
+            "strength": 1,
+            "magic": 1,
             "appearances": 2,
             "wielders": ["Ava"]
         },
@@ -895,6 +904,8 @@
             "id": 100,
             "name": "Gula's Keyblade",
             "debutGame": "Kingdom Hearts χ[chi]",
+            "strength": 1,
+            "magic": 1,
             "appearances": 2,
             "wielders": ["Gula"]
         },
@@ -902,6 +913,8 @@
             "id": 101,
             "name": "Invi's Keyblade",
             "debutGame": "Kingdom Hearts χ[chi]",
+            "strength": 1,
+            "magic": 1,
             "appearances": 2,
             "wielders": ["Invi"]
         },
@@ -909,6 +922,8 @@
             "id": 102,
             "name": "Ira's Keyblade",
             "debutGame": "Kingdom Hearts χ[chi]",
+            "strength": 1,
+            "magic": 1,
             "appearances": 2,
             "wielders": ["Ira"]
         },
@@ -916,6 +931,8 @@
             "id": 103,
             "name": "Starlight",
             "debutGame": "Kingdom Hearts χ[chi]",
+            "strength": 1,
+            "magic": 1,
             "appearances": 3,
             "wielders": ["Sora", "Player", "Ephemer", "Skuld", "Strelitzia"]
         },
@@ -923,6 +940,8 @@
             "id": 104,
             "name": "Moogle O' Glory",
             "debutGame": "Kingdom Hearts χ[chi]",
+            "strength": 1,
+            "magic": 1,
             "appearances": 2,
             "wielders": ["Player"]
         },
@@ -930,6 +949,8 @@
             "id": 105,
             "name": "Bad Guy Breaker",
             "debutGame": "Kingdom Hearts Union χ[Cross]",
+            "strength": 1,
+            "magic": 1,
             "appearances": 1,
             "wielders": ["Player"]
         },
@@ -1216,13 +1237,6 @@
             "debutGame": "Kingdom Hearts Dark Road",
             "appearances": 1,
             "wielders": ["Xehanort", "Eraqus", "Hermod", "Bragi", "Urd", "Vor", "Baldr", "Heimdall", "Helgi", "Hoder", "Sigrun", "Vala", "Vali", "Vidar"]
-        },
-        {
-            "id": 140,
-            "name": "χ-blade",
-            "debutGame": "Kingdom Hearts Birth by Sleep",
-            "appearances": 3,
-            "wielders": ["Xehanort", "Vanitas", "Ventus-Vanitas", "Sora"]
         }
     ]
 }
