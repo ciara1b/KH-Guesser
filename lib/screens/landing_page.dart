@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:khdle/assets.dart';
+import 'package:khdle/data_loader.dart';
 import 'package:khdle/widgets/custom/menu_option_button.dart';
 import 'guess_character.dart';
 import 'guess_enemy.dart';
@@ -16,19 +18,33 @@ class LandingPage extends StatefulWidget {
 
 class _LandingPageState extends State<LandingPage> {
   bool _hovered = false;
+  bool _precached = false;
 
   @override
-  void initState() {
-    super.initState();
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+
+    if (_precached) return;
+
+    _precached = true;
+
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) precacheImage(gameBg, context);
+    });
   }
 
-  void _openPage(String value) {
+  Future<void> _openPage(String value) async {
+    await dataReady;
+
+    if (!mounted) return;
+
     final Widget screen = switch (value) {
       'Character' => const GuessCharacterPage(),
       'Keyblade' => const GuessKeybladePage(),
       'Enemy' => const GuessEnemyPage(),
       _ => throw ArgumentError('Unknown option: $value'),
     };
+
     Navigator.push(
       context,
       MaterialPageRoute<void>(builder: (context) => screen),

@@ -1,12 +1,11 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:khdle/models/keyblade.dart';
+import 'data_loader.dart';
 import 'screens/landing_page.dart';
-import 'models/character.dart';
 
-Future<void> main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  await loadCharacters();
-  await loadKeyblades();
+  unawaited(dataReady);
   runApp(const MainApp());
 }
 

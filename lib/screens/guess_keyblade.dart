@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:khdle/assets.dart';
 import 'package:khdle/widgets/custom/back_button.dart';
 import 'package:khdle/widgets/game.dart';
 import 'package:khdle/widgets/custom/info_button.dart';
@@ -22,7 +23,7 @@ class _GuessKeybladePageState extends State<GuessKeybladePage> {
         height: double.infinity,
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/guessing-bg-light.png'),
+            image: gameBg,
             fit: BoxFit.cover,
           ),
         ),
