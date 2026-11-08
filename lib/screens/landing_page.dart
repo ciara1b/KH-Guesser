@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:khdle/assets.dart';
-import 'package:khdle/data_loader.dart';
+import 'package:khdle/widgets/assets.dart';
+import 'package:khdle/widgets/data_loader.dart';
 import 'package:khdle/widgets/custom/menu_option_button.dart';
-import 'guess_character.dart';
-import 'guess_keyblade.dart';
+import 'character_page.dart';
+import 'keyblade_page.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class LandingPage extends StatefulWidget {

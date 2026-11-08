@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
 
-class GuessInput extends StatefulWidget {
-  const GuessInput({super.key, required this.gameType, required this.gameOver, required this.onSubmitGuess, required this.remainingSolutions});
+class InputField extends StatefulWidget {
+  const InputField({super.key, required this.gameType, required this.gameOver, required this.onSubmitGuess, required this.remainingSolutions});
 
   final String Function() gameType;
   final bool gameOver;
@@ -13,10 +13,10 @@ class GuessInput extends StatefulWidget {
   final List<String> remainingSolutions;
 
   @override
-  State<GuessInput> createState() => _GuessInputState();
+  State<InputField> createState() => _InputFieldState();
 }
 
-class _GuessInputState extends State<GuessInput> {
+class _InputFieldState extends State<InputField> {
   final TextEditingController _textEditingController = TextEditingController();
   final ScrollController _suggestionsScrollController = ScrollController();
   final Map<String, String> _lowerCaseCache = {};

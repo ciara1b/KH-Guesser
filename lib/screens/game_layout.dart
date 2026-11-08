@@ -3,7 +3,7 @@ import 'package:khdle/models/category_info.dart';
 import 'package:khdle/widgets/custom/gradient_progress_bar.dart';
 import 'package:khdle/widgets/custom/popup_box.dart';
 import 'package:khdle/widgets/custom/tile.dart';
-import 'package:khdle/widgets/custom/guess_input.dart';
+import 'package:khdle/widgets/custom/input_field.dart';
 
 class GamePage extends StatefulWidget {
   const GamePage(this.game, this.categories, this.answer, {super.key});
@@ -90,7 +90,7 @@ class _GamePageState extends State<GamePage> {
               children: [
                 SizedBox(
                   width: rowWidth,
-                  child: GuessInput(
+                  child: InputField(
                     gameType: () => widget.game.gameType,
                     gameOver: isGameOver,
                     remainingSolutions: widget.game.remainingSolutions,
