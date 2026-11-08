@@ -118,14 +118,15 @@ class _GuessInputState extends State<GuessInput> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     spacing: 16.0,
                     children: [
-                      Image.asset(
-                        'images/${widget.gameType()}s/${suggestion.replaceAll(' ', '_').replaceAll('/', '')}.png',
+                      SizedBox(
                         width: 48,
-                        height: 48,
-                        cacheWidth: 96,
-                        cacheHeight: 96,
-                        gaplessPlayback: true,
-                        errorBuilder: (_, __, ___) => const SizedBox(width: 48, height: 48),
+                        child: Image.asset(
+                          'images/${widget.gameType()}s/${suggestion.replaceAll(' ', '_').replaceAll('/', '')}.png',
+                          height: 48,
+                          cacheHeight: 96,
+                          gaplessPlayback: true,
+                          errorBuilder: (_, _, _) => const SizedBox(height: 48),
+                        ),
                       ),
                       Text(suggestion)
                     ]
