@@ -1,4 +1,5 @@
 import 'dart:collection';
+import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:khdle/models/category_info.dart';
 
@@ -127,6 +128,69 @@ class Tile extends StatelessWidget {
             ),
         ),
       ),
+    );
+  }
+}
+
+
+class FlipTile extends StatefulWidget {
+  const FlipTile({
+    super.key,
+    required this.child,
+    required this.delay,
+    this.animate = true,
+  });
+
+  final Widget child;
+  final Duration delay;
+  final bool animate;
+
+  @override
+  State<FlipTile> createState() => _FlipTileState();
+}
+
+class _FlipTileState extends State<FlipTile> with SingleTickerProviderStateMixin {
+  late final AnimationController _controller;
+  late final Animation<double> _flip;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 500),
+    );
+    _flip = CurvedAnimation(parent: _controller, curve: Curves.easeOutBack);
+
+    if (widget.animate) {
+      Future.delayed(widget.delay, () {
+        if (mounted) _controller.forward();
+      });
+    } else {
+      _controller.value = 1;
+    }
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: _flip,
+      child: widget.child,
+      builder: (context, child) {
+        final angle = (1 - _flip.value) * (math.pi / 2);
+
+        return Transform(
+          alignment: Alignment.center,
+          transform: Matrix4.identity()..setEntry(3, 2, 0.002)..rotateY(angle),
+          child: child,
+        );
+      },
     );
   }
 }
