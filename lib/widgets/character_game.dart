@@ -26,7 +26,7 @@ const List<CategoryInfo> categories = [
   ),
   (
     category: 'Debut',
-    value: 'The game in which they first appeared chronologically.',
+    value: 'The game (chronological order) in which they first appeared.',
   ),
   (
     category: 'Appearances',

@@ -18,15 +18,15 @@ const List<CategoryInfo> categories = [
   ),
   (
     category: 'Debut',
-    value: 'The game in which the keyblade first appeared.',
+    value: 'The game (release order) in which the keyblade first appeared.',
   ),
   (
     category: 'Strength',
-    value: 'The base strength stat/boost the keyblade provides in the first game it can be used. Yellow indicates you are within 2 of the correct number.',
+    value: "The base strength stat/boost the keyblade provides in the first game it can be used; otherwise displays as 1. Yellow indicates you are within 2 of the correct number.",
   ),
   (
     category: 'Magic',
-    value: 'The base magic stat/boost the keyblade provides in the first game it can be used. Yellow indicates you are within 2 of the correct number.',
+    value: "The base magic stat/boost the keyblade provides in the first game it can be used; otherwise displays as 1. Yellow indicates you are within 2 of the correct number.",
   ),
   (
     category: 'Wielders',
