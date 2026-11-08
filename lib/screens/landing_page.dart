@@ -3,7 +3,6 @@ import 'package:khdle/assets.dart';
 import 'package:khdle/data_loader.dart';
 import 'package:khdle/widgets/custom/menu_option_button.dart';
 import 'guess_character.dart';
-import 'guess_enemy.dart';
 import 'guess_keyblade.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -41,7 +40,6 @@ class _LandingPageState extends State<LandingPage> {
     final Widget screen = switch (value) {
       'Character' => const GuessCharacterPage(),
       'Keyblade' => const GuessKeybladePage(),
-      'Enemy' => const GuessEnemyPage(),
       _ => throw ArgumentError('Unknown option: $value'),
     };
 
