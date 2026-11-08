@@ -1,5 +1,5 @@
-import 'models/character.dart';
-import 'models/keyblade.dart';
+import '../models/character.dart';
+import '../models/keyblade.dart';
 
 Future<void>? _loading;
 

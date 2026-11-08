@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:khdle/assets.dart';
+import 'package:khdle/widgets/assets.dart';
 import 'package:khdle/models/category_info.dart';
-import 'package:khdle/screens/game_page.dart';
+import 'package:khdle/screens/game_layout.dart';
 import 'package:khdle/widgets/custom/back_button.dart';
 import 'package:khdle/widgets/custom/info_button.dart';
 import 'package:khdle/widgets/game.dart';
 
-class GuessCharacterPage extends StatefulWidget {
-  const GuessCharacterPage({super.key});
+class GuessKeybladePage extends StatefulWidget {
+  const GuessKeybladePage({super.key});
 
   @override
-  State<GuessCharacterPage> createState() => _GuessCharacterPageState();
+  State<GuessKeybladePage> createState() => _GuessKeybladePageState();
 }
 
-class _GuessCharacterPageState extends State<GuessCharacterPage> {
-  final CharacterGame _game = CharacterGame(
+class _GuessKeybladePageState extends State<GuessKeybladePage> {
+  final KeybladeGame _game = KeybladeGame(
     seed: 13700000000 + (int.parse(DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day).toString().replaceAll("-", "").replaceAll(" 00:00:00.000", "")) - 20261108)
   );
 
@@ -36,12 +36,12 @@ class _GuessCharacterPageState extends State<GuessCharacterPage> {
               top: 64,
               child: GamePage(
                 _game,
-                characterCategories,
-                _game.guessFromName(_game.hiddenCharacter.name),
+                keybladeCategories,
+                _game.guessFromName(_game.hiddenKeyblade.name),
               ),
             ),
             CustomBackButton(),
-            CustomInfoButton(characterCategories, useCanonGames: true),
+            CustomInfoButton(keybladeCategories),
           ],
         ),
       ),
