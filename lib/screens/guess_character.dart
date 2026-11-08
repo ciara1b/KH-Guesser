@@ -13,7 +13,9 @@ class GuessCharacterPage extends StatefulWidget {
 }
 
 class _GuessCharacterPageState extends State<GuessCharacterPage> {
-  final Game _game = Game();
+  final Game _game = Game(
+    seed: 13700000000 + (int.parse(DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day).toString().replaceAll("-", "").replaceAll(" 00:00:00.000", "")) - 20261108)
+  );
 
   @override
   Widget build(BuildContext context) {
