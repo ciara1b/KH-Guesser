@@ -19,6 +19,9 @@ class GuessInput extends StatefulWidget {
 class _GuessInputState extends State<GuessInput> {
   final TextEditingController _textEditingController = TextEditingController();
   final ScrollController _suggestionsScrollController = ScrollController();
+  final Map<String, String> _lowerCaseCache = {};
+
+  static final List<Shadow> _buttonShadows = outlinedText();
 
   late final FocusNode _focusNode = FocusNode(
     onKeyEvent: (node, event) {
@@ -71,6 +74,8 @@ class _GuessInputState extends State<GuessInput> {
             padding: const EdgeInsets.only(top: 8.0, bottom: 16.0, right: 8.0),
             child: TypeAheadField<String>(
               constraints: BoxConstraints(maxHeight: 384),
+              debounceDuration: const Duration(milliseconds: 50),
+              animationDuration: Duration.zero,
               controller: _textEditingController,
               focusNode: _focusNode,
               scrollController: _suggestionsScrollController,
@@ -94,13 +99,17 @@ class _GuessInputState extends State<GuessInput> {
                   onSubmitted: (_) => _onSubmit(),
                 );
               },
-              suggestionsCallback: (pattern) async {
+              suggestionsCallback: (pattern) {
                 if (pattern.length < 2) return null;
                 final p = pattern.toLowerCase();
-                return widget.remainingSolutions
-                    .where((s) => s.toLowerCase().contains(p))
-                    .take(5)
-                    .toList();
+                final results = <String>[];
+                for (final s in widget.remainingSolutions) {
+                  if (_lowerCaseCache.putIfAbsent(s, s.toLowerCase).contains(p)) {
+                    results.add(s);
+                    if (results.length == 5) break;
+                  }
+                }
+                return results;
               },
               itemBuilder: (context, suggestion) => Material(
                 color: const Color(0xFF121214),
@@ -113,6 +122,10 @@ class _GuessInputState extends State<GuessInput> {
                         'images/${widget.gameType()}s/${suggestion.replaceAll(' ', '_').replaceAll('/', '')}.png',
                         width: 48,
                         height: 48,
+                        cacheWidth: 96,
+                        cacheHeight: 96,
+                        gaplessPlayback: true,
+                        errorBuilder: (_, __, ___) => const SizedBox(width: 48, height: 48),
                       ),
                       Text(suggestion)
                     ]
@@ -182,7 +195,7 @@ class _GuessInputState extends State<GuessInput> {
                 backgroundColor: Colors.transparent,
                 shadowColor: Colors.transparent,
                 foregroundColor: Colors.white,
-                textStyle: TextStyle(shadows: outlinedText(), fontSize: 16.0),
+                textStyle: TextStyle(shadows: _buttonShadows, fontSize: 16.0),
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(10.0), bottomRight: Radius.circular(10.0), bottomLeft: Radius.circular(5.0), topRight: Radius.circular(5.0))),
               ),
               child: Text('Send'),
