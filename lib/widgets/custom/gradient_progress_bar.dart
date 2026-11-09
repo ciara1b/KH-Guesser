@@ -5,7 +5,12 @@ class GradientProgressBar extends StatelessWidget {
   final LinearGradient gradient;
   final Color backgroundColor;
 
-  const GradientProgressBar({required this.percent, required this.gradient, required this.backgroundColor, super.key});
+  const GradientProgressBar({
+    required this.percent,
+    required this.gradient,
+    required this.backgroundColor,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,13 +22,13 @@ class GradientProgressBar extends StatelessWidget {
           child: Container(
             decoration: BoxDecoration(
               gradient: gradient,
-              border: const Border(
+              border: Border(
                 left: BorderSide(color: Colors.black, width: 4.0),
                 bottom: BorderSide(color: Colors.black, width: 4.0),
-                top: BorderSide(color: Colors.black, width: 4.0)
+                top: BorderSide(color: Colors.black, width: 4.0),
               ),
             ),
-            child: const SizedBox(height: 40.0),
+            child: SizedBox(height: 40.0),
           ),
         ),
         Flexible(
@@ -32,13 +37,13 @@ class GradientProgressBar extends StatelessWidget {
           child: Container(
             decoration: BoxDecoration(
               color: backgroundColor,
-              border: const Border(
+              border: Border(
                 right: BorderSide(color: Colors.black, width: 4.0),
                 bottom: BorderSide(color: Colors.black, width: 4.0),
-                top: BorderSide(color: Colors.black, width: 4.0)
+                top: BorderSide(color: Colors.black, width: 4.0),
               ),
             ),
-            child: const SizedBox(height: 40.0),
+            child: SizedBox(height: 40.0),
           ),
         ),
       ],

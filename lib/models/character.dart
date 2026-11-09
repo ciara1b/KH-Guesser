@@ -1,4 +1,5 @@
 import 'dart:convert';
+
 import 'package:flutter/services.dart';
 
 class Character {
@@ -31,7 +32,9 @@ class Character {
       id: json['id'] as int,
       name: json['name'] as String,
       gender: json['gender'] as String,
-      species: (json['species'] as List<dynamic>).map((w) => w as String).toList(),
+      species: (json['species'] as List<dynamic>)
+          .map((w) => w as String)
+          .toList(),
       debutGame: json['debutGame'] as String,
       weapon: json['weapon'] as String? ?? 'n/a',
       norted: json['norted'] as bool? ?? false,
@@ -39,7 +42,7 @@ class Character {
       imageUrl: 'assets/images/keyblades/$nameForImage.png',
     );
   }
-  
+
   Map<String, dynamic> toMap() => {
     'image': imageUrl,
     'name': name,
@@ -55,8 +58,11 @@ class Character {
 final Set<Character> allCharacters = {};
 
 Future<void> loadCharacters() async {
-  final String response = await rootBundle.loadString('assets/json/characters.json');
-  final Map<String, dynamic> data = json.decode(response) as Map<String, dynamic>;
+  final String response = await rootBundle.loadString(
+    'assets/json/characters.json',
+  );
+  final Map<String, dynamic> data =
+      json.decode(response) as Map<String, dynamic>;
   final List<dynamic> characters = data['characters'] as List<dynamic>;
 
   allCharacters.addAll(

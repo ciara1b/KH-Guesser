@@ -16,7 +16,16 @@ class GuessKeybladePage extends StatefulWidget {
 class _GuessKeybladePageState extends State<GuessKeybladePage> {
   late final Future<GuessGame> _gameFuture = GameRepository.get(
     'keyblade',
-    seed: 13700000000 + (int.parse(DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day).toString().replaceAll("-", "").replaceAll(" 00:00:00.000", "")) - 20261108),
+    seed:
+        13700000000 +
+        (int.parse(
+              DateTime(
+                DateTime.now().year,
+                DateTime.now().month,
+                DateTime.now().day,
+              ).toString().replaceAll("-", "").replaceAll(" 00:00:00.000", ""),
+            ) -
+            20261108),
   );
 
   @override
@@ -25,11 +34,8 @@ class _GuessKeybladePageState extends State<GuessKeybladePage> {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: gameBg,
-            fit: BoxFit.cover,
-          ),
+        decoration: BoxDecoration(
+          image: DecorationImage(image: gameBg, fit: BoxFit.cover),
         ),
         child: Stack(
           children: [
@@ -39,7 +45,7 @@ class _GuessKeybladePageState extends State<GuessKeybladePage> {
                 future: _gameFuture,
                 builder: (context, snap) {
                   if (!snap.hasData) {
-                    return const Center(child: CircularProgressIndicator());
+                    return Center(child: CircularProgressIndicator());
                   }
                   final game = snap.data! as KeybladeGame;
                   return GamePage(

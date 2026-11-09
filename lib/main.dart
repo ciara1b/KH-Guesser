@@ -1,5 +1,7 @@
 import 'dart:async';
+
 import 'package:flutter/material.dart';
+
 import 'widgets/data_loader.dart';
 import 'screens/landing_page.dart';
 

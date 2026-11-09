@@ -1,9 +1,12 @@
 library;
+
 import 'dart:convert';
 import 'dart:math';
+
 import 'package:collection/collection.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:khdle/models/category_info.dart';
+
 import '../models/character.dart';
 import '../models/keyblade.dart';
 
@@ -11,11 +14,13 @@ class Guess {
   Guess(this.categoryResults);
 
   factory Guess.empty(List<String> categories) => Guess([
-    for (final c in categories) (category: c, value: null, type: HitType.none, clue: null),
+    for (final c in categories)
+      (category: c, value: null, type: HitType.none, clue: null),
   ]);
 
   factory Guess.fromMap(Map<String, dynamic> map) => Guess([
-    for (final e in map.entries) (category: e.key, value: e.value, type: HitType.none, clue: null),
+    for (final e in map.entries)
+      (category: e.key, value: e.value, type: HitType.none, clue: null),
   ]);
 
   final List<CategoryResult> categoryResults;
@@ -33,9 +38,14 @@ class Guess {
       dynamic clue;
 
       if (currentValue == r.value ||
-          currentValue is List && DeepCollectionEquality.unordered().equals(currentValue, r.value)) {
+          currentValue is List &&
+              DeepCollectionEquality.unordered().equals(
+                currentValue,
+                r.value,
+              )) {
         type = HitType.hit;
-      } else if ((r.value is List && currentValue.toSet().intersection(r.value.toSet()).isNotEmpty) ||
+      } else if ((r.value is List &&
+              currentValue.toSet().intersection(r.value.toSet()).isNotEmpty) ||
           (r.value is int && (currentValue - r.value).abs() <= 2)) {
         type = HitType.partial;
       } else {
@@ -46,7 +56,12 @@ class Guess {
         clue = r.value < currentValue;
       }
 
-      result.add((category: r.category, value: r.value, type: type, clue: clue));
+      result.add((
+        category: r.category,
+        value: r.value,
+        type: type,
+        clue: clue,
+      ));
     }
 
     return Guess(result);
@@ -88,12 +103,14 @@ class GuessGame<T> {
   List<String> get _guessedNames => [
     for (final g in _guesses)
       if (!g.isEmpty)
-        g.categoryResults.firstWhere((c) => c.category == 'name').value as String,
+        g.categoryResults.firstWhere((c) => c.category == 'name').value
+            as String,
   ];
 
   List<String> get possibleNames => _items.map(_nameOf).toList();
 
-  UnmodifiableListView<String> get remainingSolutions => UnmodifiableListView(_remaining);
+  UnmodifiableListView<String> get remainingSolutions =>
+      UnmodifiableListView(_remaining);
 
   T get hidden => _hidden;
 
@@ -167,7 +184,8 @@ class GuessGame<T> {
 
   bool isLegalGuess(String guess) => _canonicalName(guess) != null;
 
-  Guess matchGuessOnly(String name) => guessFromName(name).evaluate(_toMap(_hidden));
+  Guess matchGuessOnly(String name) =>
+      guessFromName(name).evaluate(_toMap(_hidden));
 
   void addGuessToList(Guess guess) {
     final guessIndex = activeIndex;
@@ -177,7 +195,8 @@ class GuessGame<T> {
     _guesses[guessIndex] = guess;
   }
 
-  Guess guessFromName(String name) => Guess.fromMap(_toMap(_items.firstWhere((i) => _nameOf(i) == name)));
+  Guess guessFromName(String name) =>
+      Guess.fromMap(_toMap(_items.firstWhere((i) => _nameOf(i) == name)));
 
   Guess randomGuess() {
     final names = possibleNames;
@@ -196,7 +215,8 @@ class GuessGame<T> {
 
   static int _scramble(int seed) {
     const mod32 = 0x100000000;
-    int mul(int a, int b) => (((a & 0xFFFF) * b) + ((((a >>> 16) * b) & 0xFFFF) << 16)) % mod32;
+    int mul(int a, int b) =>
+        (((a & 0xFFFF) * b) + ((((a >>> 16) * b) & 0xFFFF) << 16)) % mod32;
 
     int h = (seed % mod32) ^ mul((seed ~/ mod32) + 1, 0x9E3779B1);
     h ^= h >>> 16;
@@ -208,7 +228,8 @@ class GuessGame<T> {
   }
 }
 
-List<String> get possibleCharacters => allCharacters.map((c) => c.name).toList();
+List<String> get possibleCharacters =>
+    allCharacters.map((c) => c.name).toList();
 
 List<String> get possibleKeyblades => allKeyblades.map((k) => k.name).toList();
 

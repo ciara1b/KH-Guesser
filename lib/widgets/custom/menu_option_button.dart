@@ -65,7 +65,9 @@ class _MenuOptionButtonState extends State<MenuOptionButton>
             child: Container(
               width: double.infinity,
               foregroundDecoration: BoxDecoration(
-                border: Border(bottom: BorderSide(color: Colors.black, width: 3))
+                border: Border(
+                  bottom: BorderSide(color: Colors.black, width: 3),
+                ),
               ),
               child: InkWell(
                 onTap: widget.onPressed,
@@ -93,27 +95,28 @@ class _MenuOptionButtonState extends State<MenuOptionButton>
                               animation: _pulse,
                               builder: (context, child) {
                                 final scale = _hovered
-                                    ? 0.5 +
-                                        (2.0 - 0.5) *
-                                            _pulse.value
+                                    ? 0.5 + (2.0 - 0.5) * _pulse.value
                                     : 0.0;
-                                return Transform.scale(scale: scale, child: child);
+                                return Transform.scale(
+                                  scale: scale,
+                                  child: child,
+                                );
                               },
                               child: Container(
-                              width: 32,
-                              height: 32,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                gradient: RadialGradient(
-                                  colors: [
-                                    Color.fromRGBO(255, 255, 255, 1.0),
-                                    Color.fromRGBO(255, 255, 75, 0.75),
-                                    Color.fromRGBO(255, 255, 75, 0.0),
-                                  ],
-                                  stops: [0.0, 0.55, 1.0],
+                                width: 32,
+                                height: 32,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  gradient: RadialGradient(
+                                    colors: [
+                                      Color.fromRGBO(255, 255, 255, 1.0),
+                                      Color.fromRGBO(255, 255, 75, 0.75),
+                                      Color.fromRGBO(255, 255, 75, 0.0),
+                                    ],
+                                    stops: [0.0, 0.55, 1.0],
+                                  ),
                                 ),
                               ),
-                            ),
                             ),
                           ),
                         ],
@@ -127,9 +130,19 @@ class _MenuOptionButtonState extends State<MenuOptionButton>
                             begin: Alignment.centerLeft,
                             end: Alignment.centerRight,
                             stops: [0.0, 0.3, 0.6, 1.0],
-                            colors: _hovered ? 
-                            [Color(0xFFd0bff9).withAlpha(0), Color(0xFFd0bff9).withAlpha(50), Color(0xFFd0bff9).withAlpha(255), Color(0xFFd095f9)]
-                            : [Colors.black.withAlpha(0), Colors.black.withAlpha(20), Colors.black.withAlpha(50), Colors.black.withAlpha(100)],
+                            colors: _hovered
+                                ? [
+                                    Color(0xFFd0bff9).withAlpha(0),
+                                    Color(0xFFd0bff9).withAlpha(50),
+                                    Color(0xFFd0bff9).withAlpha(255),
+                                    Color(0xFFd095f9),
+                                  ]
+                                : [
+                                    Colors.black.withAlpha(0),
+                                    Colors.black.withAlpha(20),
+                                    Colors.black.withAlpha(50),
+                                    Colors.black.withAlpha(100),
+                                  ],
                           ),
                         ),
                         child: Align(
@@ -151,7 +164,7 @@ class _MenuOptionButtonState extends State<MenuOptionButton>
               ),
             ),
           );
-        }
+        },
       ),
     );
   }

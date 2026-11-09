@@ -1,11 +1,11 @@
-enum HitType {
-  none,
-  hit,
-  partial,
-  miss,
-}
+enum HitType { none, hit, partial, miss }
 
-typedef CategoryResult = ({String category, dynamic value, HitType type, dynamic clue});
+typedef CategoryResult = ({
+  String category,
+  dynamic value,
+  HitType type,
+  dynamic clue,
+});
 typedef CategoryInfo = ({String category, String? value});
 
 const List<String> games = [
@@ -23,7 +23,7 @@ const List<String> games = [
   'Kingdom Hearts Union χ[Cross]',
   'Kingdom Hearts 0.2 Birth by Sleep -A fragmentary passage-',
   'Kingdom Hearts Dark Road',
-  'Kingdom Hearts III + Re Mind'
+  'Kingdom Hearts III + Re Mind',
 ];
 
 const List<String> canonicalGames = [
@@ -38,18 +38,12 @@ const List<String> canonicalGames = [
   'Kingdom Hearts Union χ[Cross]',
   'Kingdom Hearts 0.2 Birth by Sleep -A fragmentary passage-',
   'Kingdom Hearts Dark Road',
-  'Kingdom Hearts III + Re Mind'
+  'Kingdom Hearts III + Re Mind',
 ];
 
 const List<CategoryInfo> keybladeCategories = [
-  (
-    category: '',
-    value: null,
-  ),
-  (
-    category: 'Name',
-    value: null,
-  ),
+  (category: '', value: null),
+  (category: 'Name', value: null),
   (
     category: 'Debut',
     value: 'The game (release order) in which the keyblade first appeared.',
@@ -69,35 +63,19 @@ const List<CategoryInfo> keybladeCategories = [
   (
     category: 'Appearances',
     value: 'The number of games the keyblade appears in. Yellow indicates you are within 2 of the correct number.',
-  )
+  ),
 ];
 
-
 const List<CategoryInfo> characterCategories = [
-  (
-    category: '',
-    value: null,
-  ),
-  (
-    category: 'Name',
-    value: null,
-  ),
-  (
-    category: 'Gender',
-    value: null,
-  ),
-  (
-    category: 'Species',
-    value: null,
-  ),
+  (category: '', value: null),
+  (category: 'Name', value: null),
+  (category: 'Gender', value: null),
+  (category: 'Species', value: null),
   (
     category: 'Debut',
     value: 'The game (chronological order) in which they first appeared.',
   ),
-  (
-    category: 'Weapon',
-    value: null,
-  ),
+  (category: 'Weapon', value: null),
   (
     category: 'Norted',
     value: 'Whether or not they have been part Xehanort at any point throughout the series.',
@@ -105,5 +83,5 @@ const List<CategoryInfo> characterCategories = [
   (
     category: 'Origin',
     value: 'The media they originate from, e.g. Kingdom Hearts, Toy Story, Final Fantasy VIII, etc.',
-  )
+  ),
 ];

@@ -5,7 +5,13 @@ import 'package:flutter/services.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
 
 class InputField extends StatefulWidget {
-  const InputField({super.key, required this.gameType, required this.gameOver, required this.onSubmitGuess, required this.remainingSolutions});
+  const InputField({
+    super.key,
+    required this.gameType,
+    required this.gameOver,
+    required this.onSubmitGuess,
+    required this.remainingSolutions,
+  });
 
   final String Function() gameType;
   final bool gameOver;
@@ -25,7 +31,9 @@ class _InputFieldState extends State<InputField> {
 
   late final FocusNode _focusNode = FocusNode(
     onKeyEvent: (node, event) {
-      final isEnter = event.logicalKey == LogicalKeyboardKey.enter || event.logicalKey == LogicalKeyboardKey.numpadEnter;
+      final isEnter =
+          event.logicalKey == LogicalKeyboardKey.enter ||
+          event.logicalKey == LogicalKeyboardKey.numpadEnter;
       if (isEnter) {
         if (event is KeyDownEvent) _onSubmit();
         return KeyEventResult.handled;
@@ -34,16 +42,40 @@ class _InputFieldState extends State<InputField> {
     },
   );
 
-  static List<Shadow> outlinedText({double strokeWidth = 1, Color strokeColor = Colors.black, int precision = 5}) {
+  static List<Shadow> outlinedText({
+    double strokeWidth = 1,
+    Color strokeColor = Colors.black,
+    int precision = 5,
+  }) {
     Set<Shadow> result = HashSet();
     for (int x = 1; x < strokeWidth + precision; x++) {
-      for(int y = 1; y < strokeWidth + precision; y++) {
+      for (int y = 1; y < strokeWidth + precision; y++) {
         double offsetX = x.toDouble();
         double offsetY = y.toDouble();
-        result.add(Shadow(offset: Offset(-strokeWidth / offsetX, -strokeWidth / offsetY), color: strokeColor));
-        result.add(Shadow(offset: Offset(-strokeWidth / offsetX, strokeWidth / offsetY), color: strokeColor));
-        result.add(Shadow(offset: Offset(strokeWidth / offsetX, -strokeWidth / offsetY), color: strokeColor));
-        result.add(Shadow(offset: Offset(strokeWidth / offsetX, strokeWidth / offsetY), color: strokeColor));
+        result.add(
+          Shadow(
+            offset: Offset(-strokeWidth / offsetX, -strokeWidth / offsetY),
+            color: strokeColor,
+          ),
+        );
+        result.add(
+          Shadow(
+            offset: Offset(-strokeWidth / offsetX, strokeWidth / offsetY),
+            color: strokeColor,
+          ),
+        );
+        result.add(
+          Shadow(
+            offset: Offset(strokeWidth / offsetX, -strokeWidth / offsetY),
+            color: strokeColor,
+          ),
+        );
+        result.add(
+          Shadow(
+            offset: Offset(strokeWidth / offsetX, strokeWidth / offsetY),
+            color: strokeColor,
+          ),
+        );
       }
     }
     return result.toList();
@@ -71,10 +103,10 @@ class _InputFieldState extends State<InputField> {
       children: [
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.only(top: 8.0, bottom: 16.0, right: 8.0),
+            padding: EdgeInsets.only(top: 8.0, bottom: 16.0, right: 8.0),
             child: TypeAheadField<String>(
               constraints: BoxConstraints(maxHeight: 384),
-              debounceDuration: const Duration(milliseconds: 50),
+              debounceDuration: Duration(milliseconds: 50),
               controller: _textEditingController,
               focusNode: _focusNode,
               scrollController: _suggestionsScrollController,
@@ -104,7 +136,9 @@ class _InputFieldState extends State<InputField> {
                 final p = pattern.toLowerCase();
                 final results = <String>[];
                 for (final s in widget.remainingSolutions) {
-                  if (_lowerCaseCache.putIfAbsent(s, s.toLowerCase).contains(p)) {
+                  if (_lowerCaseCache
+                      .putIfAbsent(s, s.toLowerCase)
+                      .contains(p)) {
                     results.add(s);
                     if (results.length == 5) break;
                   }
@@ -112,7 +146,7 @@ class _InputFieldState extends State<InputField> {
                 return results;
               },
               itemBuilder: (context, suggestion) => Material(
-                color: const Color(0xFF121214),
+                color: Color(0xFF121214),
                 child: ListTile(
                   title: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -125,11 +159,11 @@ class _InputFieldState extends State<InputField> {
                           height: 48,
                           cacheHeight: 96,
                           gaplessPlayback: true,
-                          errorBuilder: (_, _, _) => const SizedBox(height: 48),
+                          errorBuilder: (_, _, _) => SizedBox(height: 48),
                         ),
                       ),
-                      Text(suggestion)
-                    ]
+                      Text(suggestion),
+                    ],
                   ),
                   textColor: Color(0xFFFDFFFD),
                   hoverColor: Color(0xFF42100F),
@@ -139,26 +173,27 @@ class _InputFieldState extends State<InputField> {
               ),
               decorationBuilder: (context, child) => Material(
                 type: MaterialType.card,
-                color: const Color(0xFF121214),
+                color: Color(0xFF121214),
                 surfaceTintColor: Colors.transparent,
                 elevation: 4,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
-                  side: const BorderSide(width: 1, color: Color(0xFF42100F)),
+                  side: BorderSide(width: 1, color: Color(0xFF42100F)),
                 ),
                 clipBehavior: Clip.antiAlias,
                 child: ScrollbarTheme(
                   data: ScrollbarThemeData(
-                    thumbColor: const WidgetStatePropertyAll(Colors.white),
-                    trackVisibility: const WidgetStatePropertyAll(false),
-                    thickness: const WidgetStatePropertyAll(6),
-                    radius: const Radius.circular(3),
+                    thumbColor: WidgetStatePropertyAll(Colors.white),
+                    trackVisibility: WidgetStatePropertyAll(false),
+                    thickness: WidgetStatePropertyAll(6),
+                    radius: Radius.circular(3),
                     crossAxisMargin: 3,
                   ),
                   child: Scrollbar(
                     controller: _suggestionsScrollController,
                     child: ScrollConfiguration(
-                      behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+                      behavior: ScrollConfiguration.of(context)
+                          .copyWith(scrollbars: false),
                       child: child,
                     ),
                   ),
@@ -172,21 +207,33 @@ class _InputFieldState extends State<InputField> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 8.0, bottom: 16.0),
+          padding: EdgeInsets.only(top: 8.0, bottom: 16.0),
           child: Container(
-            constraints: BoxConstraints(minWidth: 128, minHeight: 48, maxHeight: 384),
+            constraints: BoxConstraints(
+              minWidth: 128,
+              minHeight: 48,
+              maxHeight: 384,
+            ),
             decoration: BoxDecoration(
-              border: Border.all(
-                color: Color(0xFFDF1835),
-                width: 3.0,
+              border: Border.all(color: Color(0xFFDF1835), width: 3.0),
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(20.0),
+                bottomRight: Radius.circular(20.0),
+                bottomLeft: Radius.circular(5.0),
+                topRight: Radius.circular(5.0),
               ),
-              borderRadius: BorderRadius.only(topLeft: Radius.circular(20.0), bottomRight: Radius.circular(20.0), bottomLeft: Radius.circular(5.0), topRight: Radius.circular(5.0)),
               gradient: LinearGradient(
                 begin: AlignmentGeometry.topCenter,
                 end: AlignmentGeometry.bottomCenter,
-                colors: [Color(0xFF9A1129), Color(0xFFDF1835)]
+                colors: [Color(0xFF9A1129), Color(0xFFDF1835)],
               ),
-              boxShadow: [BoxShadow(color: Color(0xFF491225), offset: Offset.fromDirection(1.0, 4.0), spreadRadius: 1)],
+              boxShadow: [
+                BoxShadow(
+                  color: Color(0xFF491225),
+                  offset: Offset.fromDirection(1.0, 4.0),
+                  spreadRadius: 1,
+                ),
+              ],
             ),
             child: ElevatedButton(
               onPressed: _onSubmit,
@@ -195,7 +242,14 @@ class _InputFieldState extends State<InputField> {
                 shadowColor: Colors.transparent,
                 foregroundColor: Colors.white,
                 textStyle: TextStyle(shadows: _buttonShadows, fontSize: 16.0),
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(10.0), bottomRight: Radius.circular(10.0), bottomLeft: Radius.circular(5.0), topRight: Radius.circular(5.0))),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(10.0),
+                    bottomRight: Radius.circular(10.0),
+                    bottomLeft: Radius.circular(5.0),
+                    topRight: Radius.circular(5.0),
+                  ),
+                ),
               ),
               child: Text('Send'),
             ),
