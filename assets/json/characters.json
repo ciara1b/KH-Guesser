@@ -24,7 +24,7 @@
             "id": 2,
             "name": "Kairi",
             "gender": "Female",
-            "species": ["Human"],
+            "species": ["Human", "Princess of Heart"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
             "appearances": 9,
             "weapon": "Keyblade",
@@ -65,7 +65,7 @@
             "name": "King Mickey",
             "gender": "Male",
             "species": ["Rodent"],
-            "debutGame": "Kingdom Hearts χ",
+            "debutGame": "Kingdom Hearts χ[chi]",
             "appearances": 11,
             "weapon": "Keyblade",
             "origin": "Plane Crazy (1928)"
@@ -93,7 +93,7 @@
             "name": "Donald Duck",
             "gender": "Male",
             "species": ["Bird"],
-            "debutGame": "Kingdom Hearts χ",
+            "debutGame": "Kingdom Hearts χ[chi]",
             "appearances": 11,
             "weapon": "Staff",
             "origin": "The Wise Little Hen (1934)"
@@ -103,7 +103,7 @@
             "name": "Goofy",
             "gender": "Male",
             "species": ["Canine"],
-            "debutGame": "Kingdom Hearts χ",
+            "debutGame": "Kingdom Hearts χ[chi]",
             "appearances": 11,
             "weapon": "Shield",
             "origin": "Mickey's Revue (1932)"
@@ -131,7 +131,7 @@
             "name": "Chip & Dale",
             "gender": "Male",
             "species": ["Squirrel"],
-            "debutGame": "Kingdom Hearts χ",
+            "debutGame": "Kingdom Hearts χ[chi]",
             "appearances": 8,
             "origin": "Private Pluto (1943)"
         },
@@ -208,8 +208,8 @@
             "id": 21,
             "name": "Alice",
             "gender": "Female",
-            "species": ["Human"],
-            "debutGame": "Kingdom Hearts χ",
+            "species": ["Human", "Princess of Heart"],
+            "debutGame": "Kingdom Hearts χ[chi]",
             "appearances": 4,
             "origin": "Alice in Wonderland (1951)"
         },
@@ -218,7 +218,7 @@
             "name": "Queen of Hearts",
             "gender": "Female",
             "species": ["Human"],
-            "debutGame": "Kingdom Hearts χ",
+            "debutGame": "Kingdom Hearts χ[chi]",
             "appearances": 6,
             "origin": "Alice in Wonderland (1951)"
         },
@@ -227,7 +227,7 @@
             "name": "Cheshire Cat",
             "gender": "Male",
             "species": ["Feline"],
-            "debutGame": "Kingdom Hearts χ",
+            "debutGame": "Kingdom Hearts χ[chi]",
             "appearances": 6,
             "origin": "Alice in Wonderland (1951)"
         },
@@ -236,7 +236,7 @@
             "name": "Hercules",
             "gender": "Male",
             "species": ["Demigod"],
-            "debutGame": "Kingdom Hearts χ",
+            "debutGame": "Kingdom Hearts χ[chi]",
             "appearances": 8,
             "weapon": "Barehands",
             "origin": "Hercules (1997)"
@@ -246,7 +246,7 @@
             "name": "Philoctes",
             "gender": "Male",
             "species": ["Satyr"],
-            "debutGame": "Kingdom Hearts χ",
+            "debutGame": "Kingdom Hearts χ[chi]",
             "appearances": 8,
             "origin": "Hercules (1997)"
         },
@@ -255,7 +255,7 @@
             "name": "Hades",
             "gender": "Male",
             "species": ["God"],
-            "debutGame": "Kingdom Hearts χ",
+            "debutGame": "Kingdom Hearts χ[chi]",
             "appearances": 8,
             "origin": "Hercules (1997)"
         },
@@ -264,7 +264,7 @@
             "name": "Cloud",
             "gender": "Male",
             "species": ["Human"],
-            "debutGame": "Kingdom Hearts χ",
+            "debutGame": "Kingdom Hearts χ[chi]",
             "appearances": 5,
             "weapon": "Sword",
             "origin": "Final Fantasy VII (1997)"
@@ -274,7 +274,7 @@
             "name": "Sephiroth",
             "gender": "Male",
             "species": ["Human"],
-            "debutGame": "Kingdom Hearts χ",
+            "debutGame": "Kingdom Hearts χ[chi]",
             "appearances": 3,
             "weapon": "Sword",
             "origin": "Final Fantasy VII (1997)"
@@ -284,7 +284,7 @@
             "name": "Aladdin",
             "gender": "Male",
             "species": ["Human"],
-            "debutGame": "Kingdom Hearts χ",
+            "debutGame": "Kingdom Hearts χ[chi]",
             "appearances": 6,
             "weapon": "Sword",
             "origin": "Aladdin (1992)"
@@ -293,8 +293,8 @@
             "id": 30,
             "name": "Jasmine",
             "gender": "Female",
-            "species": ["Human"],
-            "debutGame": "Kingdom Hearts Union χ",
+            "species": ["Human", "Princess of Heart"],
+            "debutGame": "Kingdom Hearts Union χ[Cross]",
             "appearances": 5,
             "origin": "Aladdin (1992)"
         },
@@ -303,7 +303,7 @@
             "name": "Genie",
             "gender": "Male",
             "species": ["Genie"],
-            "debutGame": "Kingdom Hearts Union χ",
+            "debutGame": "Kingdom Hearts Union χ[Cross]",
             "appearances": 5,
             "origin": "Aladdin (1992)"
         },
@@ -321,7 +321,7 @@
             "name": "Jafar",
             "gender": "Male",
             "species": ["Human", "Genie"],
-            "debutGame": "Kingdom Hearts Union χ",
+            "debutGame": "Kingdom Hearts Union χ[Cross]",
             "appearances": 5,
             "weapon": "Staff",
             "origin": "Aladdin (1992)"
@@ -454,6 +454,231 @@
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
             "appearances": 8,
             "origin": "Kingdom Hearts (2002)"
+        },
+        {
+            "id": 45,
+            "name": "Maleficent",
+            "gender": "Female",
+            "species": ["Fairy"],
+            "debutGame": "Kingdom Hearts Union χ[Cross]",
+            "appearances": 8,
+            "origin": "Sleeping Beauty (1959)"
+        },
+        {
+            "id": 46,
+            "name": "Beast",
+            "gender": "Male",
+            "species": ["Human", "Chimera"],
+            "debutGame": "Kingdom Hearts χ[chi]",
+            "appearances": 6,
+            "origin": "Beauty and the Beast (1991)"
+        },
+        {
+            "id": 47,
+            "name": "Belle",
+            "gender": "Female",
+            "species": ["Human", "Princess of Heart"],
+            "debutGame": "Kingdom Hearts χ[chi]",
+            "appearances": 6,
+            "origin": "Beauty and the Beast (1991)"
+        },
+        {
+            "id": 48,
+            "name": "Snow White",
+            "gender": "Female",
+            "species": ["Human", "Princess of Heart"],
+            "debutGame": "Kingdom Hearts χ[chi]",
+            "appearances": 4,
+            "origin": "Snow White and the Seven Dwarfs (1937)"
+        },
+        {
+            "id": 49,
+            "name": "Cinderella",
+            "gender": "Female",
+            "species": ["Human", "Princess of Heart"],
+            "debutGame": "Kingdom Hearts Union χ[Cross]",
+            "appearances": 3,
+            "origin": "Cinderella (1950)"
+        },
+        {
+            "id": 50,
+            "name": "Aurora",
+            "gender": "Female",
+            "species": ["Human", "Princess of Heart"],
+            "debutGame": "Kingdom Hearts Union χ[Cross]",
+            "appearances": 3,
+            "origin": "Sleeping Beauty (1959)"
+        },
+        {
+            "id": 51,
+            "name": "Kairi's Grandma",
+            "gender": "Female",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "appearances": 2,
+            "origin": "Kingdom Hearts (2002)"
+        },
+        {
+            "id": 52,
+            "name": "Xemnas",
+            "gender": "Male",
+            "species": ["Nobody"],
+            "debutGame": "Kingdom Hearts Final Mix",
+            "appearances": 6,
+            "origin": "Kingdom Hearts Final Mix (2002)"
+        },
+        {
+            "id": 53,
+            "name": "Chernabog",
+            "gender": "None",
+            "species": ["Demon"],
+            "debutGame": "Kingdom Hearts Final Mix",
+            "appearances": 3,
+            "origin": "Kingdom Hearts (2002)"
+        },
+        {
+            "id": 54,
+            "name": "Dark Figure",
+            "gender": "Male",
+            "species": ["Heartless"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "appearances": 7,
+            "origin": "Kingdom Hearts (2002)"
+        },
+        {
+            "id": 55,
+            "name": "Roxas",
+            "gender": "Male",
+            "species": ["Nobody", "Human"],
+            "debutGame": "Kingdom Hearts Final Mix",
+            "appearances": 7,
+            "origin": "Kingdom Hearts (2002)"
+        },
+        {
+            "id": 56,
+            "name": "Simba",
+            "gender": "Male",
+            "species": ["Feline"],
+            "debutGame": "Kingdom Hearts Final Mix",
+            "appearances": 4,
+            "origin": "The Lion King (1994)"
+        },
+        {
+            "id": 57,
+            "name": "Mushu",
+            "gender": "Male",
+            "species": ["Reptile"],
+            "debutGame": "Kingdom Hearts Final Mix",
+            "appearances": 3,
+            "origin": "Mulan (1998)"
+        },
+        {
+            "id": 58,
+            "name": "Marluxia",
+            "gender": "Male",
+            "species": ["Nobody"],
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "appearances": 4,
+            "origin": "Kingdom Hearts: Chain of Memories (2004)"
+        },
+        {
+            "id": 59,
+            "name": "Axel",
+            "gender": "Male",
+            "species": ["Nobody"],
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "appearances": 5,
+            "origin": "Kingdom Hearts: Chain of Memories (2004)"
+        },
+        {
+            "id": 60,
+            "name": "Larxene",
+            "gender": "Female",
+            "species": ["Nobody"],
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "appearances": 4,
+            "origin": "Kingdom Hearts: Chain of Memories (2004)"
+        },
+        {
+            "id": 61,
+            "name": "Vexen",
+            "gender": "Male",
+            "species": ["Nobody"],
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "appearances": 4,
+            "origin": "Kingdom Hearts: Chain of Memories (2004)"
+        },
+        {
+            "id": 62,
+            "name": "Lexaeus",
+            "gender": "Male",
+            "species": ["Nobody"],
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "appearances": 3,
+            "origin": "Kingdom Hearts: Chain of Memories (2004)"
+        },
+        {
+            "id": 63,
+            "name": "Zexion",
+            "gender": "Male",
+            "species": ["Nobody"],
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "appearances": 3,
+            "origin": "Kingdom Hearts: Chain of Memories (2004)"
+        },
+        {
+            "id": 64,
+            "name": "Riku Replica",
+            "gender": "Male",
+            "species": ["Replica"],
+            "debutGame": "Kingdom Hearts Re:Chain of Memories",
+            "appearances": 3,
+            "origin": "Kingdom Hearts: Chain of Memories (2004)"
+        },
+        {
+            "id": 65,
+            "name": "Naminé",
+            "gender": "Female",
+            "species": ["Nobody", "Human"],
+            "debutGame": "Kingdom Hearts Re:Chain of Memories",
+            "appearances": 6,
+            "origin": "Kingdom Hearts: Chain of Memories (2004)"
+        },
+        {
+            "id": 66,
+            "name": "Ansem the Wise",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "appearances": 5,
+            "origin": "Kingdom Hearts II (2005)"
+        },
+        {
+            "id": 67,
+            "name": "Hayner",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "appearances": 3,
+            "origin": "Kingdom Hearts II (2005)"
+        },
+        {
+            "id": 68,
+            "name": "Pence",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "appearances": 3,
+            "origin": "Kingdom Hearts II (2005)"
+        },
+        {
+            "id": 69,
+            "name": "Olette",
+            "gender": "Female",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "appearances": 3,
+            "origin": "Kingdom Hearts II (2005)"
         }
     ]
 }
