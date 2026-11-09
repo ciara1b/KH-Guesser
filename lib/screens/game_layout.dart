@@ -26,21 +26,26 @@ class _GamePageState extends State<GamePage> {
   static const _flipStagger = Duration(milliseconds: 500);
 
   bool get isGameOver =>
-    widget.game.didWin || widget.game.guessesRemaining <= 0;
+      widget.game.didWin || widget.game.guessesRemaining <= 0;
 
   void _showResultDialog() {
     if (_resultShown) return;
     _resultShown = true;
 
-    final wait = _hasGuessed ? _flipStagger * widget.categories.length + const Duration(milliseconds: 700) : Duration.zero;
+    final wait = _hasGuessed
+        ? _flipStagger * widget.categories.length + Duration(milliseconds: 700)
+        : Duration.zero;
 
     Future.delayed(wait, () {
       if (!mounted) return;
       setState(() => _showAnswer = true);
       showDialog(
         context: context,
-        builder: (_) =>
-          CustomPopupBox(widget.game.didWin, widget.game.guessesRemaining, () => widget.game.gameType),
+        builder: (_) => CustomPopupBox(
+          widget.game.didWin,
+          widget.game.guessesRemaining,
+          () => widget.game.gameType,
+        ),
       );
     });
   }
@@ -62,7 +67,11 @@ class _GamePageState extends State<GamePage> {
                   FlipTile(
                     animate: isNewest && _hasGuessed,
                     delay: _flipStagger * i,
-                    child: Tile(results[i].value, results[i].type, results[i].clue),
+                    child: Tile(
+                      results[i].value,
+                      results[i].type,
+                      results[i].clue,
+                    ),
                   ),
                 ],
               ),
@@ -89,119 +98,139 @@ class _GamePageState extends State<GamePage> {
         Expanded(
           child: LayoutBuilder(
             builder: (context, constraints) {
-              final double contentWidth = math.max(constraints.maxWidth, math.max(rowWidth, widget.categories.length * tileSlot));
+              final double contentWidth = math.max(
+                constraints.maxWidth,
+                math.max(rowWidth, widget.categories.length * tileSlot),
+              );
 
-              return SingleChildScrollView(
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: SizedBox(
-                    width: contentWidth,
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          width: rowWidth,
-                          child: InputField(
-                            gameType: () => widget.game.gameType,
-                            gameOver: isGameOver,
-                            remainingSolutions: widget.game.remainingSolutions,
-                            onSubmitGuess: (String guess) {
-                              setState(() {
-                                _hasGuessed = true;
-                                widget.game.guess(guess);
-                              });
+              return SizedBox(
+                width: contentWidth,
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(top: 32.0),
+                      child: SizedBox(
+                        width: rowWidth,
+                        child: InputField(
+                          gameType: () => widget.game.gameType,
+                          gameOver: isGameOver,
+                          remainingSolutions: widget.game.remainingSolutions,
+                          onSubmitGuess: (String guess) {
+                            setState(() {
+                              _hasGuessed = true;
+                              widget.game.guess(guess);
+                            });
 
-                              widget.game.save();
+                            widget.game.save();
 
-                              if (isGameOver) _showResultDialog();
-                            },
-                          ),
+                            if (isGameOver) _showResultDialog();
+                          },
                         ),
-                        SizedBox(
-                          width: rowWidth,
-                          child: Padding(
-                            padding: const EdgeInsets.only(bottom: 32.0),
-                            child: GradientProgressBar(
-                              percent: ((widget.game.guessesRemaining / widget.game.maxGuesses) * 100).round(),
-                              gradient: const LinearGradient(
-                                begin: Alignment.bottomCenter,
-                                end: Alignment.topCenter,
-                                colors: [
-                                  Color(0xFF32FB39),
-                                  Color(0xFFC0FF0D),
-                                ],
-                              ),
-                              backgroundColor: const Color(0xFF171928),
-                            ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: rowWidth,
+                      child: Padding(
+                        padding: EdgeInsets.only(bottom: 32.0),
+                        child: GradientProgressBar(
+                          percent:
+                              ((widget.game.guessesRemaining /
+                                          widget.game.maxGuesses) *
+                                      100)
+                                  .round(),
+                          gradient: LinearGradient(
+                            begin: Alignment.bottomCenter,
+                            end: Alignment.topCenter,
+                            colors: [Color(0xFF32FB39), Color(0xFFC0FF0D)],
                           ),
+                          backgroundColor: Color(0xFF171928),
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                      ),
+                    ),
+                    SingleChildScrollView(
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Column(
                           children: [
-                            if (!widget.game.guesses.first.isEmpty)
-                              for (var categoryType in widget.categories)
-                                SizedBox(
-                                  width: tileSlot,
-                                  height: tileSize / 4,
-                                  child: Column(
-                                    children: [
-                                      Row(
-                                        mainAxisSize: MainAxisSize.min,
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                if (!widget.game.guesses.first.isEmpty)
+                                  for (var categoryType in widget.categories)
+                                    SizedBox(
+                                      width: tileSlot,
+                                      height: tileSize / 4,
+                                      child: Column(
                                         children: [
-                                          Flexible(
-                                            child: Text(
-                                              categoryType.category,
-                                              style: const TextStyle(
-                                                color: Color(0xFFFDFFFD),
-                                                fontSize: 10,
-                                                fontFamily: 'KH-Numbers',
+                                          Row(
+                                            mainAxisSize: MainAxisSize.min,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Flexible(
+                                                child: Text(
+                                                  categoryType.category,
+                                                  style: TextStyle(
+                                                    color: Color(0xFFFDFFFD),
+                                                    fontSize: 10,
+                                                    fontFamily: 'KH-Numbers',
+                                                  ),
+                                                ),
                                               ),
-                                            ),
+                                            ],
                                           ),
                                         ],
                                       ),
-                                    ],
-                                  ),
-                                ),
+                                    ),
+                              ],
+                            ),
+                            if (_showAnswer && !widget.game.didWin)
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  for (var category
+                                      in widget.answer.categoryResults)
+                                    Padding(
+                                      padding: EdgeInsetsGeometry.only(
+                                        top: tilePadding,
+                                      ),
+                                      child: SizedBox(
+                                        width: tileSlot,
+                                        child: Column(
+                                          children: [
+                                            Tile(
+                                              category.value,
+                                              HitType.none,
+                                              null,
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                ],
+                              ),
+                            ...() {
+                              final guesses = widget.game.guesses as List;
+                              final newest = widget.game.activeIndex - 1;
+                              return [
+                                for (int i = guesses.length - 1; i >= 0; i--)
+                                  _buildGuessRow(i, guesses[i], i == newest),
+                              ];
+                            }(),
                           ],
                         ),
-                        if (_showAnswer && !widget.game.didWin)
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              for (var category in widget.answer.categoryResults)
-                                Padding(
-                                  padding: EdgeInsetsGeometry.only(top: tilePadding),
-                                  child: SizedBox(
-                                    width: tileSlot,
-                                    child: Column(
-                                      children: [
-                                        Tile(category.value, HitType.none, null),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                            ],
-                          ),
-                        ...() {
-                          final guesses = widget.game.guesses as List;
-                          final newest = widget.game.activeIndex - 1;
-                          return [
-                            for (int i = guesses.length - 1; i >= 0; i--)
-                              _buildGuessRow(i, guesses[i], i == newest),
-                          ];
-                        }(),
-                      ],
+                      ),
                     ),
-                  ),
+                  ],
                 ),
               );
             },
           ),
         ),
 
-        const Padding(
+        Padding(
           padding: EdgeInsets.symmetric(horizontal: 32.0, vertical: 16.0),
           child: Text(
             "Zekrofire is not affiliated with Disney or Square Enix and does not own or claim any rights to any trademark belonging to either party.",
