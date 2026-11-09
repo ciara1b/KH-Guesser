@@ -14,8 +14,9 @@ class GuessKeybladePage extends StatefulWidget {
 }
 
 class _GuessKeybladePageState extends State<GuessKeybladePage> {
-  final KeybladeGame _game = KeybladeGame(
-    seed: 13700000000 + (int.parse(DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day).toString().replaceAll("-", "").replaceAll(" 00:00:00.000", "")) - 20261108)
+  late final Future<GuessGame> _gameFuture = GameRepository.get(
+    'keyblade',
+    seed: 13700000000 + (int.parse(DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day).toString().replaceAll("-", "").replaceAll(" 00:00:00.000", "")) - 20261108),
   );
 
   @override
@@ -34,10 +35,19 @@ class _GuessKeybladePageState extends State<GuessKeybladePage> {
           children: [
             Positioned.fill(
               top: 64,
-              child: GamePage(
-                _game,
-                keybladeCategories,
-                _game.guessFromName(_game.hiddenKeyblade.name),
+              child: FutureBuilder<GuessGame>(
+                future: _gameFuture,
+                builder: (context, snap) {
+                  if (!snap.hasData) {
+                    return const Center(child: CircularProgressIndicator());
+                  }
+                  final game = snap.data! as KeybladeGame;
+                  return GamePage(
+                    game,
+                    keybladeCategories,
+                    game.guessFromName(game.hiddenKeyblade.name),
+                  );
+                },
               ),
             ),
             CustomBackButton(),

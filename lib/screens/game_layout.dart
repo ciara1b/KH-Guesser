@@ -100,6 +100,8 @@ class _GamePageState extends State<GamePage> {
                         widget.game.guess(guess);
                       });
 
+                      widget.game.save();
+
                       if (isGameOver) _showResultDialog();
                     },
                   ),

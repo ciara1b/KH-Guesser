@@ -14,8 +14,9 @@ class GuessCharacterPage extends StatefulWidget {
 }
 
 class _GuessCharacterPageState extends State<GuessCharacterPage> {
-  final CharacterGame _game = CharacterGame(
-    seed: 13700000000 + (int.parse(DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day).toString().replaceAll("-", "").replaceAll(" 00:00:00.000", "")) - 20261108)
+  late final Future<GuessGame> _gameFuture = GameRepository.get(
+    'character',
+    seed: 13700000000 + (int.parse(DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day).toString().replaceAll("-", "").replaceAll(" 00:00:00.000", "")) - 20261108),
   );
 
   @override
@@ -34,14 +35,23 @@ class _GuessCharacterPageState extends State<GuessCharacterPage> {
           children: [
             Positioned.fill(
               top: 64,
-              child: GamePage(
-                _game,
-                characterCategories,
-                _game.guessFromName(_game.hiddenCharacter.name),
+              child: FutureBuilder<GuessGame>(
+                future: _gameFuture,
+                builder: (context, snap) {
+                  if (!snap.hasData) {
+                    return const Center(child: CircularProgressIndicator());
+                  }
+                  final game = snap.data! as CharacterGame;
+                  return GamePage(
+                    game,
+                    characterCategories,
+                    game.guessFromName(game.hiddenCharacter.name),
+                  );
+                },
               ),
             ),
             CustomBackButton(),
-            CustomInfoButton(characterCategories, useCanonGames: true),
+            CustomInfoButton(characterCategories),
           ],
         ),
       ),

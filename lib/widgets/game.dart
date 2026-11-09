@@ -1,6 +1,8 @@
 library;
+import 'dart:convert';
 import 'dart:math';
 import 'package:collection/collection.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:khdle/models/category_info.dart';
 import '../models/character.dart';
 import '../models/keyblade.dart';
@@ -83,6 +85,12 @@ class GuessGame<T> {
   List<Guess> _guesses;
   List<String> _remaining;
 
+  List<String> get _guessedNames => [
+    for (final g in _guesses)
+      if (!g.isEmpty)
+        g.categoryResults.firstWhere((c) => c.category == 'name').value as String,
+  ];
+
   List<String> get possibleNames => _items.map(_nameOf).toList();
 
   UnmodifiableListView<String> get remainingSolutions => UnmodifiableListView(_remaining);
@@ -114,7 +122,33 @@ class GuessGame<T> {
     _hidden = _pickInitial(_items, seed);
     _guesses = List<Guess>.filled(maxGuesses, Guess.empty(_categories));
     _remaining = _items.map(_nameOf).toList();
+    GameStorage.clear(gameType);
   }
+
+  Map<String, dynamic> toJson() => {
+    'hidden': _nameOf(_hidden),
+    'guessed': List<String>.from(_guessedNames),
+    'seed': seed,
+  };
+
+  bool restore(Map<String, dynamic> json) {
+    if (json['seed'] != seed) return false;
+
+    final match = _items.where((i) => _nameOf(i) == json['hidden']);
+    if (match.isEmpty) return false;
+
+    _hidden = match.first;
+    _guesses = List<Guess>.filled(maxGuesses, Guess.empty(_categories));
+    _remaining = _items.map(_nameOf).toList();
+
+    for (final name in (json['guessed'] as List).cast<String>()) {
+      if (activeIndex == -1) break;
+      guess(name);
+    }
+    return true;
+  }
+
+  Future<void> save() => GameStorage.save(this);
 
   String? _canonicalName(String guess) {
     final g = guess.trim().toLowerCase();
@@ -207,4 +241,45 @@ class KeybladeGame extends GuessGame<Keyblade> {
       );
 
   Keyblade get hiddenKeyblade => hidden;
+}
+
+class GameStorage {
+  static String _key(String gameType) => 'saved_game_$gameType';
+
+  static Future<void> save(GuessGame game) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString(_key(game.gameType), jsonEncode(game.toJson()));
+  }
+
+  static Future<void> load(GuessGame game) async {
+    final prefs = await SharedPreferences.getInstance();
+    final raw = prefs.getString(_key(game.gameType));
+    if (raw == null) return;
+    try {
+      final ok = game.restore(jsonDecode(raw) as Map<String, dynamic>);
+      if (!ok) await clear(game.gameType);
+    } catch (_) {
+      game.resetGame();
+    }
+  }
+
+  static Future<void> clear(String gameType) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove(_key(gameType));
+  }
+}
+
+class GameRepository {
+  static final Map<String, GuessGame> _cache = {};
+
+  static Future<GuessGame> get(String gameType, {int? seed}) async {
+    final cached = _cache[gameType];
+    if (cached != null && cached.seed == seed) return cached;
+
+    final GuessGame game = gameType == 'character'
+        ? CharacterGame(seed: seed)
+        : KeybladeGame(seed: seed);
+    await GameStorage.load(game);
+    return _cache[gameType] = game;
+  }
 }
