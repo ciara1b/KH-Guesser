@@ -75,7 +75,6 @@ class _InputFieldState extends State<InputField> {
             child: TypeAheadField<String>(
               constraints: BoxConstraints(maxHeight: 384),
               debounceDuration: const Duration(milliseconds: 50),
-              animationDuration: Duration.zero,
               controller: _textEditingController,
               focusNode: _focusNode,
               scrollController: _suggestionsScrollController,
@@ -151,7 +150,6 @@ class _InputFieldState extends State<InputField> {
                 child: ScrollbarTheme(
                   data: ScrollbarThemeData(
                     thumbColor: const WidgetStatePropertyAll(Colors.white),
-                    thumbVisibility: const WidgetStatePropertyAll(true),
                     trackVisibility: const WidgetStatePropertyAll(false),
                     thickness: const WidgetStatePropertyAll(6),
                     radius: const Radius.circular(3),
@@ -159,7 +157,6 @@ class _InputFieldState extends State<InputField> {
                   ),
                   child: Scrollbar(
                     controller: _suggestionsScrollController,
-                    thumbVisibility: true,
                     child: ScrollConfiguration(
                       behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
                       child: child,
