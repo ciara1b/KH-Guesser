@@ -79,6 +79,7 @@ class _InputFieldState extends State<InputField> {
               controller: _textEditingController,
               focusNode: _focusNode,
               scrollController: _suggestionsScrollController,
+              hideOnEmpty: true,
               builder: (context, controller, focusNode) {
                 return TextField(
                   controller: controller,
