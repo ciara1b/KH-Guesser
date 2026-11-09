@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 import 'package:khdle/models/category_info.dart';
 import 'package:khdle/widgets/custom/gradient_progress_bar.dart';
@@ -85,105 +87,117 @@ class _GamePageState extends State<GamePage> {
     return Column(
       children: [
         Expanded(
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                SizedBox(
-                  width: rowWidth,
-                  child: InputField(
-                    gameType: () => widget.game.gameType,
-                    gameOver: isGameOver,
-                    remainingSolutions: widget.game.remainingSolutions,
-                    onSubmitGuess: (String guess) {
-                      setState(() {
-                        _hasGuessed = true;
-                        widget.game.guess(guess);
-                      });
+          child: LayoutBuilder(
+            builder: (context, constraints) {
+              final double contentWidth = math.max(constraints.maxWidth, math.max(rowWidth, widget.categories.length * tileSlot));
 
-                      widget.game.save();
-
-                      if (isGameOver) _showResultDialog();
-                    },
-                  ),
-                ),
-                SizedBox(
-                  width: rowWidth,
-                  child: Padding(
-                    padding: const EdgeInsets.only(bottom: 32.0),
-                    child: GradientProgressBar(
-                      percent: ((widget.game.guessesRemaining / widget.game.maxGuesses) * 100).round(),
-                      gradient: const LinearGradient(
-                        begin: Alignment.bottomCenter,
-                        end: Alignment.topCenter,
-                        colors: [
-                          Color(0xFF32FB39),
-                          Color(0xFFC0FF0D),
-                        ],
-                      ),
-                      backgroundColor: const Color(0xFF171928),
-                    ),
-                  ),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    if (!widget.game.guesses.first.isEmpty)
-                      for (var categoryType in widget.categories)
+              return SingleChildScrollView(
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: SizedBox(
+                    width: contentWidth,
+                    child: Column(
+                      children: [
                         SizedBox(
-                          width: tileSlot,
-                          height: tileSize / 4,
-                          child: Column(
-                            children: [
-                              Row(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Flexible(
-                                    child: Text(
-                                      categoryType.category,
-                                      style: const TextStyle(
-                                        color: Color(0xFFFDFFFD),
-                                        fontSize: 10,
-                                        fontFamily: 'KH-Numbers',
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
+                          width: rowWidth,
+                          child: InputField(
+                            gameType: () => widget.game.gameType,
+                            gameOver: isGameOver,
+                            remainingSolutions: widget.game.remainingSolutions,
+                            onSubmitGuess: (String guess) {
+                              setState(() {
+                                _hasGuessed = true;
+                                widget.game.guess(guess);
+                              });
+
+                              widget.game.save();
+
+                              if (isGameOver) _showResultDialog();
+                            },
                           ),
                         ),
-                  ],
-                ),
-                if (_showAnswer && !widget.game.didWin)
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      for (var category in widget.answer.categoryResults)
-                        Padding(
-                          padding: EdgeInsetsGeometry.only(top: tilePadding),
-                          child: SizedBox(
-                            width: tileSlot,
-                            child: Column(
-                              children: [
-                                Tile(category.value, HitType.none, null),
-                              ],
+                        SizedBox(
+                          width: rowWidth,
+                          child: Padding(
+                            padding: const EdgeInsets.only(bottom: 32.0),
+                            child: GradientProgressBar(
+                              percent: ((widget.game.guessesRemaining / widget.game.maxGuesses) * 100).round(),
+                              gradient: const LinearGradient(
+                                begin: Alignment.bottomCenter,
+                                end: Alignment.topCenter,
+                                colors: [
+                                  Color(0xFF32FB39),
+                                  Color(0xFFC0FF0D),
+                                ],
+                              ),
+                              backgroundColor: const Color(0xFF171928),
                             ),
                           ),
                         ),
-                    ],
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            if (!widget.game.guesses.first.isEmpty)
+                              for (var categoryType in widget.categories)
+                                SizedBox(
+                                  width: tileSlot,
+                                  height: tileSize / 4,
+                                  child: Column(
+                                    children: [
+                                      Row(
+                                        mainAxisSize: MainAxisSize.min,
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Flexible(
+                                            child: Text(
+                                              categoryType.category,
+                                              style: const TextStyle(
+                                                color: Color(0xFFFDFFFD),
+                                                fontSize: 10,
+                                                fontFamily: 'KH-Numbers',
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                          ],
+                        ),
+                        if (_showAnswer && !widget.game.didWin)
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              for (var category in widget.answer.categoryResults)
+                                Padding(
+                                  padding: EdgeInsetsGeometry.only(top: tilePadding),
+                                  child: SizedBox(
+                                    width: tileSlot,
+                                    child: Column(
+                                      children: [
+                                        Tile(category.value, HitType.none, null),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                            ],
+                          ),
+                        ...() {
+                          final guesses = widget.game.guesses as List;
+                          final newest = widget.game.activeIndex - 1;
+                          return [
+                            for (int i = guesses.length - 1; i >= 0; i--)
+                              _buildGuessRow(i, guesses[i], i == newest),
+                          ];
+                        }(),
+                      ],
+                    ),
                   ),
-                ...() {
-                  final guesses = widget.game.guesses as List;
-                  final newest = widget.game.activeIndex - 1;
-                  return [
-                    for (int i = guesses.length - 1; i >= 0; i--)
-                      _buildGuessRow(i, guesses[i], i == newest),
-                  ];
-                }(),
-              ],
-            ),
+                ),
+              );
+            },
           ),
         ),
 
