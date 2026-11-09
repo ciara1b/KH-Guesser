@@ -77,6 +77,7 @@
             "species": ["Rodent"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
             "appearances": 5,
+            "weapon": "Magic",
             "origin": "Plane Crazy (1928)"
         },
         {
@@ -182,7 +183,7 @@
             "species": ["Human"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
             "appearances": 4,
-            "weapon": "Wand",
+            "weapon": "Magic",
             "origin": "The Sword in the Stone (1963)"
         },
         {
@@ -192,7 +193,7 @@
             "species": ["Fairy"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
             "appearances": 3,
-            "weapon": "Wand",
+            "weapon": "Magic",
             "origin": "Cinderella (1950)"
         },
         {
@@ -257,6 +258,7 @@
             "species": ["God"],
             "debutGame": "Kingdom Hearts χ[chi]",
             "appearances": 8,
+            "weapon": "Magic",
             "origin": "Hercules (1997)"
         },
         {
@@ -305,6 +307,7 @@
             "species": ["Genie"],
             "debutGame": "Kingdom Hearts Union χ[Cross]",
             "appearances": 5,
+            "weapon": "Magic",
             "origin": "Aladdin (1992)"
         },
         {
@@ -369,6 +372,7 @@
             "species": ["Merfolk"],
             "debutGame": "Kingdom Hearts Final Mix",
             "appearances": 4,
+            "weapon": "Magic",
             "origin": "The Little Mermaid (1989)"
         },
         {
@@ -378,6 +382,7 @@
             "species": ["Undead"],
             "debutGame": "Kingdom Hearts Final Mix",
             "appearances": 4,
+            "weapon": "Barehands",
             "origin": "The Nightmare Before Christmas (1993)"
         },
         {
@@ -387,6 +392,7 @@
             "species": ["Undead"],
             "debutGame": "Kingdom Hearts Final Mix",
             "appearances": 3,
+            "weapon": "Darkness",
             "origin": "The Nightmare Before Christmas (1993)"
         },
         {
@@ -453,6 +459,7 @@
             "species": ["Heartless"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
             "appearances": 8,
+            "weapon": "Darkness",
             "origin": "Kingdom Hearts (2002)"
         },
         {
@@ -462,6 +469,7 @@
             "species": ["Fairy"],
             "debutGame": "Kingdom Hearts Union χ[Cross]",
             "appearances": 8,
+            "weapon": "Staff",
             "origin": "Sleeping Beauty (1959)"
         },
         {
@@ -471,6 +479,7 @@
             "species": ["Human", "Chimera"],
             "debutGame": "Kingdom Hearts χ[chi]",
             "appearances": 6,
+            "weapon": "Barehands",
             "origin": "Beauty and the Beast (1991)"
         },
         {
@@ -525,6 +534,7 @@
             "species": ["Nobody"],
             "debutGame": "Kingdom Hearts Final Mix",
             "appearances": 6,
+            "weapon": "Ethereal Blades",
             "origin": "Kingdom Hearts Final Mix (2002)"
         },
         {
@@ -534,6 +544,7 @@
             "species": ["Demon"],
             "debutGame": "Kingdom Hearts Final Mix",
             "appearances": 3,
+            "weapon": "Darkness",
             "origin": "Kingdom Hearts (2002)"
         },
         {
@@ -543,6 +554,7 @@
             "species": ["Heartless"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
             "appearances": 7,
+            "weapon": "Darkness",
             "origin": "Kingdom Hearts (2002)"
         },
         {
@@ -552,6 +564,7 @@
             "species": ["Nobody", "Human"],
             "debutGame": "Kingdom Hearts Final Mix",
             "appearances": 7,
+            "weapon": "Keyblade",
             "origin": "Kingdom Hearts (2002)"
         },
         {
@@ -579,6 +592,7 @@
             "species": ["Nobody"],
             "debutGame": "Kingdom Hearts 358/2 Days",
             "appearances": 4,
+            "weapon": "Scythe",
             "origin": "Kingdom Hearts: Chain of Memories (2004)"
         },
         {
@@ -588,6 +602,7 @@
             "species": ["Nobody"],
             "debutGame": "Kingdom Hearts 358/2 Days",
             "appearances": 5,
+            "weapon": "Chakram",
             "origin": "Kingdom Hearts: Chain of Memories (2004)"
         },
         {
@@ -597,6 +612,7 @@
             "species": ["Nobody"],
             "debutGame": "Kingdom Hearts 358/2 Days",
             "appearances": 4,
+            "weapon": "Knife",
             "origin": "Kingdom Hearts: Chain of Memories (2004)"
         },
         {
@@ -606,6 +622,7 @@
             "species": ["Nobody"],
             "debutGame": "Kingdom Hearts 358/2 Days",
             "appearances": 4,
+            "weapon": "Shield",
             "origin": "Kingdom Hearts: Chain of Memories (2004)"
         },
         {
@@ -615,6 +632,7 @@
             "species": ["Nobody"],
             "debutGame": "Kingdom Hearts 358/2 Days",
             "appearances": 3,
+            "weapon": "Axe Sword",
             "origin": "Kingdom Hearts: Chain of Memories (2004)"
         },
         {
@@ -624,6 +642,7 @@
             "species": ["Nobody"],
             "debutGame": "Kingdom Hearts 358/2 Days",
             "appearances": 3,
+            "weapon": "Book",
             "origin": "Kingdom Hearts: Chain of Memories (2004)"
         },
         {
@@ -633,6 +652,7 @@
             "species": ["Replica"],
             "debutGame": "Kingdom Hearts Re:Chain of Memories",
             "appearances": 3,
+            "weapon": "Soul Eater",
             "origin": "Kingdom Hearts: Chain of Memories (2004)"
         },
         {
@@ -660,6 +680,7 @@
             "species": ["Human"],
             "debutGame": "Kingdom Hearts 358/2 Days",
             "appearances": 3,
+            "weapon": "Barehands",
             "origin": "Kingdom Hearts II (2005)"
         },
         {
