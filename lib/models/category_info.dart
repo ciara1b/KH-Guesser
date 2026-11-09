@@ -95,10 +95,6 @@ const List<CategoryInfo> characterCategories = [
     value: 'The game (chronological order) in which they first appeared.',
   ),
   (
-    category: 'Appearances',
-    value: 'The number of games the character has appeared in throughout the franchise, including canon and non-canon secret endings. Yellow indicates you are within 2 of the correct number.\nN.B. Data characters do not count, i.e. Tidus did not appear in Kingdom Hearts Re:Coded, Data-Tidus did.',
-  ),
-  (
     category: 'Weapon',
     value: null,
   ),

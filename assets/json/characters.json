@@ -6,7 +6,6 @@
             "gender": "Male",
             "species": ["Human"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
-            "appearances": 9,
             "weapon": "Keyblade",
             "origin": "Kingdom Hearts (2002)"
         },
@@ -16,7 +15,6 @@
             "gender": "Male",
             "species": ["Human"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
-            "appearances": 9,
             "weapon": "Keyblade",
             "origin": "Kingdom Hearts (2002)"
         },
@@ -26,7 +24,6 @@
             "gender": "Female",
             "species": ["Human", "Princess of Heart"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
-            "appearances": 9,
             "weapon": "Keyblade",
             "origin": "Kingdom Hearts (2002)"
         },
@@ -36,8 +33,7 @@
             "gender": "Male",
             "species": ["Human"],
             "debutGame": "Kingdom Hearts Final Mix",
-            "appearances": 2,
-            "weapon": "Stick",
+            "weapon": "Sword",
             "origin": "Final Fantasy X (2001)"
         },
         {
@@ -46,7 +42,6 @@
             "gender": "Female",
             "species": ["Human"],
             "debutGame": "Kingdom Hearts Final Mix",
-            "appearances": 3,
             "weapon": "Whip",
             "origin": "Final Fantasy VIII (1999)"
         },
@@ -56,7 +51,6 @@
             "gender": "Male",
             "species": ["Human"],
             "debutGame": "Kingdom Hearts Final Mix",
-            "appearances": 2,
             "weapon": "Ball",
             "origin": "Final Fantasy X (2001)"
         },
@@ -66,7 +60,6 @@
             "gender": "Male",
             "species": ["Rodent"],
             "debutGame": "Kingdom Hearts χ[chi]",
-            "appearances": 11,
             "weapon": "Keyblade",
             "origin": "Plane Crazy (1928)"
         },
@@ -76,7 +69,6 @@
             "gender": "Female",
             "species": ["Rodent"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
-            "appearances": 5,
             "weapon": "Magic",
             "origin": "Plane Crazy (1928)"
         },
@@ -86,7 +78,6 @@
             "gender": "Female",
             "species": ["Bird"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
-            "appearances": 4,
             "origin": "Don Donald (1937)"
         },
         {
@@ -95,7 +86,6 @@
             "gender": "Male",
             "species": ["Bird"],
             "debutGame": "Kingdom Hearts χ[chi]",
-            "appearances": 11,
             "weapon": "Staff",
             "origin": "The Wise Little Hen (1934)"
         },
@@ -105,7 +95,6 @@
             "gender": "Male",
             "species": ["Canine"],
             "debutGame": "Kingdom Hearts χ[chi]",
-            "appearances": 11,
             "weapon": "Shield",
             "origin": "Mickey's Revue (1932)"
         },
@@ -115,7 +104,6 @@
             "gender": "Male",
             "species": ["Canine"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
-            "appearances": 5,
             "origin": "The Chain Gang (1930)"
         },
         {
@@ -124,7 +112,6 @@
             "gender": "Male",
             "species": ["Insect"],
             "debutGame": "Kingdom Hearts Final Mix",
-            "appearances": 5,
             "origin": "Pinocchio (1940)"
         },
         {
@@ -133,7 +120,6 @@
             "gender": "Male",
             "species": ["Squirrel"],
             "debutGame": "Kingdom Hearts χ[chi]",
-            "appearances": 8,
             "origin": "Private Pluto (1943)"
         },
         {
@@ -142,7 +128,6 @@
             "gender": "Male",
             "species": ["Human"],
             "debutGame": "Kingdom Hearts",
-            "appearances": 4,
             "weapon": "Gunblade",
             "origin": "Final Fantasy VIII (1999)"
         },
@@ -152,7 +137,6 @@
             "gender": "Male",
             "species": ["Human"],
             "debutGame": "Kingdom Hearts",
-            "appearances": 4,
             "weapon": "Lance",
             "origin": "Final Fantasy VII (1997)"
         },
@@ -162,7 +146,6 @@
             "gender": "Female",
             "species": ["Human"],
             "debutGame": "Kingdom Hearts",
-            "appearances": 4,
             "weapon": "Staff",
             "origin": "Final Fantasy VII (1997)"
         },
@@ -172,7 +155,6 @@
             "gender": "Female",
             "species": ["Human"],
             "debutGame": "Kingdom Hearts",
-            "appearances": 4,
             "weapon": "Shuriken",
             "origin": "Final Fantasy VII (1997)"
         },
@@ -182,7 +164,6 @@
             "gender": "Male",
             "species": ["Human"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
-            "appearances": 4,
             "weapon": "Magic",
             "origin": "The Sword in the Stone (1963)"
         },
@@ -192,7 +173,6 @@
             "gender": "Female",
             "species": ["Fairy"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
-            "appearances": 3,
             "weapon": "Magic",
             "origin": "Cinderella (1950)"
         },
@@ -202,7 +182,6 @@
             "gender": "Male",
             "species": ["Bird"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
-            "appearances": 4,
             "origin": "Donald's Nephews (1938)"
         },
         {
@@ -211,7 +190,6 @@
             "gender": "Female",
             "species": ["Human", "Princess of Heart"],
             "debutGame": "Kingdom Hearts χ[chi]",
-            "appearances": 4,
             "origin": "Alice in Wonderland (1951)"
         },
         {
@@ -220,7 +198,6 @@
             "gender": "Female",
             "species": ["Human"],
             "debutGame": "Kingdom Hearts χ[chi]",
-            "appearances": 6,
             "origin": "Alice in Wonderland (1951)"
         },
         {
@@ -229,7 +206,6 @@
             "gender": "Male",
             "species": ["Feline"],
             "debutGame": "Kingdom Hearts χ[chi]",
-            "appearances": 6,
             "origin": "Alice in Wonderland (1951)"
         },
         {
@@ -238,7 +214,6 @@
             "gender": "Male",
             "species": ["Demigod"],
             "debutGame": "Kingdom Hearts χ[chi]",
-            "appearances": 8,
             "weapon": "Barehands",
             "origin": "Hercules (1997)"
         },
@@ -248,7 +223,6 @@
             "gender": "Male",
             "species": ["Satyr"],
             "debutGame": "Kingdom Hearts χ[chi]",
-            "appearances": 8,
             "origin": "Hercules (1997)"
         },
         {
@@ -257,7 +231,6 @@
             "gender": "Male",
             "species": ["God"],
             "debutGame": "Kingdom Hearts χ[chi]",
-            "appearances": 8,
             "weapon": "Magic",
             "origin": "Hercules (1997)"
         },
@@ -267,7 +240,6 @@
             "gender": "Male",
             "species": ["Human"],
             "debutGame": "Kingdom Hearts χ[chi]",
-            "appearances": 5,
             "weapon": "Sword",
             "origin": "Final Fantasy VII (1997)"
         },
@@ -277,7 +249,6 @@
             "gender": "Male",
             "species": ["Human"],
             "debutGame": "Kingdom Hearts χ[chi]",
-            "appearances": 3,
             "weapon": "Sword",
             "origin": "Final Fantasy VII (1997)"
         },
@@ -287,7 +258,6 @@
             "gender": "Male",
             "species": ["Human"],
             "debutGame": "Kingdom Hearts χ[chi]",
-            "appearances": 6,
             "weapon": "Sword",
             "origin": "Aladdin (1992)"
         },
@@ -297,7 +267,6 @@
             "gender": "Female",
             "species": ["Human", "Princess of Heart"],
             "debutGame": "Kingdom Hearts Union χ[Cross]",
-            "appearances": 5,
             "origin": "Aladdin (1992)"
         },
         {
@@ -306,7 +275,6 @@
             "gender": "Male",
             "species": ["Genie"],
             "debutGame": "Kingdom Hearts Union χ[Cross]",
-            "appearances": 5,
             "weapon": "Magic",
             "origin": "Aladdin (1992)"
         },
@@ -316,7 +284,6 @@
             "gender": "Male",
             "species": ["Genie"],
             "debutGame": "Kingdom Hearts Final Mix",
-            "appearances": 2,
             "origin": "Aladdin (1992)"
         },
         {
@@ -325,7 +292,6 @@
             "gender": "Male",
             "species": ["Human", "Genie"],
             "debutGame": "Kingdom Hearts Union χ[Cross]",
-            "appearances": 5,
             "weapon": "Staff",
             "origin": "Aladdin (1992)"
         },
@@ -335,7 +301,6 @@
             "gender": "Male",
             "species": ["Human", "Toy"],
             "debutGame": "Kingdom Hearts Final Mix",
-            "appearances": 4,
             "origin": "Pinocchio (1940)"
         },
         {
@@ -344,7 +309,6 @@
             "gender": "Male",
             "species": ["Human"],
             "debutGame": "Kingdom Hearts Final Mix",
-            "appearances": 3,
             "origin": "Pinocchio (1940)"
         },
         {
@@ -353,7 +317,6 @@
             "gender": "Female",
             "species": ["Human", "Merfolk"],
             "debutGame": "Kingdom Hearts Final Mix",
-            "appearances": 4,
             "origin": "The Little Mermaid (1989)"
         },
         {
@@ -362,7 +325,6 @@
             "gender": "Male",
             "species": ["Crustacean"],
             "debutGame": "Kingdom Hearts Final Mix",
-            "appearances": 3,
             "origin": "The Little Mermaid (1989)"
         },
         {
@@ -371,7 +333,6 @@
             "gender": "Female",
             "species": ["Merfolk"],
             "debutGame": "Kingdom Hearts Final Mix",
-            "appearances": 4,
             "weapon": "Magic",
             "origin": "The Little Mermaid (1989)"
         },
@@ -381,7 +342,6 @@
             "gender": "Male",
             "species": ["Undead"],
             "debutGame": "Kingdom Hearts Final Mix",
-            "appearances": 4,
             "weapon": "Barehands",
             "origin": "The Nightmare Before Christmas (1993)"
         },
@@ -391,7 +351,6 @@
             "gender": "Male",
             "species": ["Undead"],
             "debutGame": "Kingdom Hearts Final Mix",
-            "appearances": 3,
             "weapon": "Darkness",
             "origin": "The Nightmare Before Christmas (1993)"
         },
@@ -401,7 +360,6 @@
             "gender": "Male",
             "species": ["Human"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
-            "appearances": 4,
             "weapon": "Knife",
             "origin": "Peter Pan (1953)"
         },
@@ -411,7 +369,6 @@
             "gender": "Female",
             "species": ["Fairy"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
-            "appearances": 5,
             "weapon": "Wand",
             "origin": "Peter Pan (1953)"
         },
@@ -421,7 +378,6 @@
             "gender": "Male",
             "species": ["Human"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
-            "appearances": 4,
             "weapon": "Sword",
             "origin": "Peter Pan (1953)"
         },
@@ -431,7 +387,6 @@
             "gender": "Male",
             "species": ["Bear"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
-            "appearances": 5,
             "origin": "Winnie the Pooh and the Honey Tree (1966)"
         },
         {
@@ -440,7 +395,6 @@
             "gender": "Male",
             "species": ["Feline"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
-            "appearances": 5,
             "origin": "Winnie the Pooh and the Blustery Day (1968)"
         },
         {
@@ -449,7 +403,6 @@
             "gender": "Male",
             "species": ["Equine"],
             "debutGame": "Kingdom Hearts Final Mix",
-            "appearances": 3,
             "origin": "Winnie the Pooh and the Honey Tree (1966)"
         },
         {
@@ -458,7 +411,6 @@
             "gender": "Male",
             "species": ["Heartless"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
-            "appearances": 8,
             "weapon": "Darkness",
             "origin": "Kingdom Hearts (2002)"
         },
@@ -468,7 +420,6 @@
             "gender": "Female",
             "species": ["Fairy"],
             "debutGame": "Kingdom Hearts Union χ[Cross]",
-            "appearances": 8,
             "weapon": "Staff",
             "origin": "Sleeping Beauty (1959)"
         },
@@ -478,7 +429,6 @@
             "gender": "Male",
             "species": ["Human", "Chimera"],
             "debutGame": "Kingdom Hearts χ[chi]",
-            "appearances": 6,
             "weapon": "Barehands",
             "origin": "Beauty and the Beast (1991)"
         },
@@ -488,7 +438,6 @@
             "gender": "Female",
             "species": ["Human", "Princess of Heart"],
             "debutGame": "Kingdom Hearts χ[chi]",
-            "appearances": 6,
             "origin": "Beauty and the Beast (1991)"
         },
         {
@@ -497,7 +446,6 @@
             "gender": "Female",
             "species": ["Human", "Princess of Heart"],
             "debutGame": "Kingdom Hearts χ[chi]",
-            "appearances": 4,
             "origin": "Snow White and the Seven Dwarfs (1937)"
         },
         {
@@ -506,7 +454,6 @@
             "gender": "Female",
             "species": ["Human", "Princess of Heart"],
             "debutGame": "Kingdom Hearts Union χ[Cross]",
-            "appearances": 3,
             "origin": "Cinderella (1950)"
         },
         {
@@ -515,7 +462,6 @@
             "gender": "Female",
             "species": ["Human", "Princess of Heart"],
             "debutGame": "Kingdom Hearts Union χ[Cross]",
-            "appearances": 3,
             "origin": "Sleeping Beauty (1959)"
         },
         {
@@ -524,7 +470,6 @@
             "gender": "Female",
             "species": ["Human"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
-            "appearances": 2,
             "origin": "Kingdom Hearts (2002)"
         },
         {
@@ -533,7 +478,6 @@
             "gender": "Male",
             "species": ["Nobody"],
             "debutGame": "Kingdom Hearts Final Mix",
-            "appearances": 6,
             "weapon": "Ethereal Blades",
             "origin": "Kingdom Hearts Final Mix (2002)"
         },
@@ -543,7 +487,6 @@
             "gender": "None",
             "species": ["Demon"],
             "debutGame": "Kingdom Hearts Final Mix",
-            "appearances": 3,
             "weapon": "Darkness",
             "origin": "Kingdom Hearts (2002)"
         },
@@ -553,7 +496,6 @@
             "gender": "Male",
             "species": ["Heartless"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
-            "appearances": 7,
             "weapon": "Darkness",
             "origin": "Kingdom Hearts (2002)"
         },
@@ -563,7 +505,6 @@
             "gender": "Male",
             "species": ["Nobody", "Human"],
             "debutGame": "Kingdom Hearts Final Mix",
-            "appearances": 7,
             "weapon": "Keyblade",
             "origin": "Kingdom Hearts (2002)"
         },
@@ -573,7 +514,7 @@
             "gender": "Male",
             "species": ["Feline"],
             "debutGame": "Kingdom Hearts Final Mix",
-            "appearances": 4,
+            "weapon": "Barehands",
             "origin": "The Lion King (1994)"
         },
         {
@@ -582,7 +523,6 @@
             "gender": "Male",
             "species": ["Reptile"],
             "debutGame": "Kingdom Hearts Final Mix",
-            "appearances": 3,
             "origin": "Mulan (1998)"
         },
         {
@@ -591,7 +531,6 @@
             "gender": "Male",
             "species": ["Nobody"],
             "debutGame": "Kingdom Hearts 358/2 Days",
-            "appearances": 4,
             "weapon": "Scythe",
             "origin": "Kingdom Hearts: Chain of Memories (2004)"
         },
@@ -601,7 +540,6 @@
             "gender": "Male",
             "species": ["Nobody"],
             "debutGame": "Kingdom Hearts 358/2 Days",
-            "appearances": 5,
             "weapon": "Chakram",
             "origin": "Kingdom Hearts: Chain of Memories (2004)"
         },
@@ -611,7 +549,6 @@
             "gender": "Female",
             "species": ["Nobody"],
             "debutGame": "Kingdom Hearts 358/2 Days",
-            "appearances": 4,
             "weapon": "Knife",
             "origin": "Kingdom Hearts: Chain of Memories (2004)"
         },
@@ -621,7 +558,6 @@
             "gender": "Male",
             "species": ["Nobody"],
             "debutGame": "Kingdom Hearts 358/2 Days",
-            "appearances": 4,
             "weapon": "Shield",
             "origin": "Kingdom Hearts: Chain of Memories (2004)"
         },
@@ -631,7 +567,6 @@
             "gender": "Male",
             "species": ["Nobody"],
             "debutGame": "Kingdom Hearts 358/2 Days",
-            "appearances": 3,
             "weapon": "Axe Sword",
             "origin": "Kingdom Hearts: Chain of Memories (2004)"
         },
@@ -641,7 +576,6 @@
             "gender": "Male",
             "species": ["Nobody"],
             "debutGame": "Kingdom Hearts 358/2 Days",
-            "appearances": 3,
             "weapon": "Book",
             "origin": "Kingdom Hearts: Chain of Memories (2004)"
         },
@@ -651,7 +585,6 @@
             "gender": "Male",
             "species": ["Replica"],
             "debutGame": "Kingdom Hearts Re:Chain of Memories",
-            "appearances": 3,
             "weapon": "Soul Eater",
             "origin": "Kingdom Hearts: Chain of Memories (2004)"
         },
@@ -661,7 +594,6 @@
             "gender": "Female",
             "species": ["Nobody", "Human"],
             "debutGame": "Kingdom Hearts Re:Chain of Memories",
-            "appearances": 6,
             "origin": "Kingdom Hearts: Chain of Memories (2004)"
         },
         {
@@ -670,7 +602,6 @@
             "gender": "Male",
             "species": ["Human"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
-            "appearances": 5,
             "origin": "Kingdom Hearts II (2005)"
         },
         {
@@ -679,7 +610,6 @@
             "gender": "Male",
             "species": ["Human"],
             "debutGame": "Kingdom Hearts 358/2 Days",
-            "appearances": 3,
             "weapon": "Barehands",
             "origin": "Kingdom Hearts II (2005)"
         },
@@ -689,7 +619,6 @@
             "gender": "Male",
             "species": ["Human"],
             "debutGame": "Kingdom Hearts 358/2 Days",
-            "appearances": 3,
             "origin": "Kingdom Hearts II (2005)"
         },
         {
@@ -698,7 +627,6 @@
             "gender": "Female",
             "species": ["Human"],
             "debutGame": "Kingdom Hearts 358/2 Days",
-            "appearances": 3,
             "origin": "Kingdom Hearts II (2005)"
         }
     ]

@@ -225,7 +225,6 @@ class CharacterGame extends GuessGame<Character> {
           'gender',
           'species',
           'debutGame',
-          'appearances',
           'weapon',
           'norted',
           'origin',

@@ -7,7 +7,6 @@ class Character {
   final String gender;
   final List<String> species;
   final String debutGame;
-  final int appearances;
   final String? weapon;
   final bool? norted;
   final String origin;
@@ -19,7 +18,6 @@ class Character {
     required this.gender,
     required this.species,
     required this.debutGame,
-    required this.appearances,
     this.weapon,
     this.norted,
     required this.origin,
@@ -35,7 +33,6 @@ class Character {
       gender: json['gender'] as String,
       species: (json['species'] as List<dynamic>).map((w) => w as String).toList(),
       debutGame: json['debutGame'] as String,
-      appearances: json['appearances'] as int,
       weapon: json['weapon'] as String? ?? 'n/a',
       norted: json['norted'] as bool? ?? false,
       origin: json['origin'] as String,
@@ -49,7 +46,6 @@ class Character {
     'gender': gender,
     'species': species,
     'debutGame': debutGame,
-    'appearances': appearances,
     'weapon': weapon,
     'norted': norted,
     'origin': origin,
