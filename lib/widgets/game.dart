@@ -190,8 +190,21 @@ class GuessGame<T> {
   }
 
   static T _pickInitial<T>(List<T> items, int? seed) {
-    if (seed != null) return items.elementAt(seed % items.length);
+    if (seed != null) return items.elementAt(_scramble(seed) % items.length);
     return items.elementAt(Random().nextInt(items.length));
+  }
+
+  static int _scramble(int seed) {
+    const mod32 = 0x100000000;
+    int mul(int a, int b) => (((a & 0xFFFF) * b) + ((((a >>> 16) * b) & 0xFFFF) << 16)) % mod32;
+
+    int h = (seed % mod32) ^ mul((seed ~/ mod32) + 1, 0x9E3779B1);
+    h ^= h >>> 16;
+    h = mul(h, 0x85EBCA6B);
+    h ^= h >>> 13;
+    h = mul(h, 0xC2B2AE35);
+    h ^= h >>> 16;
+    return h;
   }
 }
 
