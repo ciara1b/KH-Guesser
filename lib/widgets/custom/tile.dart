@@ -3,7 +3,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:khdle/models/category_info.dart';
 
-const double tileSize = 128;
+const double tileSize = 132;
 const double tilePadding = 8;
 const double tileSlot = tileSize + tilePadding * 2;
 
