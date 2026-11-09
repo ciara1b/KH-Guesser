@@ -3,6 +3,7 @@ import 'dart:collection';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
+import 'package:khdle/widgets/assets.dart';
 
 class InputField extends StatefulWidget {
   const InputField({
@@ -44,7 +45,7 @@ class _InputFieldState extends State<InputField> {
 
   static List<Shadow> outlinedText({
     double strokeWidth = 1,
-    Color strokeColor = Colors.black,
+    Color strokeColor = AppColours.black,
     int precision = 5,
   }) {
     Set<Shadow> result = HashSet();
@@ -119,7 +120,7 @@ class _InputFieldState extends State<InputField> {
                   maxLength: 32,
                   textInputAction: TextInputAction.send,
                   decoration: InputDecoration(
-                    fillColor: Color(0xFFFDFFFD),
+                    fillColor: AppColours.white,
                     filled: true,
                     counterText: '',
                     hintText: 'Type any ${widget.gameType()}...',
@@ -146,7 +147,7 @@ class _InputFieldState extends State<InputField> {
                 return results;
               },
               itemBuilder: (context, suggestion) => Material(
-                color: Color(0xFF121214),
+                color: AppColours.darkGrey,
                 child: ListTile(
                   title: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -165,25 +166,25 @@ class _InputFieldState extends State<InputField> {
                       Text(suggestion),
                     ],
                   ),
-                  textColor: Color(0xFFFDFFFD),
-                  hoverColor: Color(0xFF42100F),
-                  focusColor: Color(0xFF42100F),
+                  textColor: AppColours.white,
+                  hoverColor: AppColours.crimson,
+                  focusColor: AppColours.crimson,
                   onTap: () => _textEditingController.text = suggestion,
                 ),
               ),
               decorationBuilder: (context, child) => Material(
                 type: MaterialType.card,
-                color: Color(0xFF121214),
+                color: AppColours.darkGrey,
                 surfaceTintColor: Colors.transparent,
                 elevation: 4,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
-                  side: BorderSide(width: 1, color: Color(0xFF42100F)),
+                  side: BorderSide(width: 1, color: AppColours.crimson),
                 ),
                 clipBehavior: Clip.antiAlias,
                 child: ScrollbarTheme(
                   data: ScrollbarThemeData(
-                    thumbColor: WidgetStatePropertyAll(Colors.white),
+                    thumbColor: WidgetStatePropertyAll(AppColours.white),
                     trackVisibility: WidgetStatePropertyAll(false),
                     thickness: WidgetStatePropertyAll(6),
                     radius: Radius.circular(3),
@@ -215,7 +216,7 @@ class _InputFieldState extends State<InputField> {
               maxHeight: 384,
             ),
             decoration: BoxDecoration(
-              border: Border.all(color: Color(0xFFDF1835), width: 3.0),
+              border: Border.all(color: AppColours.dangerRed, width: 3.0),
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(20.0),
                 bottomRight: Radius.circular(20.0),
@@ -225,11 +226,11 @@ class _InputFieldState extends State<InputField> {
               gradient: LinearGradient(
                 begin: AlignmentGeometry.topCenter,
                 end: AlignmentGeometry.bottomCenter,
-                colors: [Color(0xFF9A1129), Color(0xFFDF1835)],
+                colors: [AppColours.bloodRed, AppColours.dangerRed],
               ),
               boxShadow: [
                 BoxShadow(
-                  color: Color(0xFF491225),
+                  color: AppColours.magenta,
                   offset: Offset.fromDirection(1.0, 4.0),
                   spreadRadius: 1,
                 ),
@@ -240,7 +241,7 @@ class _InputFieldState extends State<InputField> {
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.transparent,
                 shadowColor: Colors.transparent,
-                foregroundColor: Colors.white,
+                foregroundColor: AppColours.white,
                 textStyle: TextStyle(shadows: _buttonShadows, fontSize: 16.0),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.only(

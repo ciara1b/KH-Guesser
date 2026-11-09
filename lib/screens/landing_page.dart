@@ -76,7 +76,7 @@ class _LandingPageState extends State<LandingPage> {
           child: Text(
             "DEVELOPED BY",
             style: TextStyle(
-              color: Color(0xFF8C8C8C),
+              color: AppColours.grey,
               fontFamily: "ScienceGothic",
               fontSize: _fluid(width, 16, 24),
               fontWeight: FontWeight.w400,
@@ -91,7 +91,7 @@ class _LandingPageState extends State<LandingPage> {
             height: 2.0,
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                colors: [Color(0xFF8C8C8C), Color(0x008C8C8C)],
+                colors: [AppColours.grey, AppColours.opaqueGrey],
               ),
             ),
           ),
@@ -110,7 +110,7 @@ class _LandingPageState extends State<LandingPage> {
               child: Text(
                 "ZEKROFIRE",
                 style: TextStyle(
-                  color: Color(0xFF8C8C8C),
+                  color: AppColours.grey,
                   fontFamily: "ScienceGothic",
                   fontSize: _fluid(width, 22, 32),
                   fontWeight: FontWeight.w600,
@@ -144,7 +144,7 @@ class _LandingPageState extends State<LandingPage> {
       child: Text(
         "Zekrofire is not affiliated with Disney or Square Enix and does not own or claim any rights to any trademark belonging to either party.",
         style: TextStyle(
-          color: Color(0xFF8C8C8C),
+          color: AppColours.grey,
           fontFamily: "ScienceGothic",
           fontSize: _fluid(width, 10, 12),
         ),

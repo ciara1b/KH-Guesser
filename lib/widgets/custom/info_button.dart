@@ -2,6 +2,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:khdle/models/category_info.dart';
+import 'package:khdle/widgets/assets.dart';
 
 class CustomInfoButton extends StatelessWidget {
   const CustomInfoButton(this.info, {this.useCanonGames = false, super.key});
@@ -64,23 +65,23 @@ class CustomInfoButton extends StatelessWidget {
               height: 56,
               decoration: BoxDecoration(
                 border: Border(
-                  right: BorderSide(color: Color(0xFFE53E01), width: 2.0),
-                  bottom: BorderSide(color: Color(0xFFE53E01), width: 2.0),
+                  right: BorderSide(color: AppColours.deepOrange, width: 2.0),
+                  bottom: BorderSide(color: AppColours.deepOrange, width: 2.0),
                 ),
                 borderRadius: BorderRadius.all(Radius.circular(10.0)),
                 gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
-                  colors: [Color(0xFFE53E01), Color(0xFFFD8305)],
+                  colors: [AppColours.deepOrange, AppColours.brightOrange],
                 ),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withValues(alpha: 0.3),
+                    color: AppColours.black.withValues(alpha: 0.3),
                     blurRadius: 10,
                     spreadRadius: 2,
                   ),
                   BoxShadow(
-                    color: Color(0xFFE53E01),
+                    color: AppColours.deepOrange,
                     offset: Offset.fromDirection(6.0, 3.0),
                     spreadRadius: 1,
                   ),
@@ -95,18 +96,18 @@ class CustomInfoButton extends StatelessWidget {
                       child: Container(
                         decoration: BoxDecoration(
                           border: Border.all(
-                            color: Color(0xFF0191CE),
+                            color: AppColours.seaBlue,
                             width: 3.0,
                           ),
                           borderRadius: BorderRadius.all(Radius.circular(10.0)),
                           gradient: LinearGradient(
                             begin: AlignmentGeometry.topCenter,
                             end: AlignmentGeometry.bottomCenter,
-                            colors: [Color(0xFF0191CE), Color(0xFF002077)],
+                            colors: [AppColours.seaBlue, AppColours.oceanBlue],
                           ),
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.black,
+                              color: AppColours.black,
                               blurRadius: 0.5,
                               spreadRadius: 0.5,
                             ),
@@ -123,7 +124,7 @@ class CustomInfoButton extends StatelessWidget {
                                   padding: EdgeInsets.all(8.0),
                                   child: Text.rich(
                                     TextSpan(children: buildInfoSpans()),
-                                    style: TextStyle(color: Color(0xFFFDFFFD)),
+                                    style: TextStyle(color: AppColours.white),
                                   ),
                                 ),
                               ),
@@ -145,10 +146,10 @@ class CustomInfoButton extends StatelessWidget {
                     ).copyWith(
                       overlayColor: WidgetStateProperty.resolveWith((states) {
                         if (states.contains(WidgetState.pressed)) {
-                          return Colors.white.withValues(alpha: 0.3);
+                          return AppColours.white.withValues(alpha: 0.3);
                         }
                         if (states.contains(WidgetState.hovered)) {
-                          return Colors.white.withValues(alpha: 0.2);
+                          return AppColours.white.withValues(alpha: 0.2);
                         }
                         return null;
                       }),
@@ -158,7 +159,7 @@ class CustomInfoButton extends StatelessWidget {
                   child: Text(
                     'i',
                     style: TextStyle(
-                      color: Color(0xFFFDFFFD),
+                      color: AppColours.white,
                       fontSize: 36,
                       fontFamily: 'TitanOne',
                     ),

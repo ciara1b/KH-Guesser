@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:khdle/widgets/assets.dart';
 
 class MenuOptionButton extends StatefulWidget {
   final String text;
@@ -66,7 +67,7 @@ class _MenuOptionButtonState extends State<MenuOptionButton>
               width: double.infinity,
               foregroundDecoration: BoxDecoration(
                 border: Border(
-                  bottom: BorderSide(color: Colors.black, width: 3),
+                  bottom: BorderSide(color: AppColours.black, width: 3),
                 ),
               ),
               child: InkWell(
@@ -80,8 +81,13 @@ class _MenuOptionButtonState extends State<MenuOptionButton>
                     AnimatedContainer(
                       duration: Duration(milliseconds: 0),
                       decoration: BoxDecoration(
-                        color: _hovered ? Color(0xFFFF8400) : Colors.black,
-                        border: Border.all(color: Colors.black, width: 16.0),
+                        color: _hovered
+                            ? AppColours.brightOrange
+                            : AppColours.black,
+                        border: Border.all(
+                          color: AppColours.black,
+                          width: 16.0,
+                        ),
                       ),
                       width: 64.0,
                       height: 64.0,
@@ -132,16 +138,16 @@ class _MenuOptionButtonState extends State<MenuOptionButton>
                             stops: [0.0, 0.3, 0.6, 1.0],
                             colors: _hovered
                                 ? [
-                                    Color(0xFFd0bff9).withAlpha(0),
-                                    Color(0xFFd0bff9).withAlpha(50),
-                                    Color(0xFFd0bff9).withAlpha(255),
-                                    Color(0xFFd095f9),
+                                    AppColours.lilac.withAlpha(0),
+                                    AppColours.lilac.withAlpha(50),
+                                    AppColours.lilac.withAlpha(255),
+                                    AppColours.lavender,
                                   ]
                                 : [
-                                    Colors.black.withAlpha(0),
-                                    Colors.black.withAlpha(20),
-                                    Colors.black.withAlpha(50),
-                                    Colors.black.withAlpha(100),
+                                    AppColours.black.withAlpha(0),
+                                    AppColours.black.withAlpha(20),
+                                    AppColours.black.withAlpha(50),
+                                    AppColours.black.withAlpha(100),
                                   ],
                           ),
                         ),
@@ -150,7 +156,7 @@ class _MenuOptionButtonState extends State<MenuOptionButton>
                           child: Text(
                             widget.text,
                             style: TextStyle(
-                              color: Colors.black,
+                              color: AppColours.black,
                               fontSize: 32.0,
                               fontFamily: 'ScienceGothic',
                               fontWeight: FontWeight.w700,

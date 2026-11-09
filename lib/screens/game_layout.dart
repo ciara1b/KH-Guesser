@@ -2,6 +2,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:khdle/models/category_info.dart';
+import 'package:khdle/widgets/assets.dart';
 import 'package:khdle/widgets/custom/gradient_progress_bar.dart';
 import 'package:khdle/widgets/custom/popup_box.dart';
 import 'package:khdle/widgets/custom/tile.dart';
@@ -141,9 +142,9 @@ class _GamePageState extends State<GamePage> {
                           gradient: LinearGradient(
                             begin: Alignment.bottomCenter,
                             end: Alignment.topCenter,
-                            colors: [Color(0xFF32FB39), Color(0xFFC0FF0D)],
+                            colors: [AppColours.green, AppColours.lime],
                           ),
-                          backgroundColor: Color(0xFF171928),
+                          backgroundColor: AppColours.navy,
                         ),
                       ),
                     ),
@@ -173,7 +174,7 @@ class _GamePageState extends State<GamePage> {
                                                 child: Text(
                                                   categoryType.category,
                                                   style: TextStyle(
-                                                    color: Color(0xFFFDFFFD),
+                                                    color: AppColours.white,
                                                     fontSize: 10,
                                                     fontFamily: 'KH-Numbers',
                                                   ),
@@ -236,7 +237,7 @@ class _GamePageState extends State<GamePage> {
             "Zekrofire is not affiliated with Disney or Square Enix and does not own or claim any rights to any trademark belonging to either party.",
             textAlign: TextAlign.center,
             style: TextStyle(
-              color: Colors.white,
+              color: AppColours.white,
               fontFamily: "ScienceGothic",
               fontSize: 12.0,
             ),

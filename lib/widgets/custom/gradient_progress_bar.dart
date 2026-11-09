@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:khdle/widgets/assets.dart';
 
 class GradientProgressBar extends StatelessWidget {
   final int percent;
@@ -23,9 +24,9 @@ class GradientProgressBar extends StatelessWidget {
             decoration: BoxDecoration(
               gradient: gradient,
               border: Border(
-                left: BorderSide(color: Colors.black, width: 4.0),
-                bottom: BorderSide(color: Colors.black, width: 4.0),
-                top: BorderSide(color: Colors.black, width: 4.0),
+                left: BorderSide(color: AppColours.black, width: 4.0),
+                bottom: BorderSide(color: AppColours.black, width: 4.0),
+                top: BorderSide(color: AppColours.black, width: 4.0),
               ),
             ),
             child: SizedBox(height: 40.0),
@@ -38,9 +39,9 @@ class GradientProgressBar extends StatelessWidget {
             decoration: BoxDecoration(
               color: backgroundColor,
               border: Border(
-                right: BorderSide(color: Colors.black, width: 4.0),
-                bottom: BorderSide(color: Colors.black, width: 4.0),
-                top: BorderSide(color: Colors.black, width: 4.0),
+                right: BorderSide(color: AppColours.black, width: 4.0),
+                bottom: BorderSide(color: AppColours.black, width: 4.0),
+                top: BorderSide(color: AppColours.black, width: 4.0),
               ),
             ),
             child: SizedBox(height: 40.0),

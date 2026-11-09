@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:khdle/widgets/assets.dart';
 
 import 'widgets/data_loader.dart';
 import 'screens/landing_page.dart';
@@ -21,7 +22,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        scaffoldBackgroundColor: Color(0xFFFFFFFF),
+        scaffoldBackgroundColor: AppColours.white,
         fontFamily: 'PRGothIWA',
       ),
       home: Scaffold(

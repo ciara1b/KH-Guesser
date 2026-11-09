@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:khdle/widgets/assets.dart';
 
 class CustomPopupBox extends StatelessWidget {
   const CustomPopupBox(this.boolInfo, this.numInfo, this.gameType, {super.key});
@@ -20,16 +21,16 @@ class CustomPopupBox extends StatelessWidget {
           constraints: BoxConstraints(minWidth: 320, maxWidth: 512),
           child: Container(
             decoration: BoxDecoration(
-              border: Border.all(color: Color(0xFF0191CE), width: 3.0),
+              border: Border.all(color: AppColours.seaBlue, width: 3.0),
               borderRadius: BorderRadius.all(Radius.circular(10.0)),
               gradient: LinearGradient(
                 begin: AlignmentGeometry.topCenter,
                 end: AlignmentGeometry.bottomCenter,
-                colors: [Color(0xFF0191CE), Color(0xFF002077)],
+                colors: [AppColours.seaBlue, AppColours.oceanBlue],
               ),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black,
+                  color: AppColours.black,
                   blurRadius: 0.5,
                   spreadRadius: 0.5,
                 ),
@@ -56,7 +57,7 @@ class CustomPopupBox extends StatelessWidget {
                                     ..style = PaintingStyle.stroke
                                     ..strokeWidth = 6
                                     ..strokeJoin = StrokeJoin.round
-                                    ..color = Color(0xFF272727),
+                                    ..color = AppColours.outlineGrey,
                                 ),
                           ),
                           ShaderMask(
@@ -66,8 +67,8 @@ class CustomPopupBox extends StatelessWidget {
                                   begin: Alignment.topCenter,
                                   end: Alignment.bottomCenter,
                                   colors: [
-                                    Color(0xFFEF6F13),
-                                    Color(0xFFFEC902),
+                                    AppColours.orange,
+                                    AppColours.yellow,
                                   ],
                                 ).createShader(
                                   Rect.fromLTWH(
@@ -89,7 +90,7 @@ class CustomPopupBox extends StatelessWidget {
                       ),
                       Text(
                         'Share your result online:',
-                        style: TextStyle(color: Color(0xFFFDFFFD)),
+                        style: TextStyle(color: AppColours.white),
                       ),
                       Container(
                         decoration: BoxDecoration(
@@ -98,10 +99,10 @@ class CustomPopupBox extends StatelessWidget {
                             width: 3.0,
                           ),
                           borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                          color: Color(0xFF272727),
+                          color: AppColours.outlineGrey,
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.black,
+                              color: AppColours.black,
                               blurRadius: 0.5,
                               spreadRadius: 0.5,
                             ),
@@ -116,7 +117,7 @@ class CustomPopupBox extends StatelessWidget {
                                 padding: EdgeInsets.all(8.0),
                                 child: Text(
                                   clipboardText,
-                                  style: TextStyle(color: Color(0xFFFDFFFD)),
+                                  style: TextStyle(color: AppColours.white),
                                 ),
                               ),
                             ),
@@ -128,8 +129,8 @@ class CustomPopupBox extends StatelessWidget {
                               },
                               style: IconButton.styleFrom(
                                 backgroundColor: Colors.transparent,
-                                hoverColor: Colors.white24,
-                                highlightColor: Colors.white24,
+                                hoverColor: AppColours.white.withAlpha(60),
+                                highlightColor: AppColours.white.withAlpha(60),
                                 fixedSize: Size(44, 44),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.only(
@@ -138,7 +139,7 @@ class CustomPopupBox extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              icon: Icon(Icons.copy, color: Color(0xFFFDFFFD)),
+                              icon: Icon(Icons.copy, color: AppColours.white),
                             ),
                           ],
                         ),

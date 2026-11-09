@@ -3,6 +3,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:khdle/models/category_info.dart';
+import 'package:khdle/widgets/assets.dart';
 
 const double tileSize = 132;
 const double tilePadding = 8;
@@ -25,7 +26,7 @@ class Tile extends StatelessWidget {
 
   static List<Shadow> outlinedText({
     double strokeWidth = 1,
-    Color strokeColor = Colors.black,
+    Color strokeColor = AppColours.black,
     int precision = 5,
   }) {
     Set<Shadow> result = HashSet();
@@ -86,9 +87,9 @@ class Tile extends StatelessWidget {
         border: Border.all(color: Color.fromARGB(255, 94, 93, 93), width: 3.0),
         borderRadius: BorderRadius.all(Radius.circular(20.0)),
         color: switch (hitType) {
-          HitType.hit => Color(0xFF34A314),
-          HitType.partial => Color(0xFFffdb5b),
-          HitType.miss => Color(0xFF272727),
+          HitType.hit => AppColours.correct,
+          HitType.partial => AppColours.partial,
+          HitType.miss => AppColours.outlineGrey,
           _ => Colors.red,
         },
       ),
@@ -103,18 +104,18 @@ class Tile extends StatelessWidget {
                         constraints: BoxConstraints(maxWidth: 256),
                         decoration: BoxDecoration(
                           border: Border.all(
-                            color: Color(0xFF0191CE),
+                            color: AppColours.seaBlue,
                             width: 3.0,
                           ),
                           borderRadius: BorderRadius.all(Radius.circular(10.0)),
                           gradient: LinearGradient(
                             begin: AlignmentGeometry.topCenter,
                             end: AlignmentGeometry.bottomCenter,
-                            colors: [Color(0xFF0191CE), Color(0xFF002077)],
+                            colors: [AppColours.seaBlue, AppColours.oceanBlue],
                           ),
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.black,
+                              color: AppColours.black,
                               blurRadius: 0.5,
                               spreadRadius: 0.5,
                             ),
@@ -136,7 +137,7 @@ class Tile extends StatelessWidget {
                                       : 'PRGothIWA',
                                   fontWeight: FontWeight(900),
                                   fontSize: value is int ? 12 : 16,
-                                  color: Color(0xFFFDFFFD),
+                                  color: AppColours.white,
                                   shadows: outlinedText(),
                                 ),
                               ),
@@ -151,7 +152,7 @@ class Tile extends StatelessWidget {
                           fontFamily: value is int ? 'KH-Numbers' : 'PRGothIWA',
                           fontWeight: FontWeight(900),
                           fontSize: value is int ? 12 : 16,
-                          color: Color(0xFFFDFFFD),
+                          color: AppColours.white,
                           shadows: outlinedText(),
                         ),
                       )),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:khdle/widgets/assets.dart';
 
 class CustomBackButton extends StatelessWidget {
   const CustomBackButton({super.key});
@@ -13,23 +14,23 @@ class CustomBackButton extends StatelessWidget {
           height: 64,
           decoration: BoxDecoration(
             border: Border(
-              bottom: BorderSide(color: Color(0xFF002077), width: 2.0),
-              right: BorderSide(color: Color(0xFF002077), width: 2.0),
+              bottom: BorderSide(color: AppColours.oceanBlue, width: 2.0),
+              right: BorderSide(color: AppColours.oceanBlue, width: 2.0),
             ),
             borderRadius: BorderRadius.only(bottomRight: Radius.circular(20.0)),
             gradient: LinearGradient(
               begin: Alignment.topRight,
               end: Alignment.bottomCenter,
-              colors: [Color(0xFF002077), Color(0xFF0191CE)],
+              colors: [AppColours.oceanBlue, AppColours.seaBlue],
             ),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withValues(alpha: 0.3),
+                color: AppColours.black.withValues(alpha: 0.3),
                 blurRadius: 10,
                 spreadRadius: 2,
               ),
               BoxShadow(
-                color: Color(0xFF002077),
+                color: AppColours.oceanBlue,
                 offset: Offset.fromDirection(2.0, 3.0),
                 spreadRadius: 1,
               ),
@@ -50,10 +51,10 @@ class CustomBackButton extends StatelessWidget {
                 ).copyWith(
                   overlayColor: WidgetStateProperty.resolveWith((states) {
                     if (states.contains(WidgetState.pressed)) {
-                      return Colors.white.withValues(alpha: 0.3);
+                      return AppColours.white.withValues(alpha: 0.3);
                     }
                     if (states.contains(WidgetState.hovered)) {
-                      return Colors.white.withValues(alpha: 0.2);
+                      return AppColours.white.withValues(alpha: 0.2);
                     }
                     return null;
                   }),
