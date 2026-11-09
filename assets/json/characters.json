@@ -214,7 +214,7 @@
             "gender": "Male",
             "species": ["Demigod"],
             "debutGame": "Kingdom Hearts χ[chi]",
-            "weapon": "Barehands",
+            "weapon": "Fists",
             "origin": "Hercules (1997)"
         },
         {
@@ -342,7 +342,7 @@
             "gender": "Male",
             "species": ["Undead"],
             "debutGame": "Kingdom Hearts Final Mix",
-            "weapon": "Barehands",
+            "weapon": "Fists",
             "origin": "The Nightmare Before Christmas (1993)"
         },
         {
@@ -412,6 +412,7 @@
             "species": ["Heartless"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
             "weapon": "Darkness",
+            "norted": true,
             "origin": "Kingdom Hearts (2002)"
         },
         {
@@ -429,7 +430,7 @@
             "gender": "Male",
             "species": ["Human", "Chimera"],
             "debutGame": "Kingdom Hearts χ[chi]",
-            "weapon": "Barehands",
+            "weapon": "Fists",
             "origin": "Beauty and the Beast (1991)"
         },
         {
@@ -479,6 +480,7 @@
             "species": ["Nobody"],
             "debutGame": "Kingdom Hearts Final Mix",
             "weapon": "Ethereal Blades",
+            "norted": true,
             "origin": "Kingdom Hearts Final Mix (2002)"
         },
         {
@@ -514,7 +516,7 @@
             "gender": "Male",
             "species": ["Feline"],
             "debutGame": "Kingdom Hearts Final Mix",
-            "weapon": "Barehands",
+            "weapon": "Fists",
             "origin": "The Lion King (1994)"
         },
         {
@@ -532,6 +534,7 @@
             "species": ["Nobody"],
             "debutGame": "Kingdom Hearts 358/2 Days",
             "weapon": "Scythe",
+            "norted": true,
             "origin": "Kingdom Hearts: Chain of Memories (2004)"
         },
         {
@@ -541,6 +544,7 @@
             "species": ["Nobody"],
             "debutGame": "Kingdom Hearts 358/2 Days",
             "weapon": "Chakram",
+            "norted": true,
             "origin": "Kingdom Hearts: Chain of Memories (2004)"
         },
         {
@@ -550,6 +554,7 @@
             "species": ["Nobody"],
             "debutGame": "Kingdom Hearts 358/2 Days",
             "weapon": "Knife",
+            "norted": true,
             "origin": "Kingdom Hearts: Chain of Memories (2004)"
         },
         {
@@ -559,6 +564,7 @@
             "species": ["Nobody"],
             "debutGame": "Kingdom Hearts 358/2 Days",
             "weapon": "Shield",
+            "norted": true,
             "origin": "Kingdom Hearts: Chain of Memories (2004)"
         },
         {
@@ -568,6 +574,7 @@
             "species": ["Nobody"],
             "debutGame": "Kingdom Hearts 358/2 Days",
             "weapon": "Axe Sword",
+            "norted": true,
             "origin": "Kingdom Hearts: Chain of Memories (2004)"
         },
         {
@@ -577,6 +584,7 @@
             "species": ["Nobody"],
             "debutGame": "Kingdom Hearts 358/2 Days",
             "weapon": "Book",
+            "norted": true,
             "origin": "Kingdom Hearts: Chain of Memories (2004)"
         },
         {
@@ -610,7 +618,7 @@
             "gender": "Male",
             "species": ["Human"],
             "debutGame": "Kingdom Hearts 358/2 Days",
-            "weapon": "Barehands",
+            "weapon": "Fists",
             "origin": "Kingdom Hearts II (2005)"
         },
         {
