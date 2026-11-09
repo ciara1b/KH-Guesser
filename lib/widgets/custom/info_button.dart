@@ -67,12 +67,12 @@ class CustomInfoButton extends StatelessWidget {
       child: Align(
         alignment: Alignment.topRight,
         child: Padding(
-          padding: EdgeInsets.only(right: 24.0, top: 16.0),
+          padding: EdgeInsets.only(right: 32.0, top: 24.0),
           child: Transform.rotate(
             angle: math.pi / 4,
             child: Container(
-              width: 64,
-              height: 64,
+              width: 56,
+              height: 56,
               decoration: BoxDecoration(
                 border: const Border(
                   right: BorderSide(color: Color(0xFFE53E01), width: 2.0),
