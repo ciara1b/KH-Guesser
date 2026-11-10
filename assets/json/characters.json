@@ -360,7 +360,7 @@
             "gender": "Male",
             "species": ["Human"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
-            "weapon": "Knife",
+            "weapon": "Dagger/Knife",
             "origin": "Peter Pan (1953)"
         },
         {
@@ -553,7 +553,7 @@
             "gender": "Female",
             "species": ["Nobody"],
             "debutGame": "Kingdom Hearts 358/2 Days",
-            "weapon": "Knife",
+            "weapon": "Dagger/Knife",
             "norted": true,
             "origin": "Kingdom Hearts: Chain of Memories (2004)"
         },
@@ -636,6 +636,344 @@
             "species": ["Human"],
             "debutGame": "Kingdom Hearts 358/2 Days",
             "origin": "Kingdom Hearts II (2005)"
+        },
+        {
+            "id": 70,
+            "name": "Seifer",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts II Final Mix",
+            "weapon": "Gunblade",
+            "origin": "Final Fantasy VIII (1999)"
+        },
+        {
+            "id": 71,
+            "name": "Raijin",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts II Final Mix",
+            "weapon": "Staff",
+            "origin": "Final Fantasy VIII (1999)"
+        },
+        {
+            "id": 72,
+            "name": "Fujin",
+            "gender": "Female",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts II Final Mix",
+            "weapon": "Chakram",
+            "origin": "Final Fantasy VIII (1999)"
+        },
+        {
+            "id": 73,
+            "name": "Setzer",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts II Final Mix",
+            "weapon": "Cards",
+            "origin": "Final Fantasy VI (1994)"
+        },
+        {
+            "id": 74,
+            "name": "Vivi",
+            "gender": "Male",
+            "species": ["Black Mage"],
+            "debutGame": "Kingdom Hearts II Final Mix",
+            "weapon": "Magic",
+            "origin": "Final Fantasy IX (2000)"
+        },
+        {
+            "id": 75,
+            "name": "Yen Sid",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "weapon": "Magic",
+            "origin": "The Sorcerer's Apprentice (1940)"
+        },
+        {
+            "id": 76,
+            "name": "Tifa",
+            "gender": "Female",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts II Final Mix",
+            "weapon": "Fists",
+            "origin": "Final Fantasy VII (1997)"
+        },
+        {
+            "id": 77,
+            "name": "Scrooge McDuck",
+            "gender": "Male",
+            "species": ["Bird"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "origin": "Christmas on Bear Mountain (1947)"
+        },
+        {
+            "id": 78,
+            "name": "Yuna",
+            "gender": "Female",
+            "species": ["Human", "Fairy"],
+            "debutGame": "Kingdom Hearts II Final Mix",
+            "weapon": "Gun",
+            "origin": "Final Fantasy X (2001)"
+        },
+        {
+            "id": 79,
+            "name": "Rikku",
+            "gender": "Female",
+            "species": ["Human", "Fairy"],
+            "debutGame": "Kingdom Hearts II Final Mix",
+            "weapon": "Dagger/Knife",
+            "origin": "Final Fantasy X (2001)"
+        },
+        {
+            "id": 80,
+            "name": "Paine",
+            "gender": "Female",
+            "species": ["Human", "Fairy"],
+            "debutGame": "Kingdom Hearts II Final Mix",
+            "weapon": "Sword",
+            "origin": "Final Fantasy X-2 (2003)"
+        },
+        {
+            "id": 81,
+            "name": "Stitch",
+            "gender": "Male",
+            "species": ["Alien"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "weapon": "Gun",
+            "origin": "Lilo & Stitch (2002)"
+        },
+        {
+            "id": 82,
+            "name": "Terra-Xehanort",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "weapon": "Keyblade",
+            "norted": true,
+            "origin": "Kingdom Hearts II (2005)"
+        },
+        {
+            "id": 83,
+            "name": "Fa Mulan",
+            "gender": "Female",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts II Final Mix",
+            "weapon": "Sword",
+            "origin": "Mulan (1998)"
+        },
+        {
+            "id": 84,
+            "name": "Pete",
+            "gender": "Male",
+            "species": ["Feline"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "weapon": "Fists",
+            "origin": "Alice Solves the Puzzle (1925)"
+        },
+        {
+            "id": 85,
+            "name": "William Turner",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts II Final Mix",
+            "weapon": "Sword",
+            "origin": "Pirates of the Caribbean: The Curse of the Black Pearl (2003)"
+        },
+        {
+            "id": 86,
+            "name": "Jack Sparrow",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts II Final Mix",
+            "weapon": "Sword",
+            "origin": "Pirates of the Caribbean: The Curse of the Black Pearl (2003)"
+        },
+        {
+            "id": 87,
+            "name": "Elizabeth Swann",
+            "gender": "Female",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts II Final Mix",
+            "weapon": "Sword",
+            "origin": "Pirates of the Caribbean: The Curse of the Black Pearl (2003)"
+        },
+        {
+            "id": 88,
+            "name": "Santa Claus",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts II Final Mix",
+            "origin": "The Nightmare Before Christmas (1993)"
+        },
+        {
+            "id": 89,
+            "name": "Timon",
+            "gender": "Male",
+            "species": ["Mongoose"],
+            "debutGame": "Kingdom Hearts II Final Mix",
+            "origin": "The Lion King (1994)"
+        },
+        {
+            "id": 90,
+            "name": "Pumbaa",
+            "gender": "Female",
+            "species": ["Pig"],
+            "debutGame": "Kingdom Hearts II Final Mix",
+            "origin": "The Lion King (1994)"
+        },
+        {
+            "id": 91,
+            "name": "Scar",
+            "gender": "Male",
+            "species": ["Feline"],
+            "debutGame": "Kingdom Hearts II Final Mix",
+            "weapon": "Fists",
+            "origin": "The Lion King (1994)"
+        },
+        {
+            "id": 92,
+            "name": "Gopher",
+            "gender": "Male",
+            "species": ["Rodent"],
+            "debutGame": "Kingdom Hearts II Final Mix",
+            "origin": "Winnie the Pooh and the Honey Tree (1966)"
+        },
+        {
+            "id": 93,
+            "name": "Tron",
+            "gender": "Male",
+            "species": ["Construct"],
+            "debutGame": "Kingdom Hearts II Final Mix",
+            "weapon": "Shuriken",
+            "origin": "Tron (1982)"
+        },
+        {
+            "id": 94,
+            "name": "Sark",
+            "gender": "Male",
+            "species": ["Construct"],
+            "debutGame": "Kingdom Hearts II Final Mix",
+            "weapon": "Fists",
+            "origin": "Tron (1982)"
+        },
+        {
+            "id": 95,
+            "name": "Xigbar",
+            "gender": "Male",
+            "species": ["Nobody"],
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "weapon": "Gun",
+            "norted": true,
+            "origin": "Kingdom Hearts II (2005)"
+        },
+        {
+            "id": 96,
+            "name": "Xaldin",
+            "gender": "Male",
+            "species": ["Nobody"],
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "weapon": "Lance",
+            "origin": "Kingdom Hearts II (2005)"
+        },
+        {
+            "id": 97,
+            "name": "Saïx",
+            "gender": "Male",
+            "species": ["Nobody"],
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "weapon": "Sword",
+            "norted": true,
+            "origin": "Kingdom Hearts II (2005)"
+        },
+        {
+            "id": 98,
+            "name": "Demyx",
+            "gender": "Male",
+            "species": ["Nobody"],
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "weapon": "Instrument",
+            "norted": true,
+            "origin": "Kingdom Hearts II (2005)"
+        },
+        {
+            "id": 99,
+            "name": "Luxord",
+            "gender": "Male",
+            "species": ["Nobody"],
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "weapon": "Cards",
+            "norted": true,
+            "origin": "Kingdom Hearts II (2005)"
+        },
+        {
+            "id": 100,
+            "name": "Lingering Will",
+            "gender": "None",
+            "species": ["Construct"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "weapon": "Keyblade",
+            "origin": "Kingdom Hearts II Final Mix (2007)"
+        },
+        {
+            "id": 101,
+            "name": "Terra",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts Dark Road",
+            "weapon": "Keyblade",
+            "norted": true,
+            "origin": "Kingdom Hearts II (2005)"
+        },
+        {
+            "id": 102,
+            "name": "Aqua",
+            "gender": "Female",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts Dark Road",
+            "weapon": "Keyblade",
+            "origin": "Kingdom Hearts II (2005)"
+        },
+        {
+            "id": 103,
+            "name": "Ventus",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts Union χ[Cross]",
+            "weapon": "Keyblade",
+            "norted": true,
+            "origin": "Kingdom Hearts II (2005)"
+        },
+        {
+            "id": 104,
+            "name": "Vanitas",
+            "gender": "Male",
+            "species": ["Darkness"],
+            "debutGame": "Kingdom Hearts Dark Road",
+            "weapon": "Keyblade",
+            "norted": true,
+            "origin": "Kingdom Hearts: Birth by Sleep Final Mix"
+        },
+        {
+            "id": 105,
+            "name": "Xehanort",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts Union χ[Cross]",
+            "weapon": "Keyblade",
+            "norted": true,
+            "origin": "Kingdom Hearts II Final Mix (2007)"
+        },
+        {
+            "id": 106,
+            "name": "Xion",
+            "gender": "Female",
+            "species": ["Human", "Nobody"],
+            "debutGame": "Kingdom Hearts 358/2 Days",
+            "weapon": "Keyblade",
+            "norted": true,
+            "origin": "Kingdom Hearts 358/2 Days (2009)"
         }
     ]
 }
