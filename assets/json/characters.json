@@ -155,7 +155,7 @@
             "gender": "Female",
             "species": ["Human"],
             "debutGame": "Kingdom Hearts",
-            "weapon": "Shuriken",
+            "weapon": "Shuriken/Disc",
             "origin": "Final Fantasy VII (1997)"
         },
         {
@@ -171,7 +171,7 @@
             "id": 19,
             "name": "Fairy Godmother",
             "gender": "Female",
-            "species": ["Fairy"],
+            "species": ["Fae"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
             "weapon": "Magic",
             "origin": "Cinderella (1950)"
@@ -367,7 +367,7 @@
             "id": 39,
             "name": "Tinkerbell",
             "gender": "Female",
-            "species": ["Fairy"],
+            "species": ["Fae"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
             "weapon": "Wand",
             "origin": "Peter Pan (1953)"
@@ -419,7 +419,7 @@
             "id": 45,
             "name": "Maleficent",
             "gender": "Female",
-            "species": ["Fairy"],
+            "species": ["Fae"],
             "debutGame": "Kingdom Hearts Union χ[Cross]",
             "weapon": "Staff",
             "origin": "Sleeping Beauty (1959)"
@@ -712,16 +712,16 @@
             "id": 78,
             "name": "Yuna",
             "gender": "Female",
-            "species": ["Human", "Fairy"],
+            "species": ["Human", "Fae"],
             "debutGame": "Kingdom Hearts II Final Mix",
-            "weapon": "Gun",
+            "weapon": "Gun/Blaster",
             "origin": "Final Fantasy X (2001)"
         },
         {
             "id": 79,
             "name": "Rikku",
             "gender": "Female",
-            "species": ["Human", "Fairy"],
+            "species": ["Human", "Fae"],
             "debutGame": "Kingdom Hearts II Final Mix",
             "weapon": "Dagger/Knife",
             "origin": "Final Fantasy X (2001)"
@@ -730,7 +730,7 @@
             "id": 80,
             "name": "Paine",
             "gender": "Female",
-            "species": ["Human", "Fairy"],
+            "species": ["Human", "Fae"],
             "debutGame": "Kingdom Hearts II Final Mix",
             "weapon": "Sword",
             "origin": "Final Fantasy X-2 (2003)"
@@ -741,7 +741,7 @@
             "gender": "Male",
             "species": ["Alien"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
-            "weapon": "Gun",
+            "weapon": "Gun/Blaster",
             "origin": "Lilo & Stitch (2002)"
         },
         {
@@ -846,7 +846,7 @@
             "gender": "Male",
             "species": ["Construct"],
             "debutGame": "Kingdom Hearts II Final Mix",
-            "weapon": "Shuriken",
+            "weapon": "Shuriken/Disc",
             "origin": "Tron (1982)"
         },
         {
@@ -864,7 +864,7 @@
             "gender": "Male",
             "species": ["Nobody"],
             "debutGame": "Kingdom Hearts 358/2 Days",
-            "weapon": "Gun",
+            "weapon": "Gun/Blaster",
             "norted": true,
             "origin": "Kingdom Hearts II (2005)"
         },
@@ -969,11 +969,601 @@
             "id": 106,
             "name": "Xion",
             "gender": "Female",
-            "species": ["Human", "Nobody"],
+            "species": ["Human", "Replica"],
             "debutGame": "Kingdom Hearts 358/2 Days",
             "weapon": "Keyblade",
             "norted": true,
             "origin": "Kingdom Hearts 358/2 Days (2009)"
+        },
+        {
+            "id": 107,
+            "name": "Data-Sora",
+            "gender": "Male",
+            "species": ["Construct"],
+            "debutGame": "Kingdom Hearts Re:Coded",
+            "weapon": "Keyblade",
+            "origin": "Kingdom Hearts coded (2009)"
+        },
+        {
+            "id": 108,
+            "name": "Data-Riku",
+            "gender": "Male",
+            "species": ["Construct"],
+            "debutGame": "Kingdom Hearts Re:Coded",
+            "weapon": "Soul Eater",
+            "origin": "Kingdom Hearts coded (2009)"
+        },
+        {
+            "id": 109,
+            "name": "Data-Roxas",
+            "gender": "Male",
+            "species": ["Construct"],
+            "debutGame": "Kingdom Hearts Re:Coded",
+            "weapon": "Keyblade",
+            "origin": "Kingdom Hearts coded (2009)"
+        },
+        {
+            "id": 110,
+            "name": "Data-Naminé",
+            "gender": "Female",
+            "species": ["Construct"],
+            "debutGame": "Kingdom Hearts Re:Coded",
+            "origin": "Kingdom Hearts coded (2009)"
+        },
+        {
+            "id": 111,
+            "name": "Young Xehanort",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts Union χ[Cross]",
+            "weapon": "Keyblade",
+            "norted": true,
+            "origin": "Kingdom Hearts: Birth by Sleep (2010)"
+        },
+        {
+            "id": 112,
+            "name": "Braig",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "weapon": "Gun/Blaster",
+            "norted": true,
+            "origin": "Kingdom Hearts: Birth by Sleep (2010)"
+        },
+        {
+            "id": 113,
+            "name": "Dilan",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "weapon": "Lance",
+            "origin": "Kingdom Hearts: Birth by Sleep (2010)"
+        },
+        {
+            "id": 114,
+            "name": "Aeleus",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "weapon": "Axe Sword",
+            "origin": "Kingdom Hearts: Birth by Sleep (2010)"
+        },
+        {
+            "id": 115,
+            "name": "Even",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "origin": "Kingdom Hearts: Birth by Sleep (2010)"
+        },
+        {
+            "id": 116,
+            "name": "Ienzo",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "origin": "Kingdom Hearts: Birth by Sleep (2010)"
+        },
+        {
+            "id": 117,
+            "name": "Isa",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "origin": "Kingdom Hearts: Birth by Sleep (2010)"
+        },
+        {
+            "id": 118,
+            "name": "Lea",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "weapon": "Keyblade",
+            "origin": "Kingdom Hearts: Birth by Sleep (2010)"
+        },
+        {
+            "id": 119,
+            "name": "Prince Charming",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts Union χ[Cross]",
+            "origin": "Cinderella (1950)"
+        },
+        {
+            "id": 120,
+            "name": "Lucifer",
+            "gender": "Male",
+            "species": ["Feline"],
+            "debutGame": "Kingdom Hearts Union χ[Cross]",
+            "weapon": "Fists",
+            "origin": "Cinderella (1950)"
+        },
+        {
+            "id": 121,
+            "name": "Gantu",
+            "gender": "Male",
+            "species": ["Alien"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "weapon": "Gun/Blaster",
+            "origin": "Lilo & Stitch (2002)"
+        },
+        {
+            "id": 122,
+            "name": "Dr. Jumba Jookiba",
+            "gender": "Male",
+            "species": ["Alien"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "origin": "Lilo & Stitch (2002)"
+        },
+        {
+            "id": 123,
+            "name": "Magic Mirror",
+            "gender": "None",
+            "species": ["Fae"],
+            "debutGame": "Kingdom Hearts Union χ[Cross]",
+            "weapon": "Magic",
+            "origin": "Snow White and the Seven Dwarfs (1937)"
+        },
+        {
+            "id": 124,
+            "name": "The Queen",
+            "gender": "Female",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts χ[chi]",
+            "weapon": "Magic",
+            "origin": "Snow White and the Seven Dwarfs (1937)"
+        },
+        {
+            "id": 125,
+            "name": "Eraqus",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts Dark Road",
+            "weapon": "Keyblade",
+            "origin": "Kingdom Hearts: Birth by Sleep (2010)"
+        },
+        {
+            "id": 126,
+            "name": "Quasimodo",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts 3D: Dream Drop Distance",
+            "origin": "The Hunchback of Notre Dame (1996)"
+        },
+        {
+            "id": 127,
+            "name": "Esmeralda",
+            "gender": "Female",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts 3D: Dream Drop Distance",
+            "origin": "The Hunchback of Notre Dame (1996)"
+        },
+        {
+            "id": 128,
+            "name": "Claude Frollo",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts 3D: Dream Drop Distance",
+            "weapon": "Sword",
+            "origin": "The Hunchback of Notre Dame (1996)"
+        },
+        {
+            "id": 129,
+            "name": "Quorra",
+            "gender": "Female",
+            "species": ["Construct"],
+            "debutGame": "Kingdom Hearts 3D: Dream Drop Distance",
+            "weapon": "Shuriken/Disc",
+            "origin": "Tron: Legacy (2010)"
+        },
+        {
+            "id": 130,
+            "name": "Neku Sakuraba",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts 3D: Dream Drop Distance",
+            "weapon": "Magic",
+            "origin": "The World Ends with You (2007)"
+        },
+        {
+            "id": 131,
+            "name": "Joshua",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts 3D: Dream Drop Distance",
+            "weapon": "Magic",
+            "origin": "The World Ends with You (2007)"
+        },
+        {
+            "id": 132,
+            "name": "Shiki Misaki",
+            "gender": "Female",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts 3D: Dream Drop Distance",
+            "weapon": "Magic",
+            "origin": "The World Ends with You (2007)"
+        },
+        {
+            "id": 133,
+            "name": "Julius",
+            "gender": "Male",
+            "species": ["Chimera"],
+            "debutGame": "Kingdom Hearts 3D: Dream Drop Distance",
+            "weapon": "Fists",
+            "origin": "Runaway Brain (1995)"
+        },
+        {
+            "id": 134,
+            "name": "Chirithy",
+            "gender": "None",
+            "species": ["Dream Eater", "Spirit", "Nightmare"],
+            "debutGame": "Kingdom Hearts χ[chi]",
+            "origin": "Kingdom Hearts χ[chi] (2013)"
+        },
+        {
+            "id": 135,
+            "name": "Ira",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts χ[chi]",
+            "weapon": "Keyblade",
+            "origin": "Kingdom Hearts χ[chi] (2013)"
+        },
+        {
+            "id": 136,
+            "name": "Invi",
+            "gender": "Female",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts χ[chi]",
+            "weapon": "Keyblade",
+            "origin": "Kingdom Hearts χ[chi] (2013)"
+        },
+        {
+            "id": 137,
+            "name": "Aced",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts χ[chi]",
+            "weapon": "Keyblade",
+            "origin": "Kingdom Hearts χ[chi] (2013)"
+        },
+        {
+            "id": 138,
+            "name": "Gula",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts χ[chi]",
+            "weapon": "Keyblade",
+            "origin": "Kingdom Hearts χ[chi] (2013)"
+        },
+        {
+            "id": 139,
+            "name": "Ava",
+            "gender": "Female",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts χ[chi]",
+            "weapon": "Keyblade",
+            "origin": "Kingdom Hearts χ[chi] (2013)"
+        },
+        {
+            "id": 140,
+            "name": "Ephemer",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts χ[chi]",
+            "weapon": "Keyblade",
+            "origin": "Kingdom Hearts χ[chi] (2013)"
+        },
+        {
+            "id": 141,
+            "name": "The Master of Masters",
+            "gender": "Male",
+            "species": ["???"],
+            "debutGame": "Kingdom Hearts χ[chi]",
+            "weapon": "Keyblade",
+            "origin": "Kingdom Hearts χ[chi] (2013)"
+        },
+        {
+            "id": 142,
+            "name": "Skuld",
+            "gender": "Female",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts χ[chi]",
+            "weapon": "Keyblade",
+            "origin": "Kingdom Hearts χ[chi] (2013)"
+        },
+        {
+            "id": 143,
+            "name": "Luxu",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts χ[chi]",
+            "weapon": "Keyblade",
+            "origin": "Kingdom Hearts χ[chi] (2013)"
+        },
+        {
+            "id": 144,
+            "name": "Anti-Aqua",
+            "gender": "Female",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "weapon": "Keyblade",
+            "norted": true,
+            "origin": "Kingdom Hearts III (2019)"
+        },
+        {
+            "id": 145,
+            "name": "Brain",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts Union χ[Cross]",
+            "weapon": "Keyblade",
+            "origin": "Kingdom Hearts Union χ[Cross] (2015)"
+        },
+        {
+            "id": 146,
+            "name": "Strelitzia",
+            "gender": "Female",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts Union χ[Cross]",
+            "weapon": "Keyblade",
+            "origin": "Kingdom Hearts Union χ[Cross] (2015)"
+        },
+        {
+            "id": 147,
+            "name": "Lauriam",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts Union χ[Cross]",
+            "weapon": "Keyblade",
+            "origin": "Kingdom Hearts Union χ[Cross] (2015)"
+        },
+        {
+            "id": 148,
+            "name": "Elrena",
+            "gender": "Female",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts Union χ[Cross]",
+            "weapon": "Keyblade",
+            "origin": "Kingdom Hearts Union χ[Cross] (2015)"
+        },
+        {
+            "id": 149,
+            "name": "Wreck-It Ralph",
+            "gender": "Male",
+            "species": ["Construct"],
+            "debutGame": "Kingdom Hearts Union χ[Cross]",
+            "weapon": "Fists",
+            "origin": "Wreck-It Ralph (2012)"
+        },
+        {
+            "id": 150,
+            "name": "Sergeant Calhoun",
+            "gender": "Female",
+            "species": ["Construct"],
+            "debutGame": "Kingdom Hearts Union χ[Cross]",
+            "weapon": "Gun/Blaster",
+            "origin": "Wreck-It Ralph (2012)"
+        },
+        {
+            "id": 151,
+            "name": "Sigurd",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts Union χ[Cross]",
+            "weapon": "Keyblade",
+            "origin": "Kingdom Hearts Union χ[Cross] (2015)"
+        },
+        {
+            "id": 152,
+            "name": "Auron",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts II Final Mix",
+            "weapon": "Sword",
+            "origin": "Final Fantasy X (2001)"
+        },
+        {
+            "id": 153,
+            "name": "Megara",
+            "gender": "Female",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts II Final Mix",
+            "origin": "Hercules (1997)"
+        },
+        {
+            "id": 154,
+            "name": "Remy",
+            "gender": "Male",
+            "species": ["Rodent"],
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "origin": "Ratatouille (2007)"
+        },
+        {
+            "id": 155,
+            "name": "Woody",
+            "gender": "Male",
+            "species": ["Toy"],
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "weapon": "Fists",
+            "origin": "Toy Story (1995)"
+        },
+        {
+            "id": 156,
+            "name": "Buzz Lightyear",
+            "gender": "Male",
+            "species": ["Toy"],
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "weapon": "Fists",
+            "origin": "Toy Story (1995)"
+        },
+        {
+            "id": 157,
+            "name": "Rapunzel",
+            "gender": "Female",
+            "species": ["Human", "Princess of Heart"],
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "weapon": "Fists",
+            "origin": "Tangled (2010)"
+        },
+        {
+            "id": 158,
+            "name": "Eugene Fitzherbert",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "weapon": "Fists",
+            "origin": "Tangled (2010)"
+        },
+        {
+            "id": 159,
+            "name": "Mother Gothel",
+            "gender": "Female",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "weapon": "Magic",
+            "origin": "Tangled (2010)"
+        },
+        {
+            "id": 160,
+            "name": "Pascal",
+            "gender": "Male",
+            "species": ["Reptile"],
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "origin": "Tangled (2010)"
+        },
+        {
+            "id": 161,
+            "name": "James P. Sully",
+            "gender": "Male",
+            "species": ["Monster"],
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "weapon": "Fists",
+            "origin": "Monsters, Inc. (2001)"
+        },
+        {
+            "id": 162,
+            "name": "Mike Wazowski",
+            "gender": "Male",
+            "species": ["Monster"],
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "weapon": "Fists",
+            "origin": "Monsters, Inc. (2001)"
+        },
+        {
+            "id": 163,
+            "name": "Boo",
+            "gender": "Female",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "origin": "Monsters, Inc. (2001)"
+        },
+        {
+            "id": 164,
+            "name": "Elsa",
+            "gender": "Female",
+            "species": ["Human", "Princess of Heart"],
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "weapon": "Magic",
+            "origin": "Frozen (2013)"
+        },
+        {
+            "id": 165,
+            "name": "Anna",
+            "gender": "Female",
+            "species": ["Human", "Princess of Heart"],
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "origin": "Frozen (2013)"
+        },
+        {
+            "id": 166,
+            "name": "Olaf",
+            "gender": "Male",
+            "species": ["Construct"],
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "origin": "Frozen (2013)"
+        },
+        {
+            "id": 167,
+            "name": "Hiro Hamada",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "weapon": "Gun/Blaster",
+            "origin": "Big Hero 6 (2014)"
+        },
+        {
+            "id": 168,
+            "name": "Go Go Tomago",
+            "gender": "Female",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "weapon": "Shuriken/Disc",
+            "origin": "Big Hero 6 (2014)"
+        },
+        {
+            "id": 169,
+            "name": "Wasabi",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "weapon": "Sword",
+            "origin": "Big Hero 6 (2014)"
+        },
+        {
+            "id": 170,
+            "name": "Baymax",
+            "gender": "None",
+            "species": ["Construct"],
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "weapon": "Gun/Blaster",
+            "origin": "Big Hero 6 (2014)"
+        },
+        {
+            "id": 171,
+            "name": "Nameless Star",
+            "gender": "Female",
+            "species": ["???"],
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "origin": "Kingdom Hearts III (2019)"
+        },
+        {
+            "id": 172,
+            "name": "Yozora",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "weapon": "Sword",
+            "origin": "Kingdom Hearts III (2019)"
+        },
+        {
+            "id": 173,
+            "name": "Meow Wow",
+            "gender": "None",
+            "species": ["Dream Eater", "Spirit", "Nightmare"],
+            "debutGame": "Kingdom Hearts III + Re Mind",
+            "weapon": "Magic",
+            "origin": "Kingdom Hearts III (2019)"
         }
     ]
 }
