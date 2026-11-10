@@ -156,7 +156,7 @@ class _InputFieldState extends State<InputField> {
                       SizedBox(
                         width: 48,
                         child: Image.asset(
-                          'images/${widget.gameType()}s/${suggestion.replaceAll(' ', '_').replaceAll('/', '')}.png',
+                          'images/${widget.gameType()}s/${suggestion.replaceAll(RegExp(r"[',./]"), "").replaceAll(' ', '_')}.png',
                           height: 48,
                           cacheHeight: 96,
                           gaplessPlayback: true,

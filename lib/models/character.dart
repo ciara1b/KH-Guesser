@@ -26,7 +26,9 @@ class Character {
   });
 
   factory Character.fromJson(Map<String, dynamic> json) {
-    final String nameForImage = (json['name'] as String).replaceAll(' ', '_');
+    final String nameForImage = (json['name'] as String)
+        .replaceAll(RegExp(r"[',./]"), "")
+        .replaceAll(' ', '_');
 
     return Character(
       id: json['id'] as int,
@@ -39,7 +41,7 @@ class Character {
       weapon: json['weapon'] as String? ?? 'n/a',
       norted: json['norted'] as bool? ?? false,
       origin: json['origin'] as String,
-      imageUrl: 'assets/images/keyblades/$nameForImage.png',
+      imageUrl: 'assets/images/characters/$nameForImage.png',
     );
   }
 

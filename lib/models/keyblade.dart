@@ -25,8 +25,8 @@ class Keyblade {
 
   factory Keyblade.fromJson(Map<String, dynamic> json) {
     final String nameForImage = (json['name'] as String)
-        .replaceAll(' ', '_')
-        .replaceAll('/', '');
+        .replaceAll(RegExp(r"[',./]"), "")
+        .replaceAll(' ', '_');
 
     return Keyblade(
       id: json['id'] as int,
