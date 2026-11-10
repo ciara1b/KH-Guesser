@@ -48,3 +48,4 @@ app.*.map.json
 .widget_preview/
 
 /assets/images/keyblades/*.png
+/assets/images/characters/*.png
