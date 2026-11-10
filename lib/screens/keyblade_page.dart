@@ -25,7 +25,7 @@ class _GuessKeybladePageState extends State<GuessKeybladePage> {
                 DateTime.now().day,
               ).toString().replaceAll("-", "").replaceAll(" 00:00:00.000", ""),
             ) -
-            20261108),
+            20261112),
   );
 
   @override
