@@ -367,7 +367,7 @@
             "strength": 20,
             "magic": 0,
             "appearances": 2,
-            "wielders": ["Roxas", "Xion", "Player"]
+            "wielders": ["Roxas", "Xion", "Player", "Ventus"]
         },
         {
             "id": 41,
@@ -564,7 +564,7 @@
             "debutGame": "Kingdom Hearts Birth by Sleep",
             "strength": 3,
             "magic": 1,
-            "appearances": 3,
+            "appearances": 4,
             "wielders": ["Terra"]
         },
         {
@@ -726,7 +726,7 @@
             "debutGame": "Kingdom Hearts Birth by Sleep",
             "strength": 2,
             "magic": 2,
-            "appearances": 2,
+            "appearances": 3,
             "wielders": ["Aqua"]
         },
         {
