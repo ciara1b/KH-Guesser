@@ -116,9 +116,9 @@
         },
         {
             "id": 13,
-            "name": "Chip & Dale",
+            "name": "Chip",
             "gender": "Male",
-            "species": ["Squirrel"],
+            "species": ["Rodent"],
             "debutGame": "Kingdom Hearts χ[chi]",
             "origin": "Private Pluto (1943)"
         },
@@ -178,7 +178,7 @@
         },
         {
             "id": 20,
-            "name": "Huey, Dewey & Louie",
+            "name": "Huey",
             "gender": "Male",
             "species": ["Bird"],
             "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
@@ -270,23 +270,6 @@
             "origin": "Aladdin (1992)"
         },
         {
-            "id": 29,
-            "name": "Genie",
-            "gender": "Male",
-            "species": ["Genie"],
-            "debutGame": "Kingdom Hearts Union χ[Cross]",
-            "weapon": "Magic",
-            "origin": "Aladdin (1992)"
-        },
-        {
-            "id": 30,
-            "name": "The Peddler",
-            "gender": "Male",
-            "species": ["Genie"],
-            "debutGame": "Kingdom Hearts Final Mix",
-            "origin": "Aladdin (1992)"
-        },
-        {
             "id": 31,
             "name": "Jafar",
             "gender": "Male",
@@ -300,14 +283,6 @@
             "name": "Pinocchio",
             "gender": "Male",
             "species": ["Human", "Toy"],
-            "debutGame": "Kingdom Hearts Final Mix",
-            "origin": "Pinocchio (1940)"
-        },
-        {
-            "id": 32,
-            "name": "Geppetto",
-            "gender": "Male",
-            "species": ["Human"],
             "debutGame": "Kingdom Hearts Final Mix",
             "origin": "Pinocchio (1940)"
         },
@@ -1454,7 +1429,7 @@
         },
         {
             "id": 161,
-            "name": "James P. Sully",
+            "name": "Sulley",
             "gender": "Male",
             "species": ["Monster"],
             "debutGame": "Kingdom Hearts III + Re Mind",
@@ -1564,6 +1539,55 @@
             "debutGame": "Kingdom Hearts III + Re Mind",
             "weapon": "Magic",
             "origin": "Kingdom Hearts III (2019)"
+        },
+        {
+            "id": 174,
+            "name": "Genie",
+            "gender": "Male",
+            "species": ["Genie"],
+            "debutGame": "Kingdom Hearts Union χ[Cross]",
+            "weapon": "Magic",
+            "origin": "Aladdin (1992)"
+        },
+        {
+            "id": 175,
+            "name": "The Peddler",
+            "gender": "Male",
+            "species": ["Genie"],
+            "debutGame": "Kingdom Hearts Final Mix",
+            "origin": "Aladdin (1992)"
+        },
+        {
+            "id": 176,
+            "name": "Geppetto",
+            "gender": "Male",
+            "species": ["Human"],
+            "debutGame": "Kingdom Hearts Final Mix",
+            "origin": "Pinocchio (1940)"
+        },
+        {
+            "id": 177,
+            "name": "Dale",
+            "gender": "Male",
+            "species": ["Rodent"],
+            "debutGame": "Kingdom Hearts χ[chi]",
+            "origin": "Private Pluto (1943)"
+        },
+        {
+            "id": 178,
+            "name": "Dewey",
+            "gender": "Male",
+            "species": ["Bird"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "origin": "Donald's Nephews (1938)"
+        },
+        {
+            "id": 179,
+            "name": "Louie",
+            "gender": "Male",
+            "species": ["Bird"],
+            "debutGame": "Kingdom Hearts: Birth by Sleep Final Mix",
+            "origin": "Donald's Nephews (1938)"
         }
     ]
 }
