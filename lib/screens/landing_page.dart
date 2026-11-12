@@ -198,7 +198,7 @@ class _LandingPageState extends State<LandingPage> {
                 child: Semantics(
                   label: "Art of the website developer in the style of Kingdom Hearts.",
                   child: Image.asset(
-                    'images/author.png',
+                    'assets/images/author.png',
                     height: height,
                     fit: BoxFit.fitHeight,
                     alignment: Alignment.centerRight,
@@ -220,7 +220,7 @@ class _LandingPageState extends State<LandingPage> {
                       child: Semantics(
                         label: "Custom logo in the style of Kingdom Hearts, that reads: Kingdom Hearts Guesser.",
                         child: Image.asset(
-                          'images/main-menu-logo.png',
+                          'assets/images/main-menu-logo.png',
                           fit: BoxFit.contain,
                         ),
                       ),
@@ -269,7 +269,7 @@ class _LandingPageState extends State<LandingPage> {
                 child: Semantics(
                   label: "Custom logo in the style of Kingdom Hearts, that reads: Kingdom Hearts Guesser.",
                   child: Image.asset(
-                    'images/main-menu-logo.png',
+                    'assets/images/main-menu-logo.png',
                     fit: BoxFit.contain,
                   ),
                 ),

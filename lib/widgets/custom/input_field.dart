@@ -159,7 +159,7 @@ class _InputFieldState extends State<InputField> {
                           label:
                               "Render of Kingdom Hearts ${widget.gameType()}",
                           child: Image.asset(
-                            'images/${widget.gameType()}s/${suggestion.replaceAll(RegExp(r"[',./]"), "").replaceAll("χ", "X").replaceAll(' ', '_')}.png',
+                            'assets/images/${widget.gameType()}s/${suggestion.replaceAll(RegExp(r"[',./]"), "").replaceAll("χ", "X").replaceAll(' ', '_')}.png',
                             height: 48,
                             cacheHeight: 96,
                             gaplessPlayback: true,

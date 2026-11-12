@@ -74,12 +74,12 @@ class Tile extends StatelessWidget {
         image: value is int && hitType != HitType.hit && hitType != HitType.none
             ? (clue != null && clue
                   ? DecorationImage(
-                      image: NetworkImage('assets/images/up-arrow.png'),
+                      image: AssetImage('assets/images/up-arrow.png'),
                       fit: BoxFit.cover,
                       opacity: 0.2,
                     )
                   : DecorationImage(
-                      image: NetworkImage('assets/images/down-arrow.png'),
+                      image: AssetImage('assets/images/down-arrow.png'),
                       fit: BoxFit.cover,
                       opacity: 0.2,
                     ))
