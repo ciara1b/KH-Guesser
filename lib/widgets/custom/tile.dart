@@ -98,64 +98,49 @@ class Tile extends StatelessWidget {
           padding: EdgeInsets.all(tilePadding),
           child: value is String && value.startsWith('assets/images/')
               ? Image.asset(value, width: tileSize - tilePadding)
-              : (value is List
-                    ? Tooltip(
-                        message: _display(value),
-                        constraints: BoxConstraints(maxWidth: 256),
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: AppColours.seaBlue,
-                            width: 3.0,
-                          ),
-                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                          gradient: LinearGradient(
-                            begin: AlignmentGeometry.topCenter,
-                            end: AlignmentGeometry.bottomCenter,
-                            colors: [AppColours.seaBlue, AppColours.oceanBlue],
-                          ),
-                          boxShadow: [
-                            BoxShadow(
-                              color: AppColours.black,
-                              blurRadius: 0.5,
-                              spreadRadius: 0.5,
-                            ),
-                          ],
-                        ),
-                        child: Align(
-                          alignment: Alignment.topRight,
-                          child: Padding(
-                            padding: EdgeInsets.only(right: 4.0),
-                            child: Center(
-                              child: Text(
-                                _display(value),
-                                textAlign: TextAlign.center,
-                                maxLines: 4,
-                                overflow: TextOverflow.ellipsis,
-                                style: TextStyle(
-                                  fontFamily: value is int
-                                      ? 'KH-Numbers'
-                                      : 'PRGothIWA',
-                                  fontWeight: FontWeight(900),
-                                  fontSize: value is int ? 12 : 16,
-                                  color: AppColours.white,
-                                  shadows: outlinedText(),
-                                ),
-                              ),
-                            ),
+              : Tooltip(
+                  message: _display(value),
+                  constraints: BoxConstraints(maxWidth: 256),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: AppColours.seaBlue, width: 3.0),
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                    gradient: LinearGradient(
+                      begin: AlignmentGeometry.topCenter,
+                      end: AlignmentGeometry.bottomCenter,
+                      colors: [AppColours.seaBlue, AppColours.oceanBlue],
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: AppColours.black,
+                        blurRadius: 0.5,
+                        spreadRadius: 0.5,
+                      ),
+                    ],
+                  ),
+                  child: Align(
+                    alignment: Alignment.topRight,
+                    child: Padding(
+                      padding: EdgeInsets.only(right: 4.0),
+                      child: Center(
+                        child: Text(
+                          _display(value),
+                          textAlign: TextAlign.center,
+                          maxLines: 4,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            fontFamily: value is int
+                                ? 'KH-Numbers'
+                                : 'PRGothIWA',
+                            fontWeight: FontWeight(900),
+                            fontSize: value is int ? 12 : 16,
+                            color: AppColours.white,
+                            shadows: outlinedText(),
                           ),
                         ),
-                      )
-                    : Text(
-                        _display(value),
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontFamily: value is int ? 'KH-Numbers' : 'PRGothIWA',
-                          fontWeight: FontWeight(900),
-                          fontSize: value is int ? 12 : 16,
-                          color: AppColours.white,
-                          shadows: outlinedText(),
-                        ),
-                      )),
+                      ),
+                    ),
+                  ),
+                ),
         ),
       ),
     );
