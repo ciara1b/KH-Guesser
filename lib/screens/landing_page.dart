@@ -87,7 +87,7 @@ class _LandingPageState extends State<LandingPage> {
           ),
         ),
         FractionallySizedBox(
-          widthFactor: 0.2,
+          widthFactor: width > _wideBreakpoint ? 0.2 : 0.4,
           child: Container(
             height: 2.0,
             decoration: BoxDecoration(
