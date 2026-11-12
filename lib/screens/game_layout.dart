@@ -93,7 +93,7 @@ class _GamePageState extends State<GamePage> {
   @override
   Widget build(BuildContext context) {
     final double rowWidth = 4 * tileSlot;
-    final _scrollController = ScrollController();
+    final scrollController = ScrollController();
 
     return Column(
       children: [
@@ -159,9 +159,9 @@ class _GamePageState extends State<GamePage> {
                     ),
                     Expanded(
                       child: SingleChildScrollView(
-                        controller: _scrollController,
+                        controller: scrollController,
                         child: SingleChildScrollView(
-                          controller: _scrollController,
+                          controller: scrollController,
                           scrollDirection: Axis.horizontal,
                           child: Column(
                             children: [

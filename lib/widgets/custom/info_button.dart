@@ -53,6 +53,7 @@ class CustomInfoButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scrollController = ScrollController();
     return SafeArea(
       child: Align(
         alignment: Alignment.topRight,
@@ -113,23 +114,26 @@ class CustomInfoButton extends StatelessWidget {
                             ),
                           ],
                         ),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Align(
-                              alignment: Alignment.topRight,
-                              child: Padding(
-                                padding: EdgeInsets.only(right: 4.0),
+                        child: SingleChildScrollView(
+                          controller: scrollController,
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Align(
+                                alignment: Alignment.topRight,
                                 child: Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: Text.rich(
-                                    TextSpan(children: buildInfoSpans()),
-                                    style: TextStyle(color: AppColours.white),
+                                  padding: EdgeInsets.only(right: 4.0),
+                                  child: Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Text.rich(
+                                      TextSpan(children: buildInfoSpans()),
+                                      style: TextStyle(color: AppColours.white),
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     );
