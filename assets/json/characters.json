@@ -127,7 +127,7 @@
             "name": "Leon",
             "gender": "Male",
             "species": ["Human"],
-            "debutGame": "Kingdom Hearts",
+            "debutGame": "Kingdom Hearts Final Mix",
             "weapon": "Gunblade",
             "origin": "Final Fantasy VIII (1999)"
         },
@@ -136,7 +136,7 @@
             "name": "Cid",
             "gender": "Male",
             "species": ["Human"],
-            "debutGame": "Kingdom Hearts",
+            "debutGame": "Kingdom Hearts Final Mix",
             "weapon": "Lance",
             "origin": "Final Fantasy VII (1997)"
         },
@@ -145,7 +145,7 @@
             "name": "Aerith",
             "gender": "Female",
             "species": ["Human"],
-            "debutGame": "Kingdom Hearts",
+            "debutGame": "Kingdom Hearts Final Mix",
             "weapon": "Staff",
             "origin": "Final Fantasy VII (1997)"
         },
@@ -154,7 +154,7 @@
             "name": "Yuffie",
             "gender": "Female",
             "species": ["Human"],
-            "debutGame": "Kingdom Hearts",
+            "debutGame": "Kingdom Hearts Final Mix",
             "weapon": "Shuriken/Disc",
             "origin": "Final Fantasy VII (1997)"
         },
