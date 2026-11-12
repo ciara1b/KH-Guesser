@@ -110,7 +110,11 @@ class _GamePageState extends State<GamePage> {
                 child: Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(top: 32.0),
+                      padding: EdgeInsets.only(
+                        top: 32.0,
+                        left: 8.0,
+                        right: 8.0,
+                      ),
                       child: SizedBox(
                         width: rowWidth,
                         child: InputField(
@@ -133,7 +137,11 @@ class _GamePageState extends State<GamePage> {
                     SizedBox(
                       width: rowWidth,
                       child: Padding(
-                        padding: EdgeInsets.only(bottom: 32.0),
+                        padding: EdgeInsets.only(
+                          bottom: 32.0,
+                          left: 8.0,
+                          right: 8.0,
+                        ),
                         child: GradientProgressBar(
                           percent:
                               ((widget.game.guessesRemaining /
