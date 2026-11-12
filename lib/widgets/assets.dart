@@ -1,6 +1,6 @@
 import 'package:flutter/painting.dart';
 
-const AssetImage gameBg = AssetImage('images/guessing-bg.jpg');
+const AssetImage gameBg = AssetImage('assets/images/guessing-bg.jpg');
 
 class AppColours {
   static const white = Color(0xFFFDFFFD);
