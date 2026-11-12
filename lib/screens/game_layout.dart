@@ -93,6 +93,7 @@ class _GamePageState extends State<GamePage> {
   @override
   Widget build(BuildContext context) {
     final double rowWidth = 4 * tileSlot;
+    final _scrollController = ScrollController();
 
     return Column(
       children: [
@@ -148,79 +149,83 @@ class _GamePageState extends State<GamePage> {
                         ),
                       ),
                     ),
-                    SingleChildScrollView(
+                    Expanded(
                       child: SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                if (!widget.game.guesses.first.isEmpty)
-                                  for (var categoryType in widget.categories)
-                                    SizedBox(
-                                      width: tileSlot,
-                                      height: tileSize / 4,
-                                      child: Column(
-                                        children: [
-                                          Row(
-                                            mainAxisSize: MainAxisSize.min,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Flexible(
-                                                child: Text(
-                                                  categoryType.category,
-                                                  style: TextStyle(
-                                                    color: AppColours.white,
-                                                    fontSize: 10,
-                                                    fontFamily: 'KH-Numbers',
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                              ],
-                            ),
-                            if (_showAnswer && !widget.game.didWin)
+                        controller: _scrollController,
+                        child: SingleChildScrollView(
+                          controller: _scrollController,
+                          scrollDirection: Axis.horizontal,
+                          child: Column(
+                            children: [
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  for (var category
-                                      in widget.answer.categoryResults)
-                                    Padding(
-                                      padding: EdgeInsetsGeometry.only(
-                                        top: tilePadding,
-                                      ),
-                                      child: SizedBox(
+                                  if (!widget.game.guesses.first.isEmpty)
+                                    for (var categoryType in widget.categories)
+                                      SizedBox(
                                         width: tileSlot,
+                                        height: tileSize / 4,
                                         child: Column(
                                           children: [
-                                            Tile(
-                                              category.value,
-                                              HitType.none,
-                                              null,
+                                            Row(
+                                              mainAxisSize: MainAxisSize.min,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Flexible(
+                                                  child: Text(
+                                                    categoryType.category,
+                                                    style: TextStyle(
+                                                      color: AppColours.white,
+                                                      fontSize: 10,
+                                                      fontFamily: 'KH-Numbers',
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
                                             ),
                                           ],
                                         ),
                                       ),
-                                    ),
                                 ],
                               ),
-                            ...() {
-                              final guesses = widget.game.guesses as List;
-                              final newest = widget.game.activeIndex - 1;
-                              return [
-                                for (int i = guesses.length - 1; i >= 0; i--)
-                                  _buildGuessRow(i, guesses[i], i == newest),
-                              ];
-                            }(),
-                          ],
+                              if (_showAnswer && !widget.game.didWin)
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    for (var category
+                                        in widget.answer.categoryResults)
+                                      Padding(
+                                        padding: EdgeInsetsGeometry.only(
+                                          top: tilePadding,
+                                        ),
+                                        child: SizedBox(
+                                          width: tileSlot,
+                                          child: Column(
+                                            children: [
+                                              Tile(
+                                                category.value,
+                                                HitType.none,
+                                                null,
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                  ],
+                                ),
+                              ...() {
+                                final guesses = widget.game.guesses as List;
+                                final newest = widget.game.activeIndex - 1;
+                                return [
+                                  for (int i = guesses.length - 1; i >= 0; i--)
+                                    _buildGuessRow(i, guesses[i], i == newest),
+                                ];
+                              }(),
+                            ],
+                          ),
                         ),
                       ),
                     ),
