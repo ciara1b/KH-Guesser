@@ -1,5 +1,6 @@
 import 'dart:math' as math;
 
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:khdle/widgets/assets.dart';
 import 'package:khdle/widgets/data_loader.dart';
@@ -8,6 +9,8 @@ import 'package:khdle/widgets/custom/menu_option_button.dart';
 import 'character_page.dart';
 import 'keyblade_page.dart';
 
+import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 const double _wideBreakpoint = 900;
@@ -141,12 +144,39 @@ class _LandingPageState extends State<LandingPage> {
 
     return Padding(
       padding: EdgeInsets.fromLTRB(side, 0, side, 16.0),
-      child: Text(
-        "Zekrofire is not affiliated with Disney or Square Enix and does not own or claim any rights to any trademark belonging to either party.",
-        style: TextStyle(
-          color: AppColours.grey,
-          fontFamily: "ScienceGothic",
-          fontSize: _fluid(width, 10, 12),
+      child: RichText(
+        text: TextSpan(
+          children: [
+            TextSpan(
+              text: 'Developer character art by ',
+              style: TextStyle(
+                color: AppColours.grey,
+                fontFamily: "ScienceGothic",
+                fontSize: _fluid(width, 10, 12),
+              ),
+            ),
+            TextSpan(
+              text: 'miscfi',
+              style: TextStyle(
+                color: AppColours.grey,
+                fontFamily: "ScienceGothic",
+                fontSize: _fluid(width, 10, 12),
+                decoration: TextDecoration.underline,
+              ),
+              recognizer: TapGestureRecognizer()
+                ..onTap = () {
+                  launchUrl(Uri.parse("https://www.instagram.com/miscfi"));
+                },
+            ),
+            TextSpan(
+              text: '.\nZekrofire is not affiliated with Disney or Square Enix and does not own or claim any rights to any trademark belonging to either party.',
+              style: TextStyle(
+                color: AppColours.grey,
+                fontFamily: "ScienceGothic",
+                fontSize: _fluid(width, 10, 12),
+              ),
+            ),
+          ],
         ),
       ),
     );
