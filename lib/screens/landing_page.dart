@@ -11,7 +11,7 @@ import 'keyblade_page.dart';
 
 import 'package:url_launcher/url_launcher.dart';
 
-const double _wideBreakpoint = 900;
+const double _wideBreakpoint = 1200;
 const double _minWideHeight = 600;
 
 class LandingPage extends StatefulWidget {
@@ -260,6 +260,7 @@ class _LandingPageState extends State<LandingPage> {
       child: ConstrainedBox(
         constraints: BoxConstraints(minHeight: constraints.maxHeight),
         child: Column(
+          spacing: 32.0,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Padding(
