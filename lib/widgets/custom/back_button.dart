@@ -59,7 +59,12 @@ class CustomBackButton extends StatelessWidget {
                     return null;
                   }),
                 ),
-            child: Center(child: Image.asset('images/back-arrow.png')),
+            child: Center(
+              child: Semantics(
+                label: "Curved arrow pointing left.",
+                child: Image.asset('images/back-arrow.png'),
+              ),
+            ),
           ),
         ),
       ),

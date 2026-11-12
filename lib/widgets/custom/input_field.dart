@@ -155,12 +155,16 @@ class _InputFieldState extends State<InputField> {
                     children: [
                       SizedBox(
                         width: 48,
-                        child: Image.asset(
-                          'images/${widget.gameType()}s/${suggestion.replaceAll(RegExp(r"[',./]"), "").replaceAll(' ', '_')}.png',
-                          height: 48,
-                          cacheHeight: 96,
-                          gaplessPlayback: true,
-                          errorBuilder: (_, _, _) => SizedBox(height: 48),
+                        child: Semantics(
+                          label:
+                              "Render of Kingdom Hearts ${widget.gameType()}",
+                          child: Image.asset(
+                            'images/${widget.gameType()}s/${suggestion.replaceAll(RegExp(r"[',./]"), "").replaceAll(' ', '_')}.png',
+                            height: 48,
+                            cacheHeight: 96,
+                            gaplessPlayback: true,
+                            errorBuilder: (_, _, _) => SizedBox(height: 48),
+                          ),
                         ),
                       ),
                       Text(suggestion),

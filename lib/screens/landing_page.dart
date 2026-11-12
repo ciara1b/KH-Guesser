@@ -10,8 +10,6 @@ import 'character_page.dart';
 import 'keyblade_page.dart';
 
 import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter/services.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 const double _wideBreakpoint = 900;
 const double _minWideHeight = 600;
@@ -197,11 +195,14 @@ class _LandingPageState extends State<LandingPage> {
               bottom: 0,
               right: 0,
               child: IgnorePointer(
-                child: Image.asset(
-                  'images/author.png',
-                  height: height,
-                  fit: BoxFit.fitHeight,
-                  alignment: Alignment.centerRight,
+                child: Semantics(
+                  label: "Art of the website developer in the style of Kingdom Hearts.",
+                  child: Image.asset(
+                    'images/author.png',
+                    height: height,
+                    fit: BoxFit.fitHeight,
+                    alignment: Alignment.centerRight,
+                  ),
                 ),
               ),
             ),
@@ -216,9 +217,12 @@ class _LandingPageState extends State<LandingPage> {
                         left: _fluid(width, 32, 128),
                         right: 4.0,
                       ),
-                      child: Image.asset(
-                        'images/main-menu-logo.png',
-                        fit: BoxFit.contain,
+                      child: Semantics(
+                        label: "Custom logo in the style of Kingdom Hearts, that reads: Kingdom Hearts Guesser.",
+                        child: Image.asset(
+                          'images/main-menu-logo.png',
+                          fit: BoxFit.contain,
+                        ),
                       ),
                     ),
                   ),
@@ -262,9 +266,12 @@ class _LandingPageState extends State<LandingPage> {
               padding: EdgeInsets.only(top: 64.0),
               child: ConstrainedBox(
                 constraints: BoxConstraints(maxWidth: _wideBreakpoint),
-                child: Image.asset(
-                  'images/main-menu-logo.png',
-                  fit: BoxFit.contain,
+                child: Semantics(
+                  label: "Custom logo in the style of Kingdom Hearts, that reads: Kingdom Hearts Guesser.",
+                  child: Image.asset(
+                    'images/main-menu-logo.png',
+                    fit: BoxFit.contain,
+                  ),
                 ),
               ),
             ),
