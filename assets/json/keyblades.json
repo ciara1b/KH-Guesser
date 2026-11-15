@@ -1156,6 +1156,8 @@
             "id": 128,
             "name": "Keyblade of Heart",
             "debutGame": "Kingdom Hearts",
+            "strength": 1,
+            "magic": 1,
             "appearances": 2,
             "wielders": ["Riku"]
         },
@@ -1163,6 +1165,8 @@
             "id": 129,
             "name": "No Name",
             "debutGame": "Kingdom Hearts II Final Mix",
+            "strength": 1,
+            "magic": 1,
             "appearances": 9,
             "wielders": ["Master of Masters", "Luxu", "Xehanort", "Terra-Xehanort", "Replica Xehanorts", "Odin"]
         },
@@ -1170,6 +1174,8 @@
             "id": 130,
             "name": "Fake Oblivion",
             "debutGame": "Kingdom Hearts 358/2 Days",
+            "strength": 1,
+            "magic": 1,
             "appearances": 2,
             "wielders": ["Anti-Riku", "Data-Roxas"]
         },
@@ -1177,6 +1183,8 @@
             "id": 131,
             "name": "Fake Oathkeeper",
             "debutGame": "Kingdom Hearts Re:Coded",
+            "strength": 1,
+            "magic": 1,
             "appearances": 1,
             "wielders": ["Data-Roxas"]
         },
@@ -1184,6 +1192,8 @@
             "id": 132,
             "name": "Fake Master's Defender",
             "debutGame": "Kingdom Hearts Birth by Sleep Final Mix",
+            "strength": 1,
+            "magic": 1,
             "appearances": 2,
             "wielders": ["Phantom Aqua", "Armor of Eraqus"]
         },
@@ -1191,6 +1201,8 @@
             "id": 133,
             "name": "Fake Kingdom Key",
             "debutGame": "Kingdom Hearts",
+            "strength": 1,
+            "magic": 1,
             "appearances": 3,
             "wielders": ["Zexion", "AntiSora"]
         },
@@ -1198,6 +1210,8 @@
             "id": 134,
             "name": "Fake Earthshaker",
             "debutGame": "Kingdom Hearts Birth by Sleep",
+            "strength": 1,
+            "magic": 1,
             "appearances": 2,
             "wielders": ["Mimic Terra"]
         },
@@ -1205,6 +1219,8 @@
             "id": 135,
             "name": "Fake Wayward Wind",
             "debutGame": "Kingdom Hearts Birth by Sleep",
+            "strength": 1,
+            "magic": 1,
             "appearances": 2,
             "wielders": ["Mimic Ventus"]
         },
@@ -1212,6 +1228,8 @@
             "id": 136,
             "name": "Fake Rainfell",
             "debutGame": "Kingdom Hearts Birth by Sleep",
+            "strength": 1,
+            "magic": 1,
             "appearances": 2,
             "wielders": ["Mimic Aqua"]
         },
@@ -1219,6 +1237,8 @@
             "id": 137,
             "name": "Fake No Name",
             "debutGame": "Kingdom Hearts Birth by Sleep Final Mix",
+            "strength": 1,
+            "magic": 1,
             "appearances": 1,
             "wielders": ["No Heart"]
         },
@@ -1235,6 +1255,8 @@
             "id": 139,
             "name": "Keyblade (Dark Road)",
             "debutGame": "Kingdom Hearts Dark Road",
+            "strength": 1,
+            "magic": 1,
             "appearances": 1,
             "wielders": ["Xehanort", "Eraqus", "Hermod", "Bragi", "Urd", "Vor", "Baldr", "Heimdall", "Helgi", "Hoder", "Sigrun", "Vala", "Vali", "Vidar"]
         }
