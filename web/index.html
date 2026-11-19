@@ -22,18 +22,28 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="khdle">
-  <link rel="apple-touch-icon" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.ico">
+  <link rel="mask-icon" href="favicon.ico" color="red">
+  <link href="favicon.ico" rel="icon" type="image/x-icon">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
-  <link rel="icon" href="favicon.svg" type="image/x-icon">
-
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 
   <title>KH Guesser</title>
   <link rel="manifest" href="manifest.json">
-  
-  
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+
+  <style>
+    .flutter-loader .indeterminate {
+      background-color: #717171 !important;
+    }
+
+    .flutter-loader .indeterminate::after, .flutter-loader .indeterminate::before {
+      background-color: #DDAC21 !important;
+    }
+  </style>
+  
   <style id="splash-screen-style">
     html {
       height: 100%
@@ -100,18 +110,14 @@
       document.body.style.background = "transparent";
     }
   </script>
-
-  <style>
-    .flutter-loader .indeterminate {
-      background-color: #717171 !important;
-    }
-
-    .flutter-loader .indeterminate::after, .flutter-loader .indeterminate::before {
-      background-color: #DDAC21 !important;
-    }
-  </style>
 </head>
 <body>
+  
+  
+  
+  
+  
+  
   
   <!--
     You can customize the "flutter_bootstrap.js" script.
