@@ -29,8 +29,19 @@ class Guess {
 
   bool get isCorrect => categoryResults.every((c) => c.type == HitType.hit);
 
-  Guess evaluate(Map<String, dynamic> hidden) {
+  Guess evaluate(Map<String, dynamic> hidden, String gameType) {
     final result = <CategoryResult>[];
+
+    bool isPartialOrigin = false;
+    if (gameType == "character") {
+      final hiddenType = Character.typeFromOriginString(
+        hidden['origin'] as String,
+      );
+      final guessedOrigin =
+          categoryResults.firstWhere((c) => c.category == "origin").value
+              as String;
+      isPartialOrigin = guessedOrigin.contains(hiddenType);
+    }
 
     for (final r in categoryResults) {
       final currentValue = hidden[r.category];
@@ -46,7 +57,8 @@ class Guess {
         type = HitType.hit;
       } else if ((r.value is List &&
               currentValue.toSet().intersection(r.value.toSet()).isNotEmpty) ||
-          (r.value is int && (currentValue - r.value).abs() <= 2)) {
+          (r.value is int && (currentValue - r.value).abs() <= 2) ||
+          (r.category == "origin" && isPartialOrigin)) {
         type = HitType.partial;
       } else {
         type = HitType.miss;
@@ -184,7 +196,7 @@ class GuessGame<T> {
   bool isLegalGuess(String guess) => _canonicalName(guess) != null;
 
   Guess matchGuessOnly(String name) =>
-      guessFromName(name).evaluate(_toMap(_hidden));
+      guessFromName(name).evaluate(_toMap(_hidden), gameType);
 
   void addGuessToList(Guess guess) {
     final guessIndex = activeIndex;

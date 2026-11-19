@@ -45,6 +45,20 @@ class Character {
     );
   }
 
+  static String typeFromOriginString(String origin) {
+    if (origin.contains("Kingdom Hearts")) {
+      return "Kingdom Hearts";
+    } else if (origin.contains("Final Fantasy")) {
+      return "Final Fantasy";
+    } else if (origin.contains("The World Ends with You")) {
+      return "The World Ends with You";
+    }
+
+    return "Disney";
+  }
+
+  String get typeFromOrigin => typeFromOriginString(origin);
+
   Map<String, dynamic> toMap() => {
     'image': imageUrl,
     'name': name,
