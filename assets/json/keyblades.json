@@ -7,6 +7,7 @@
             "strength": 3,
             "magic": 0,
             "appearances": 9,
+            "type": "Original",
             "wielders": ["Sora", "Riku", "Data-Sora", "Roxas", "Xion", "Terra", "Armored Ventus Nightmare"]
         },
         {
@@ -79,6 +80,7 @@
             "strength": 10,
             "magic": -1,
             "appearances": 4,
+            "type": "Square Enix",
             "wielders": ["Sora", "Data-Sora"]
         },
         {
@@ -88,6 +90,7 @@
             "strength": 9,
             "magic": 0,
             "appearances": 6,
+            "type": "Original",
             "wielders": ["Sora", "Data-Sora", "Player"]
         },
         {
@@ -97,6 +100,7 @@
             "strength": 10,
             "magic": 1,
             "appearances": 4,
+            "type": "Square Enix",
             "wielders": ["Sora", "Data-Sora"]
         },
         {
@@ -124,6 +128,7 @@
             "strength": 9,
             "magic": 1,
             "appearances": 8,
+            "type": "Original",
             "wielders": ["Sora", "Roxas", "Data-Sora", "Data-Roxas", "Xion"]
         },
         {
@@ -133,6 +138,7 @@
             "strength": 11,
             "magic": -1,
             "appearances": 8,
+            "type": "Original",
             "wielders": ["Sora", "Roxas", "Data-Sora", "Data-Roxas", "Riku"]
         },
         {
@@ -142,6 +148,7 @@
             "strength": 12,
             "magic": 2,
             "appearances": 9,
+            "type": "Square Enix",
             "wielders": ["Sora", "Data-Sora", "Terra", "Ventus", "Aqua", "Riku"]
         },
         {
@@ -160,6 +167,7 @@
             "strength": 8,
             "magic": -2,
             "appearances": 2,
+            "type": "Square Enix",
             "wielders": ["Sora"]
         },
         {
@@ -178,6 +186,7 @@
             "strength": 3,
             "magic": 0,
             "appearances": 9,
+            "type": "Original",
             "wielders": ["King Mickey", "Aqua"]
         },
         {
@@ -241,6 +250,7 @@
             "strength": 3,
             "magic": 0,
             "appearances": 2,
+            "type": "Square Enix",
             "wielders": ["Sora"]
         },
         {
@@ -259,6 +269,7 @@
             "strength": 5,
             "magic": 1,
             "appearances": 2,
+            "type": "Square Enix",
             "wielders": ["Sora"]
         },
         {
@@ -304,6 +315,7 @@
             "strength": 5,
             "magic": 3,
             "appearances": 3,
+            "type": "Square Enix",
             "wielders": ["Sora", "Player"]
         },
         {
@@ -313,6 +325,7 @@
             "strength": 4,
             "magic": 4,
             "appearances": 4,
+            "type": "Original",
             "wielders": ["Sora"]
         },
         {
@@ -322,6 +335,7 @@
             "strength": 5,
             "magic": 4,
             "appearances": 3,
+            "type": "Original",
             "wielders": ["Sora", "Roxas", "Xion"]
         },
         {
@@ -340,6 +354,7 @@
             "strength": 7,
             "magic": 1,
             "appearances": 3,
+            "type": "Square Enix",
             "wielders": ["Sora", "Player"]
         },
         {
@@ -349,6 +364,7 @@
             "strength": 5,
             "magic": 7,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["Sora"]
         },
         {
@@ -358,6 +374,7 @@
             "strength": 3,
             "magic": 0,
             "appearances": 5,
+            "type": "Original",
             "wielders": ["Riku", "Riku Replica", "Sora", "Ventus"]
         },
         {
@@ -367,6 +384,7 @@
             "strength": 20,
             "magic": 0,
             "appearances": 2,
+            "type": "Original",
             "wielders": ["Roxas", "Xion", "Player", "Ventus"]
         },
         {
@@ -376,6 +394,7 @@
             "strength": 45,
             "magic": 0,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["Roxas", "Xion"]
         },
         {
@@ -385,6 +404,7 @@
             "strength": 71,
             "magic": 0,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["Roxas", "Xion"]
         },
         {
@@ -394,6 +414,7 @@
             "strength": 23,
             "magic": 12,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["Roxas", "Xion"]
         },
         {
@@ -403,6 +424,7 @@
             "strength": 60,
             "magic": 18,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["Roxas", "Xion"]
         },
         {
@@ -412,6 +434,7 @@
             "strength": 67,
             "magic": 29,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["Roxas", "Xion"]
         },
         {
@@ -421,6 +444,7 @@
             "strength": 55,
             "magic": 0,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["Roxas", "Xion"]
         },
         {
@@ -430,6 +454,7 @@
             "strength": 54,
             "magic": 0,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["Roxas", "Xion"]
         },
         {
@@ -439,6 +464,7 @@
             "strength": 55,
             "magic": 0,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["Roxas", "Xion"]
         },
         {
@@ -448,6 +474,7 @@
             "strength": 52,
             "magic": 0,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["Roxas", "Xion"]
         },
         {
@@ -457,6 +484,7 @@
             "strength": 70,
             "magic": 0,
             "appearances": 2,
+            "type": "Original",
             "wielders": ["Roxas", "Xion", "Sora"]
         },
         {
@@ -466,6 +494,7 @@
             "strength": 70,
             "magic": 0,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["Roxas", "Xion"]
         },
         {
@@ -475,6 +504,7 @@
             "strength": 65,
             "magic": 0,
             "appearances": 2,
+            "type": "Original",
             "wielders": ["Roxas", "Xion", "Sora"]
         },
         {
@@ -484,6 +514,7 @@
             "strength": 64,
             "magic": 23,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["Roxas", "Xion"]
         },
         {
@@ -493,6 +524,7 @@
             "strength": 100,
             "magic": 31,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["Roxas", "Xion"]
         },
         {
@@ -502,6 +534,7 @@
             "strength": 75,
             "magic": 37,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["Roxas", "Xion"]
         },
         {
@@ -511,6 +544,7 @@
             "strength": 88,
             "magic": 0,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["Roxas", "Xion"]
         },
         {
@@ -520,6 +554,7 @@
             "strength": 80,
             "magic": 0,
             "appearances": 2,
+            "type": "Original",
             "wielders": ["Roxas", "Xion", "Sora"]
         },
         {
@@ -529,6 +564,7 @@
             "strength": 120,
             "magic": 0,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["Roxas", "Xion"]
         },
         {
@@ -538,6 +574,7 @@
             "strength": 90,
             "magic": 30,
             "appearances": 1,
+            "type": "Square Enix",
             "wielders": ["Roxas", "Xion"]
         },
         {
@@ -547,6 +584,7 @@
             "strength": 40,
             "magic": 0,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["Roxas", "Xion"]
         },
         {
@@ -556,6 +594,7 @@
             "strength": 80,
             "magic": 0,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["Roxas", "Xion"]
         },
         {
@@ -565,6 +604,7 @@
             "strength": 3,
             "magic": 1,
             "appearances": 4,
+            "type": "Original",
             "wielders": ["Terra"]
         },
         {
@@ -637,6 +677,7 @@
             "strength": 6,
             "magic": 4,
             "appearances": 2,
+            "type": "Original",
             "wielders": ["Terra", "Ventus", "Aqua"]
         },
         {
@@ -646,6 +687,7 @@
             "strength": 5,
             "magic": 2,
             "appearances": 3,
+            "type": "Original",
             "wielders": ["Terra", "Player"]
         },
         {
@@ -655,6 +697,7 @@
             "strength": 5,
             "magic": 3,
             "appearances": 5,
+            "type": "Original",
             "wielders": ["Terra", "Lingering Will"]
         },
         {
@@ -664,6 +707,7 @@
             "strength": 10,
             "magic": -2,
             "appearances": 2,
+            "type": "Original",
             "wielders": ["Terra"]
         },
         {
@@ -673,6 +717,7 @@
             "strength": 8,
             "magic": 4,
             "appearances": 4,
+            "type": "Original",
             "wielders": ["Terra", "Ventus", "Aqua", "Vanitas", "Vanitas Remnant", "Replica Xehanorts"]
         },
         {
@@ -682,6 +727,7 @@
             "strength": 6,
             "magic": 7,
             "appearances": 4,
+            "type": "Original",
             "wielders": ["Young Xehanort", "Terra", "Ventus", "Aqua", "Replica Xehanorts"]
         },
         {
@@ -691,6 +737,7 @@
             "strength": 8,
             "magic": 7,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["Terra", "Ventus", "Aqua"]
         },
         {
@@ -700,6 +747,7 @@
             "strength": 3,
             "magic": 1,
             "appearances": 5,
+            "type": "Original",
             "wielders": ["Ventus"]
         },
         {
@@ -709,6 +757,7 @@
             "strength": 3,
             "magic": 3,
             "appearances": 2,
+            "type": "Original",
             "wielders": ["Ventus"]
         },
         {
@@ -718,6 +767,7 @@
             "strength": 6,
             "magic": 5,
             "appearances": 2,
+            "type": "Original",
             "wielders": ["Ventus"]
         },
         {
@@ -727,6 +777,7 @@
             "strength": 2,
             "magic": 2,
             "appearances": 3,
+            "type": "Original",
             "wielders": ["Aqua"]
         },
         {
@@ -736,6 +787,7 @@
             "strength": 3,
             "magic": 3,
             "appearances": 6,
+            "type": "Original",
             "wielders": ["Kairi", "Aqua"]
         },
         {
@@ -745,6 +797,7 @@
             "strength": 5,
             "magic": 4,
             "appearances": 4,
+            "type": "Original",
             "wielders": ["Aqua"]
         },
         {
@@ -754,6 +807,7 @@
             "strength": 4,
             "magic": 7,
             "appearances": 2,
+            "type": "Original",
             "wielders": ["Aqua"]
         },
         {
@@ -763,6 +817,7 @@
             "strength": 7,
             "magic": 7,
             "appearances": 6,
+            "type": "Original",
             "wielders": ["Brain", "Ephemer", "Odin", "Eraqus", "Aqua", "Sora"]
         },
         {
@@ -772,6 +827,7 @@
             "strength": 1,
             "magic": 1,
             "appearances": 3,
+            "type": "Original",
             "wielders": ["Xehanort", "Vanitas", "Ventus-Vanitas", "Sora"]
         },
         {
@@ -781,6 +837,7 @@
             "strength": 1,
             "magic": 1,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["Data-Sora"]
         },
         {
@@ -790,6 +847,7 @@
             "strength": 7,
             "magic": 7,
             "appearances": 1,
+            "type": "Square Enix",
             "wielders": ["Sora", "Riku"]
         },
         {
@@ -826,6 +884,7 @@
             "strength": 12,
             "magic": 10,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["Sora"]
         },
         {
@@ -853,6 +912,7 @@
             "strength": 14,
             "magic": 12,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["Sora", "Riku"]
         },
         {
@@ -862,6 +922,7 @@
             "strength": 12,
             "magic": 15,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["Sora", "Riku"]
         },
         {
@@ -871,6 +932,7 @@
             "strength": 14,
             "magic": 16,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["Sora", "Riku"]
         },
         {
@@ -880,6 +942,7 @@
             "strength": 18,
             "magic": 14,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["Sora", "Riku"]
         },
         {
@@ -889,6 +952,7 @@
             "strength": 1,
             "magic": 1,
             "appearances": 2,
+            "type": "Original",
             "wielders": ["Aced"]
         },
         {
@@ -898,6 +962,7 @@
             "strength": 1,
             "magic": 1,
             "appearances": 2,
+            "type": "Original",
             "wielders": ["Ava"]
         },
         {
@@ -907,6 +972,7 @@
             "strength": 1,
             "magic": 1,
             "appearances": 2,
+            "type": "Original",
             "wielders": ["Gula"]
         },
         {
@@ -916,6 +982,7 @@
             "strength": 1,
             "magic": 1,
             "appearances": 2,
+            "type": "Original",
             "wielders": ["Invi"]
         },
         {
@@ -925,6 +992,7 @@
             "strength": 1,
             "magic": 1,
             "appearances": 2,
+            "type": "Original",
             "wielders": ["Ira"]
         },
         {
@@ -934,6 +1002,7 @@
             "strength": 1,
             "magic": 1,
             "appearances": 3,
+            "type": "Original",
             "wielders": ["Sora", "Player", "Ephemer", "Skuld", "Strelitzia"]
         },
         {
@@ -943,6 +1012,7 @@
             "strength": 1,
             "magic": 1,
             "appearances": 2,
+            "type": "Square Enix",
             "wielders": ["Player"]
         },
         {
@@ -970,6 +1040,7 @@
             "strength": 3,
             "magic": 5,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["Sora"]
         },
         {
@@ -1060,6 +1131,7 @@
             "strength": 4,
             "magic": 4,
             "appearances": 1,
+            "type": "Platform-Exclusive",
             "wielders": ["Sora"]
         },
         {
@@ -1069,6 +1141,7 @@
             "strength": 4,
             "magic": 4,
             "appearances": 1,
+            "type": "Platform-Exclusive",
             "wielders": ["Sora"]
         },
         {
@@ -1078,6 +1151,7 @@
             "strength": 4,
             "magic": 4,
             "appearances": 1,
+            "type": "Platform-Exclusive",
             "wielders": ["Sora"]
         },
         {
@@ -1087,6 +1161,7 @@
             "strength": 4,
             "magic": 4,
             "appearances": 1,
+            "type": "Platform-Exclusive",
             "wielders": ["Sora"]
         },
         {
@@ -1096,6 +1171,7 @@
             "strength": 4,
             "magic": 4,
             "appearances": 1,
+            "type": "Platform-Exclusive",
             "wielders": ["Sora"]
         },
         {
@@ -1105,6 +1181,7 @@
             "strength": 4,
             "magic": 4,
             "appearances": 1,
+            "type": "Platform-Exclusive",
             "wielders": ["Sora"]
         },
         {
@@ -1114,6 +1191,7 @@
             "strength": 4,
             "magic": 4,
             "appearances": 1,
+            "type": "Platform-Exclusive",
             "wielders": ["Sora"]
         },
         {
@@ -1123,6 +1201,7 @@
             "strength": 5,
             "magic": 5,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["Riku"]
         },
         {
@@ -1132,6 +1211,7 @@
             "strength": 5,
             "magic": 5,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["King Mickey", "Anti-Aqua"]
         },
         {
@@ -1141,6 +1221,7 @@
             "strength": 5,
             "magic": 5,
             "appearances": 2,
+            "type": "Original",
             "wielders": ["Lea"]
         },
         {
@@ -1150,6 +1231,7 @@
             "strength": 5,
             "magic": 5,
             "appearances": 1,
+            "type": "Fake/Replica",
             "wielders": ["Xion", "Replica Xehanorts"]
         },
         {
@@ -1159,6 +1241,7 @@
             "strength": 1,
             "magic": 1,
             "appearances": 2,
+            "type": "Original",
             "wielders": ["Riku"]
         },
         {
@@ -1168,6 +1251,7 @@
             "strength": 1,
             "magic": 1,
             "appearances": 9,
+            "type": "Original",
             "wielders": ["Master of Masters", "Luxu", "Xehanort", "Terra-Xehanort", "Replica Xehanorts", "Odin"]
         },
         {
@@ -1177,6 +1261,7 @@
             "strength": 1,
             "magic": 1,
             "appearances": 2,
+            "type": "Fake/Replica",
             "wielders": ["Anti-Riku", "Data-Roxas"]
         },
         {
@@ -1186,6 +1271,7 @@
             "strength": 1,
             "magic": 1,
             "appearances": 1,
+            "type": "Fake/Replica",
             "wielders": ["Data-Roxas"]
         },
         {
@@ -1195,6 +1281,7 @@
             "strength": 1,
             "magic": 1,
             "appearances": 2,
+            "type": "Fake/Replica",
             "wielders": ["Phantom Aqua", "Armor of Eraqus"]
         },
         {
@@ -1204,6 +1291,7 @@
             "strength": 1,
             "magic": 1,
             "appearances": 3,
+            "type": "Fake/Replica",
             "wielders": ["Zexion", "AntiSora"]
         },
         {
@@ -1213,6 +1301,7 @@
             "strength": 1,
             "magic": 1,
             "appearances": 2,
+            "type": "Fake/Replica",
             "wielders": ["Mimic Terra"]
         },
         {
@@ -1222,6 +1311,7 @@
             "strength": 1,
             "magic": 1,
             "appearances": 2,
+            "type": "Fake/Replica",
             "wielders": ["Mimic Ventus"]
         },
         {
@@ -1231,6 +1321,7 @@
             "strength": 1,
             "magic": 1,
             "appearances": 2,
+            "type": "Fake/Replica",
             "wielders": ["Mimic Aqua"]
         },
         {
@@ -1240,6 +1331,7 @@
             "strength": 1,
             "magic": 1,
             "appearances": 1,
+            "type": "Fake/Replica",
             "wielders": ["No Heart"]
         },
         {
@@ -1249,6 +1341,7 @@
             "strength": 0,
             "magic": 20,
             "appearances": 2,
+            "type": "Original",
             "wielders": ["Sora", "Riku"]
         },
         {
@@ -1258,6 +1351,7 @@
             "strength": 1,
             "magic": 1,
             "appearances": 1,
+            "type": "Original",
             "wielders": ["Xehanort", "Eraqus", "Hermod", "Bragi", "Urd", "Vor", "Baldr", "Heimdall", "Helgi", "Hoder", "Sigrun", "Vala", "Vali", "Vidar"]
         }
     ]

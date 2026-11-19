@@ -64,6 +64,10 @@ const List<CategoryInfo> keybladeCategories = [
     category: 'Appearances',
     value: 'The number of games the keyblade appears in. Yellow indicates you are within 2 of the correct number.',
   ),
+  (
+    category: 'Type',
+    value: "Possible types: Disney, Square Enix, Fake/Replica, Platform-Exclusive, Original.",
+  ),
 ];
 
 const List<CategoryInfo> characterCategories = [

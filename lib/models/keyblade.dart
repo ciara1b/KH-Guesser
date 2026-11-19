@@ -11,6 +11,7 @@ class Keyblade {
     this.magic,
     this.wielders,
     required this.appearances,
+    required this.type,
     required this.imageUrl,
   });
 
@@ -21,6 +22,7 @@ class Keyblade {
   final int? magic;
   final List<String>? wielders;
   final int appearances;
+  final String? type;
   final String imageUrl;
 
   factory Keyblade.fromJson(Map<String, dynamic> json) {
@@ -38,6 +40,7 @@ class Keyblade {
           ?.map((w) => w as String)
           .toList(),
       appearances: json['appearances'] as int,
+      type: json['type'] as String? ?? 'Disney',
       imageUrl: 'assets/images/keyblades/$nameForImage.png',
     );
   }
@@ -50,6 +53,7 @@ class Keyblade {
     'magic': magic,
     'wielders': wielders,
     'appearances': appearances,
+    'type': type,
   };
 }
 

@@ -269,6 +269,7 @@ class KeybladeGame extends GuessGame<Keyblade> {
           'magic',
           'wielders',
           'appearances',
+          'type',
         ],
       );
 
