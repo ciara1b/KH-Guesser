@@ -7,6 +7,7 @@
             "strength": 3,
             "magic": 0,
             "appearances": 3,
+            "type": "Original",
             "wielders": ["Sora", "Riku"]
         },
         {
@@ -79,6 +80,7 @@
             "strength": 10,
             "magic": -1,
             "appearances": 3,
+            "type": "Square Enix",
             "wielders": ["Sora"]
         },
         {
@@ -97,6 +99,7 @@
             "strength": 10,
             "magic": 1,
             "appearances": 3,
+            "type": "Square Enix",
             "wielders": ["Sora"]
         },
         {
@@ -124,6 +127,7 @@
             "strength": 9,
             "magic": 1,
             "appearances": 3,
+            "type": "Original",
             "wielders": ["Sora"]
         },
         {
@@ -133,6 +137,7 @@
             "strength": 11,
             "magic": -1,
             "appearances": 3,
+            "type": "Original",
             "wielders": ["Sora"]
         },
         {
@@ -142,6 +147,7 @@
             "strength": 12,
             "magic": 2,
             "appearances": 3,
+            "type": "Square Enix",
             "wielders": ["Sora"]
         },
         {
@@ -160,6 +166,7 @@
             "strength": 8,
             "magic": -2,
             "appearances": 2,
+            "type": "Square Enix",
             "wielders": ["Sora"]
         },
         {
@@ -169,6 +176,7 @@
             "strength": 1,
             "magic": 1,
             "appearances": 2,
+            "type": "Original",
             "wielders": ["Riku"]
         }
     ]

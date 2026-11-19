@@ -42,6 +42,7 @@ const List<CategoryInfo> keybladeCategories = [
     category: 'Appearances',
     value: 'The number of games the keyblade appears in. Yellow indicates you are within 2 of the correct number.',
   ),
+  (category: 'Type', value: "Possible types: Disney, Square Enix, Original."),
 ];
 
 const List<CategoryInfo> characterCategories = [
@@ -60,6 +61,6 @@ const List<CategoryInfo> characterCategories = [
   ),
   (
     category: 'Origin',
-    value: 'The media they originate from, e.g. Kingdom Hearts, Toy Story, Final Fantasy VIII, etc.',
+    value: 'The media they originate from, e.g. Kingdom Hearts, Toy Story, Final Fantasy VIII, etc. Yellow indicates you have the correct media franchise.',
   ),
 ];
