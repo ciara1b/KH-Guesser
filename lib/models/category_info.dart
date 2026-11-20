@@ -86,6 +86,6 @@ const List<CategoryInfo> characterCategories = [
   ),
   (
     category: 'Origin',
-    value: 'The media they originate from, e.g. Kingdom Hearts, Toy Story, Final Fantasy VIII, etc. Yellow indicates you have the correct media franchise.',
+    value: 'The media they originate from, e.g. Kingdom Hearts, Toy Story, Final Fantasy VIII, etc. Yellow indicates you have the correct media franchise (Disney, Kingdom Hearts, Final Fantasy, The World Ends with You).',
   ),
 ];
