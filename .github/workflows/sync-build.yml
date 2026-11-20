@@ -1,0 +1,44 @@
+name: Build and sync
+
+on:
+  push:
+    branches: [main, misc]
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Pick target repo and build branch
+        run: |
+          if [ "${{ github.ref_name }}" = "main" ]; then
+            echo "TARGET=ciara1b/KH-Guesser-build" >> $GITHUB_ENV
+            echo "BUILD_BRANCH=production-main" >> $GITHUB_ENV
+          else
+            echo "TARGET=ciara1b/KHFI" >> $GITHUB_ENV
+            echo "BUILD_BRANCH=production-misc" >> $GITHUB_ENV
+          fi
+
+      - name: Configure git and add private repo as a remote
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote add build-target https://x-access-token:${{ secrets.build_token }}@github.com/$TARGET.git
+          git fetch build-target $BUILD_BRANCH:$BUILD_BRANCH || true
+
+      - name: Build with peanut
+        run: |
+          flutter pub get
+          flutter pub global activate peanut
+          flutter pub global run peanut:peanut -b $BUILD_BRANCH
+
+      - name: Push build branch to private repo
+        run: git push build-target $BUILD_BRANCH:main
