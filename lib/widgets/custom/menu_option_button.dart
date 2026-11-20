@@ -154,7 +154,7 @@ class _MenuOptionButtonState extends State<MenuOptionButton>
                         child: Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
-                            widget.text,
+                            "Test Build",
                             style: TextStyle(
                               color: AppColours.black,
                               fontSize: 32.0,
