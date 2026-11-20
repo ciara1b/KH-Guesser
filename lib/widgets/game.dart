@@ -37,10 +37,11 @@ class Guess {
       final hiddenType = Character.typeFromOriginString(
         hidden['origin'] as String,
       );
-      final guessedOrigin =
-          categoryResults.firstWhere((c) => c.category == "origin").value
-              as String;
-      isPartialOrigin = guessedOrigin.contains(hiddenType);
+      final guessedOriginAsType = Character.typeFromOriginString(
+        categoryResults.firstWhere((c) => c.category == "origin").value
+            as String,
+      );
+      isPartialOrigin = guessedOriginAsType == hiddenType;
     }
 
     for (final r in categoryResults) {
